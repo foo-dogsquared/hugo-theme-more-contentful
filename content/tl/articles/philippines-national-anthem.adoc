@@ -1,0 +1,44 @@
+---
+title: "Ang pambansang awit"
+date: 2020-05-12T21:22:39+08:00
+draft: true
+
+categories:
+    - "category1"
+tags: 
+    - "tag1"
+    - "tag2"
+---
+
+= Ang pambansang awit
+2020-05-12
+
+Isang test post lamang ito para sa multilingual mode ng Hugo.
+
+[verse]
+____
+Bayang magiliw,
+Perlas ng silanganan,
+Alab ng puso
+Sa dibdib mo’y buhay.
+
+Lupang hinirang,
+Duyan ka ng magiting,
+Sa manlulupig
+Di ka pasisiil.
+
+Sa dagat at bundok,
+Sa simoy at sa langit mong bughaw,
+May dilag ang tula
+At awit sa paglayang minamahal.
+
+Ang kislap ng watawat mo’y
+Tagumpay na nagniningning;
+Ang bituin at araw niya,
+Kailan pa ma’y di magdidilim.
+
+Lupa ng araw, ng luwalhati’t pagsinta,
+Buhay ay langit sa piling mo;
+Aming ligaya na ‘pag may mang-aapi,
+Ang mamatay nang dahil sa ‘yo. 
+____

@@ -1,0 +1,211 @@
+---
+title: "Asciidoctor Syntax Guide"
+date: 2019-08-27T01:03:09+08:00
+tags: 
+    - asciidoctor
+    - guide
+categories:
+    - guide
+---
+
+= Asciidoctor Syntax Guide
+Gabriel Arazas <foo.dogsquared@gmail.com>
+2019-08-27
+:stem: latexmath 
+
+The main purpose of this article is to make sure that all 
+basic HTML Elements are decorated with CSS so as to not miss 
+any possible elements when creating new themes for Hugo.
+
+== Headings
+
+Let's start with all possible headings. 
+The HTML `<h1>`—`<h6>` elements represent six levels of section headings. 
+`<h1>` is the highest section level and `<h6>` is the lowest.
+
+== Heading 2
+=== Heading 3
+==== Heading 4
+===== Heading 5
+====== Heading 6
+
+== Paragraph
+According to the https://www.w3.org/TR/html5/dom.html=elements[HTML5 specification] 
+by https://www.w3.org/[W3C], **HTML documents consist of a tree of elements and text**. 
+Each element is denoted in the source by a https://www.w3.org/TR/html5/syntax.html=syntax-start-tags[start tag], 
+such as `<body>`, and an https://www.w3.org/TR/html5/syntax.html=syntax-end-tags[end tag], 
+such as `</body>`. 
+(*Certain start tags and end tags can in certain cases be omitted and are implied by other tags.*)
+
+Elements can have attributes, which control how the elements work. 
+For example, hyperlink are formed using the `a` element and its `href` attribute.
+
+== List Types
+
+=== Ordered List
+
+. First item
+. Second item
+. Third item
+
+=== Unordered List
+
+* List item
+* Another item
+* And another item
+
+=== Nested list
+
+* First item
+* Second item
+** Second item First subitem
+** Second item second subitem
+*** Second item Second subitem First sub-subitem
+*** Second item Second subitem Second sub-subitem
+*** Second item Second subitem Third sub-subitem
+** Second item Third subitem
+... Second item Third subitem First sub-subitem
+... Second item Third subitem Second sub-subitem
+... Second item Third subitem Third sub-subitem
+* Third item
+
+=== Definition List
+
+HTML also supports definition lists.
+
+Blanco tequila::
+The purest form of the blue agave spirit...
+
+Reposado tequila::
+Typically aged in wooden barrels for between two and eleven months...
+
+== Blockquotes
+
+The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
+
+[quote]
+Quoted text.
+This line is part of the same quote.
+Also you can _put_ *Asciidoctor* into a blockquote.
+
+Blockquote with a citation.
+
+[quote,Steve Wozniak]
+____
+My goal wasn't to make a ton of money. It was to build good computers. I only started the company when I realized I could be an engineer forever.
+____
+
+According to Mozilla's website, Firefox 1.0 was released in 2004 and became a big success.
+
+== Tables
+
+Tables aren't part of the core Markdown spec, but Hugo supports them.
+
+[cols="4*",options="header"]
+|===
+| ID 
+| Make 
+| Model 
+| Year 
+
+| 1 
+| Honda 
+| Accord
+| 2009 
+
+| 2 
+| Toyota 
+| Camry 
+| 2012 
+
+| 3 
+| Hyundai 
+| Elantra 
+| 2010 
+
+|===
+
+Colons can be used to align columns.
+
+[cols="<,^,>",options="headers"]
+|===
+| Tables 
+| Are 
+| Cool 
+
+| align: left 
+| align: center 
+| align: right 
+
+| align: left 
+| align: center 
+| align: right 
+
+| align: left 
+| align: center 
+| align: right 
+
+|===
+
+You can also use inline Markdown.
+
+[cols="4*",options="headers"]
+|===
+| Inline 
+| Asciidoctor 
+| In 
+| Table 
+
+| _italics_ 
+| *bold*
+| #mark# 
+| `code` 
+
+|===
+
+== Code
+
+
+[source,html]
+----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example HTML5 Document</title>
+</head>
+<body>
+  <p>Test</p>
+</body>
+</html>
+----
+
+As you can see, content output from Asciidoctor does not have 
+syntax highlighting.
+You can use the built-in Hugo shortcode instead.
+
+{{< highlight html >}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example HTML5 Document</title>
+</head>
+<body>
+  <p>Test</p>
+</body>
+</html>
+{{< /highlight >}}
+
+== Other stuff — sub, sup, kbd, etc.
+
+H~2~O
+
+C~6~H~12~O~6~
+
+X^n^ + Y^n^ = Z^n^
+
+Press kbd:[X] to win. Or press kbd:[kbd:[CTRL]+kbd:[ALT]+kbd:[F]] to show FPS counter.
+footnote:[This requires https://asciidoctor.org/docs/user-manual/#keyboard-shortcuts[setting experimental flags enabled].] 
+
+#As a unit of information in information theory, the bit has alternatively been called a shannon#, named after Claude Shannon, the founder of field of information theory.

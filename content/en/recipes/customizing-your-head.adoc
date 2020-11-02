@@ -1,0 +1,58 @@
+---
+title: "Customizing your head"
+date: 2020-10-20T20:29:42+08:00
+
+categories:
+    - "recipe"
+tags: 
+    - "seo"
+---
+
+= Customizing your head
+John Doe <johndoe@example.com>
+2020-10-20 20:29:00 +0800
+:stem: latexmath
+
+
+Let's start with the most basic and perhaps most useful customization: modifying the `<head`>.
+This is useful for adding your own CSS and JavaScript files, changing certain metadata, or adding icons.
+
+First, copy the `head` partial from the theme (`theme/contentful/layouts/partials/head.html`) to your own (`layouts/partials/head.html`).
+We're simply taking advantage of https://gohugo.io/templates/lookup-order/[Hugo's lookup order] where we've override the `head` partial with our own copy.
+
+Then, feel free to add your own (or others') scripts and stylesheets, https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML[icons and other metadata], or whatever suitable things.
+
+In my case, I often use certain JavaScript libraries like https://www.mathjax.org/[MathJax] for mathematical typesetting, https://prismjs.com/[Prism] for syntax highlighting, and https://github.com/francoischalifour/medium-zoom/[medium-zoom] for interactive image zooms.
+
+Here's the modified code.
+(The example code is snipped for brevity.)
+
+```go
+<!--snip-->
+
+{{- /* MathJax */ -}}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+{{- /* Prism.js */ -}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-tomorrow.min.css" type="text/css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-core.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/keep-markup/prism-keep-markup.min.js">
+
+{{- /* medium-zoom */ -}}
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.5/dist/medium-zoom.min.js"></script>
+<script>window.addEventListener('load', () => mediumZoom('article img', { 'background': 'rgba(0, 0, 0, 0.75)' }))</script>
+```
+
+Since most of the JavaScript libraries used here are not really a requirement (except for MathJax for mathematical typesetting), I've set them to be loaded at the end of the page loading with https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script[`defer` attribute].
+If you have an inline script, you can simply wrap it in an event listener for page loading (`window.addEventListener("load", your_function_goes_here)`).
+
+If you want document-specific libraries, you have to pass some raw HTML through the parser of the document.
+For Goldmark, the default Markdown parser starting https://gohugo.io/news/0.60.0-relnotes/[Hugo v0.60.0], blocks raw HTML by default and you can disable it by setting `markup.goldmark.renderer.unsafe` to `true`.
+
+For Blackfriday, it parses even the raw HTML just fine.
+Though, you have to set it as the default Markdown parser.
+
+For https://asciidoctor.org/[Asciidoctor], you can use https://asciidoctor.org/docs/user-manual/#passthroughs[passthroughs] to get raw HTML through.
+

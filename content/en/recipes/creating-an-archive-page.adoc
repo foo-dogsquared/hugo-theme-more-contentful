@@ -1,0 +1,64 @@
+---
+title: "Creating an archive page"
+date: 2020-10-20T20:36:55+08:00
+
+categories:
+    - "recipe"
+---
+
+= Creating an archive page
+John Doe <johndoe@example.com>
+2020-10-20 20:36:55 +0800
+:stem: latexmath
+
+
+This will add an archive page similar to archive pages https://davidtranscend.com/archives/[like] https://lukesmith.xyz/blogindex.html[these].
+
+```go
+{{- define "main" -}}
+
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<hr>
+
+{{- /* Creating a section that lists out regular pages by year */ -}}
+{{ range $.Site.RegularPages.GroupByPublishDate "2006" }}
+    {{- /* Skip regular pages with an invalid creation date string. */ -}}
+    {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter. */ -}}
+    {{- /* We will also exclude hidden pages. */ -}}
+    {{ if ne .Key "0001" }}
+        <section data-year="{{ .Key }}">
+            <h2 id="{{ .Key }}">{{ .Key }}</h2> 
+            <ul>
+            {{- range where .Pages "Params.hidden" "!=" true -}}
+                <li>
+                    <date>{{ .Date.Format "2006-01-02" }}</date> -
+                    <a aria-label="{{ .Title }}" href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+            {{- end -}}
+            </ul>
+        </section>
+    {{- end }}
+{{ end }}
+
+{{- end -}}
+```
+
+We will simply add this as a layout in our customized theme.
+Let's call it `archives` so we have to add a file in `layouts/_default/archives.html` then set a page of our project with the `layout` key in the frontmatter.
+
+We want the archives page to be accessed at `$.Site.BaseURL/archives` so we'll simply create `archives.adoc` (https://gohugo.io/content-management/formats/#list-of-content-formats[any valid content files with certain file extensions can do], I'm using https://asciidoctor.org/[Asciidoctor]) with the following example content.
+
+```asciidoctor
+---
+title: "Archives"
+layout: "archive"
+---
+
+= Archives
+
+This is the archives of the century.
+```
+

@@ -1,0 +1,27 @@
+---
+title: "Open graph protocol"
+date: 2020-10-20T20:35:39+08:00
+
+categories:
+    - "recipe"
+tags: 
+    - "seo"
+    - "social media"
+---
+
+= Open graph protocol
+John Doe <johndoe@example.com>
+2020-10-20 20:35:39 +0800
+:stem: latexmath
+
+
+Next up, we're implementing https://opengraphprotocol.org/[Open Graph protocol] for our webpages.
+Commonly used for making suitable format when sharing the content on certain sites like Facebook.
+(Be sure to copy the `head` partial first in your own layout folder.)
+
+Similar to Twitter cards, Hugo has https://gohugo.io/templates/internal/#open-graph[an internal template for this].
+Simply add  `{{- template "_internal/opengraph.html" . -}}` somewhere in your own copy.
+(For reference, https://github.com/gohugoio/hugo/blob/25a6b33693992e8c6d9c35bc1e781ce3e2bca4be/tpl/tplimpl/embedded/templates/opengraph.html[here's the source code for the internal template].)
+
+If you want more control and customized version of the output, I recommend to copy the internal template and create a partial (e.g., `layouts/partials/opengraph.html`) and modify it.
+

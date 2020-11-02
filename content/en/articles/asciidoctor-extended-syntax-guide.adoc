@@ -1,0 +1,196 @@
+---
+title: "Asciidoctor Extended Syntax Guide"
+date: 2019-08-29T22:09:16+08:00
+
+categories:
+    - "asciidoctor"
+tags: 
+    - "asciidoctor"
+    - "guide"
+---
+
+= Asciidoctor Extended Syntax Guide
+Gabriel Arazas <foo.dogsquared@gmail.com>
+2019-08-29
+:stem: latexmath
+
+The purpose of this article to make sure not-so-common features of 
+Asciidoctor (i.e. admonition blocks, callouts) are styled and 
+fit to the theme. 
+It also serves as a quick introduction to more Asciidoctor as well.  
+Feel free to steal this if you want a template for this.
+
+
+
+
+== Admonition blocks
+
+Admonition blocks contain content that are not a part of the main 
+content but you'll want to draw attention to the audience anyways. 
+
+By default, Asciidoctor provides five labels for admonitions:
+
+* `TIP` 
+* `NOTE` 
+* `IMPORTANT` 
+* `CAUTION` 
+* `WARNING` 
+
+.`CAUTION` vs `WARNING`
+[sidebar]
+--
+As the https://asciidoctor.org/docs/user-manual/#admonition[user manual] 
+has said, `CAUTION` and `WARNING` should be used with different semantics. 
+
+`CAUTION` basically advises the user to observe care. 
+`WARNING` warns the user about the dangers or consequences that'll exist. 
+--
+
+Writing an admonition is intuitively easy, simply write the label 
+in all uppercase and append with a colon. 
+Then write the content after. 
+
+[source,asciidoc]
+----
+TIP: Lorem ipsum dolor sit amet consectetur adipiscing elit varius cursus 
+orci nulla, fames nisl sodales scelerisque eu consequat sem imperdiet ac mi 
+vivamus tempor, accumsan ad justo odio viverra praesent senectus class egestas duis.
+----
+
+It'll render as this:
+
+TIP: Lorem ipsum dolor sit amet consectetur adipiscing elit varius cursus 
+orci nulla, fames nisl sodales scelerisque eu consequat sem imperdiet ac mi 
+vivamus tempor, accumsan ad justo odio viverra praesent senectus class egestas duis.
+
+In case you want to style the labels differently such as assigning 
+appropriate colors or an icon to the rest of the labels, 
+here's the rest of them:
+
+NOTE: Malesuada mattis aenean ultrices netus cursus viverra vivamus ultricies, 
+velit molestie penatibus phasellus in ante luctus, habitant suspendisse eros 
+turpis taciti risus himenaeos.
+
+IMPORTANT: Velit fringilla feugiat nibh id faucibus scelerisque facilisis ac, 
+suscipit quisque odio libero ullamcorper curabitur fames nascetur, elementum 
+tristique hac nisl etiam dictumst dapibus.
+
+CAUTION: Tempus dui aptent tempor torquent lacinia sem cursus porta cras semper 
+accumsan feugiat, himenaeos mi ullamcorper pharetra enim class eget auctor conubia 
+metus curabitur.
+
+WARNING: Aliquet ut maecenas mollis id enim nibh suscipit quisque posuere cum fusce, 
+dignissim ad curabitur odio ac diam pharetra platea vivamus eleifend.
+
+
+
+
+== Callouts
+
+Callouts are used to add annotations within a verbatim block. 
+This is especially useful for code listings in order to effectively explain what 
+is going on within the code. 
+
+Here's an example of using callouts.
+
+[source,asciidoc]
+....
+[source,python]
+----
+from pathlib import Path
+from re import compile, match 
+
+current_directory = Path(".") \<1>
+notes_directory = current_directory / "notes/" \<2>
+----
+<1> Created a Path object
+<2> Appending a Path object with "/"
+....
+
+And it'll render as:
+
+[source,python]
+----
+from pathlib import Path
+from re import compile, match 
+
+current_directory = Path(".") # <1>
+notes_directory = current_directory / "notes/" # <2>
+----
+<1> Created a `Path` object
+<2> Appending a `Path` object with "/"
+
+One of the most important you should style is the callout number 
+on the code listings block. 
+Normally, when a user wants to copy-paste (even though I don't personally 
+encourage it), the callout number gets in the way and they have to 
+manually remove them which can be annoying. 
+
+Either attach the property `user-select` with it or take a part from the 
+default Asciidoctor stylesheet and include it in your own stylesheet.
+
+
+
+
+== Passthroughs
+
+A https://asciidoctor.org/docs/user-manual/#passthroughs[passthrough] passes the input as it is on the final output.
+This is useful for web-based outputs, for example passing raw HTML for interactive scripts or to create a live result.
+
+Below is a very simple example with a https://p5js.org/[p5.js] sketch.
+
+++++
+<div id="example-sketch"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+<script>
+const sketchuuuuu = ( sketch ) => {
+  let x = 100;
+  let y = 100;
+
+  sketch.setup = () => {
+    sketch.createCanvas(300, 380);
+  };
+
+  sketch.draw = () => {
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(x,y,50,50);
+    sketch.ellipse(sketch["mouseX"], sketch["mouseY"], 20);
+  };
+};
+
+let example_sketch = new p5(sketchuuuuu, "example-sketch")
+</script>
+++++
+
+Here is the input from the source code of this document.
+
+[source, asciidoctor]
+----
+++++
+<div id="example-sketch"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+<script>
+const sketchuuuuu = ( sketch ) => {
+  let x = 100;
+  let y = 100;
+
+  sketch.setup = () => {
+    sketch.createCanvas(300, 380);
+  };
+
+  sketch.draw = () => {
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(x,y,50,50);
+    sketch.ellipse(sketch["mouseX"], sketch["mouseY"], 20);
+  };
+};
+
+let example_sketch = new p5(sketchuuuuu, "example-sketch")
+</script>
+++++
+----
+
+This is the closest instance of https://en.wikipedia.org/wiki/Literate_programming[literate programming] in the web when using Asciidoctor.
+(Sadly, not as flexible or cool as https://orgmode.org/[Org-Mode] or https://jupyter.org/[Jupyter Notebooks].)

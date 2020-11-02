@@ -1,0 +1,76 @@
+---
+title: "RSS, Atom, and JSON Feed Support"
+date: 2019-09-04T17:22:44+08:00
+author:
+    - name: "John Doe"
+    - name: "Jane Doe"
+aliases:
+    - "/feeds/"
+categories:
+    - "guide"
+tags:
+    - "this is a test tag"
+    - "tag2"
+---
+
+= RSS, Atom, and JSON Feed Support
+John Dodo <johndodo@example.com>
+2019-09-04
+:stem: latexmath
+
+
+Web feeds are one of the most common ways for a visitor to keep up with someone who creates content.
+Nowadays, most social media has that feature such as the subscribing YouTube channels, following Twitter accounts, and watching Deviantart artists.
+Outside of those, we have simpler things like https://www.rssboard.org/rss-2-0-1[RSS] and https://www.jsonfeed.org/[JSON] feeds where they are just plain text files describing the content.
+
+The Contentful theme doesn't have a web feed export but we can have it with https://gohugo.io/hugo-modules/theme-components/[theme components].
+For this demo, we'll use the https://github.com/foo-dogsquared/hugo-web-feeds[web feed component] created by https://foo-dogsquared.github.io/[foo-dogsquared].
+
+If you're settling with this option, here's an example template for installing the web feed module and exporting all of the feed formats all in one fell swoop.
+
+[source,toml]
+----
+[[module.imports]]
+    path = "github.com/foo-dogsquared/hugo-web-feeds"
+
+# Visit the following for more information:
+# https://gohugo.io/templates/output-formats
+
+# Defining the media type of the output formats
+# For JSON format, it doesn't need to be since it's already built-in into Hugo
+[mediaTypes]
+    [mediaTypes."application/atom+xml"]
+        suffixes = ["atom", "atom.xml"] # You can remove the "atom.xml" if you want
+
+    # Redefining RSS media type for the additional suffix
+    [mediaTypes."application/rss+xml"]
+        suffixes = ["rss", "rss.xml"] # You can remove the "rss.xml" if you want
+
+    [mediaTypes."application/feed+json"]
+        suffixes = ["json"] # You can remove the "rss.xml" if you want
+
+
+# Including all of the feed output formats in the build
+[outputFormats]
+    [outputFormats.Rss]
+        mediaType = "application/rss+xml"
+        baseName = "feed"
+
+    [outputFormats.Atom]
+        mediaType = "application/atom+xml"
+        baseName = "feed"
+
+    [outputFormats.Json]
+        mediaType = "application/feed+json"
+        baseName = "feed"
+
+
+# Indicating what output formats shall be included
+# for the following kinds
+[outputs]
+    # .Site.BaseURL/index.* is available
+    home = ["HTML", "JSON", "RSS", "ATOM"]
+
+    # .Site.BaseURL/$section/index.* is available
+    section = ["HTML", "JSON", "RSS", "ATOM"]
+----

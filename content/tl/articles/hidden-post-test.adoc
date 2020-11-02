@@ -1,0 +1,18 @@
+---
+title: "Isang hidden post test"
+date: 2020-05-12T21:28:27+08:00
+hidden: true
+categories:
+    - "category1"
+tags: 
+    - "tag1"
+    - "tag2"
+---
+
+= Isang hidden post test
+2020-05-12
+
+Kamusta!
+At papano mo nahanap to?!
+
+Isang test ito para sa hidden post feature ng Hugo Contentful.
