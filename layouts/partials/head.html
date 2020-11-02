@@ -1,0 +1,60 @@
+<title>{{ if .IsHome }}{{ $.Site.Title | safeHTML }}{{ else }}{{ .Title | safeHTML }}{{ end }}</title>
+
+{{- $stylesheets := slice }}
+
+<!-- The main stylesheet being compiled. -->
+{{- $main := resources.Get "scss/main.scss" | resources.ToCSS }}
+
+{{- /* Combine all of the custom schems in under one stylesheet */ -}}
+{{ $scheme_template := resources.Get "templates/theme.scss" }}
+{{- $themes := $scheme_template | resources.ExecuteAsTemplate "css/themes.css" . | resources.ToCSS }}
+
+{{- /* Append the main stylesheet to be the last so the resulting stylesheet will make the custom colorschemes at the front. */ -}}
+{{ $stylesheets = $stylesheets | append $themes $main }}
+
+{{ $style := $stylesheets | resources.Concat "css/main.css" }}
+
+{{- /* Only enable asset bundling in production */ -}}
+{{- if hugo.IsProduction }}
+  {{- $style = $style | resources.Minify | resources.Fingerprint -}}
+{{- end }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+{{- /* Some sane <meta> tags default */ -}}
+{{ hugo.Generator }}
+<meta charset="utf-8">
+
+{{- with .Site.Author }}
+{{- $names := slice }}
+{{- range . }}{{ $names = $names | append .name }}{{ end }}
+<meta name="author" content="{{ delimit $names ", " (printf " %s " (i18n "and")) }}" />
+{{- end }}
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="{{ if (and (eq .Kind "home") .IsHome) }}{{ .Site.Title }}{{ else }}{{ .Summary | safeHTML }}{{ end }}" />
+{{- template "_internal/twitter_cards.html" . }}
+{{- template "_internal/opengraph.html" . }}
+
+
+{{- /* Linking all of the output formats for discovery. */ -}}
+{{- range .OutputFormats }}
+{{- printf "<link rel=%q type=%q href=%q />" .Rel .MediaType.Type .Permalink | safeHTML }}
+{{- end }}
+
+
+{{- if hugo.IsProduction }}
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ template "_internal/disqus.html" . }}
+{{- end }}
+
+
+{{- /* Persistent theme.
+It's a very small script so there's little effect on perceived performance. */ -}}
+<script>
+    let theme = window.localStorage.getItem('theme'); 
+    if (theme) {
+        document.documentElement.dataset.theme = theme;
+    }
+</script>
+

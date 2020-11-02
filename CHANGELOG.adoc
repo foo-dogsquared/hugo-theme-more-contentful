@@ -1,0 +1,42 @@
+= Changelog
+:toc:
+
+All notable changes to this project will be documented in this file.
+
+The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog],
+and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
+
+
+
+
+== [0.1.0] - 2020-11-02
+
+The initial release.
+
+
+=== Added
+
+* Easy custom color schemes with https://github.com/chriskempson/base16[Base16 scheme files].
+* Social media icons with https://github.com/simple-icons/simple-icons[Simple Icons] with the added setting to set whether it should appear in text or as an icon.
+* Icons on the content metadata for easier reading with link:https://heroicons.com/[HeroIcons].
+
+
+=== Changed
+
+* Port CSS into SCSS now requiring the theme to be used with the extended version.
+
+* Revamp the appearance of the site.
+
+* Update the theme button with multiple theme selection.
+Since the theme now supports more than two themes, the https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme[`prefers-color-scheme`] (the automagic color scheme solution) will not be used.
+footnote:[Workarounds exist to let automatic and manual color scheme selection work together but it is not worth it for now.]
+
+* The content metadata in the single content format.
+** Move to the bottom of the content to make more room for other metadata and to make the content more above-the-fold.
+Incidentally, this makes the theme more suitable for personal blogs (which is fine to me).
+** With the metadata has been moved, it is now replaced with the same metadata section as seen from the list template.
+
+* Improve conditional display of the table of content.
+
+* Change "Back to home" with a link bringing to the top of the page instead.
+

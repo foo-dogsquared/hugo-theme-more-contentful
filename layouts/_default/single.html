@@ -1,0 +1,58 @@
+{{ define "main" }}
+
+<article class="post--single">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    {{ partial "partials/components/post-meta.html" . }}
+
+    {{ $is_toc := cond (ne .Params.toc nil) .Params.toc $.Site.Params.toc }}
+    {{ if (and $is_toc (gt (countrunes .TableOfContents) 0)) }}
+    <style>
+    #TableOfContents:not(:empty)::before {
+      content: "{{ i18n "table_of_contents" }}";
+      font-weight: bold;
+    }
+    </style>
+    {{ .TableOfContents }}
+{{ end }}
+
+    <main>
+    {{ .Content }}
+    </main>
+
+    <hr>
+    <div class="post__meta--single">
+        <!-- List the author(s) of the article. -->
+        {{- with .Params.author }}
+        {{- $names := slice }}
+        {{- range . }}{{ $names = $names | append .name }}{{ end }}
+        <p data-content-author="{{ jsonify $names }}">{{ i18n "published_by" }}: {{ delimit $names ", " (printf " %s " (i18n "and")) }}</p>
+        {{- end }}
+
+        <!-- Only show the creation date if the `date` field is valid. -->
+        {{- if ne (.Date.Format "2006") "0001" -}}
+        <!-- Publication date. -->
+        <p data-content-publication-date="{{ .Date }}">{{ i18n "published_on" }}: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></p>
+        {{- end }}
+
+        <!-- Modification date (will only appear if the publication date is less than the modified date.) -->
+        {{- if ne .Date .Lastmod }}
+        <p data-content-modification-date="{{ .Lastmod }}">{{ i18n "updated_on" }}: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></p>
+        {{- end }}
+
+       <!-- Link the translated versions if the article has at least one translated page. -->
+        {{- if .IsTranslated }}
+        {{- $lang_links := slice }}
+        {{- $langs := slice }}
+        {{- range .Translations }}
+          {{- $lang := cond (ne .Language.LanguageName nil) .Language.LanguageName .Lang }}
+          {{ $lang_links = $lang_links | append (printf "<a href=%s>%s</a>" .Permalink $lang) }}
+          {{ $langs = $langs | append $lang }}
+        {{- end }}
+        <p data-content-translations="{{ jsonify $langs }}">{{ i18n "available_translations" }}: {{ delimit $lang_links "," (printf " %s " (i18n "and")) }}</p>
+        {{- end }}
+    </div>
+</article>
+
+{{ end }}

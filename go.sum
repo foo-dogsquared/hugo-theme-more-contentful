@@ -1,0 +1,9 @@
+github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20201026173406-633714bb359d h1:TguVIF94zP80FbYjwlHZ8j3gIL4171o79nD6lrTOcxw=
+github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20201026173406-633714bb359d/go.mod h1:IqgEwYyo2L3mFR2RoelZZ3Ncwph7QTssrZ3deCaE0us=
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.0 h1:if43vUzFAipKlnobL9THtW+QsmXp9ZPMe/vXY/vBofs=
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.0/go.mod h1:65D70b+PuQbQu0BQKQiSgp7K5vfmxrPQkcMSNIZ5nA8=
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20201030114530-c0a2488a58fb h1:W2HZmYuXfPDq7QMW0TOMSB6uI6qqbobwXRGEiCcdk9U=
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20201030114530-c0a2488a58fb/go.mod h1:BL7L5CENEhUx+miRRaOZ9SVC92j9MAMztirBWtTpiPc=
+github.com/refactoringui/heroicons v0.4.2 h1:gLYH0RH4nLh81yxAC/JgyvKIeK0d+sBVF/I2XkPb6U8=
+github.com/refactoringui/heroicons v0.4.2/go.mod h1:82HsLWQga7MkEl5aK8TctxPPIBlXrsyWcVTB57uipuk=
+github.com/simple-icons/simple-icons v0.0.0-20201025110046-413f781fd706/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  {{- partialCached "head.html" . -}}
+  <body>
+    {{- partialCached "components/theme-button.html" . }}
+    {{- partialCached "header.html" . -}}
+    {{- block "main" . }}{{- end }}
+    {{- partialCached "footer.html" . -}}
+  </body>
+</html>

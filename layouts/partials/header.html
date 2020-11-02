@@ -1,0 +1,10 @@
+<nav aria-label="Primary navigation">
+  <a class="site__title" href="{{ "" | absLangURL }}">{{ $.Site.Title }}</a>
+  <div class="list site__links">
+    {{ with $.Site.Menus.main }}
+    {{ range . -}}
+    <a href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
+    {{ end }}
+    {{ end }}
+  </div>
+  </nav>

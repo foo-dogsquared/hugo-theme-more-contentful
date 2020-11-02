@@ -1,0 +1,232 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+::selection {
+  background: var(--base01);
+}
+
+body {
+  margin: 0 auto;
+  max-width: var(--content-width);
+  padding: 1rem;
+}
+
+nav {
+  margin: 1rem auto;
+
+  &[aria-label="Primary navigation"] {
+    @include header-link-hover-style;
+
+    a {
+      color: var(--base06);
+    }
+  }
+}
+
+article {
+  h2 { margin-top: 3rem; }
+  h3 { margin-top: 2rem; }
+}
+
+h2:target {
+  animation: target-fade 3s 1;
+}
+
+@keyframes target-fade {
+  0% { background: var(--base07); color: unset; }
+  100% { background-color: transparent; }
+}
+
+
+/* Text formatting */
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: var(--header-family);
+  line-height: 1.25;
+}
+
+a {
+  color: var(--base08);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--base0C);
+    text-decoration: underline;
+  }
+
+  &::selection {
+    text-decoration: underline;
+  }
+}
+
+dd, li, p, td {
+  line-height: 1.5;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+dd {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+kbd {
+  border: var(--border-style);
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 0 0.25em;
+}
+
+tr:nth-child(even) {
+  background: var(--base01);
+}
+
+code, pre {
+  font-family: var(--mono-family);
+}
+
+code {
+  font-family: var(--mono-family);
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--base01);
+  color: var(--base06);
+  border: var(--border-style);
+  font-family: var(--mono-family);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  overflow: auto;
+}
+
+code[class*=language-]::selection,
+code[class*=language-] ::selection,
+pre[class*=language-]::selection,
+pre[class*=language-] ::selection {
+  background: var(--base01);
+  font-size: var(--mono-font-size);
+}
+
+mark {
+  background: var(--base05);
+  color: var(--base00);
+
+  &::selection {
+    color: var(--base06);
+  }
+}
+
+
+/* Multimedia blocks */
+img, video, audio, iframe {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin: auto;
+}
+
+table {
+  border: var(--border-style);
+  border-collapse: collapse;
+  margin: auto;
+}
+
+thead, tbody {
+  margin: 0 auto;
+}
+
+thead {
+  background: var(--base07);
+  color: var(--base00);
+}
+
+th, td {
+  border: var(--border-style);
+  padding: 1rem;
+}
+
+ol, ul {
+  line-height: 1.5;
+}
+
+figure {
+  margin: 2rem auto;
+  & > * {
+    margin: 1rem auto;
+  }
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1rem;
+}
+
+svg {
+  height: 1rem;
+  width: 1rem;
+  fill: currentColor;
+}
+
+blockquote {
+  margin: 2rem 1rem;
+}
+
+blockquote footer {
+  display: block;
+  width: 100%;
+}
+
+/* Form controls */
+button {
+  background: unset;
+  border: var(--base06) solid 1px;
+  color: var(--base06);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+
+/* Semantic blocks */
+aside {
+  --vertical-rhythm-reduction: 0.2;
+  color: var(--base03);
+  border: 1px solid var(--base03);
+  border-left: 3px solid var(--base03);
+  font-size: calc(1rem * (1 - var(--vertical-rhythm-reduction)));
+  font-family: var(--header-family);
+  line-height: calc(1rem * (1 + var(--vertical-rhythm-reduction)));
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+
+/* Mobile styles */
+@media all and (max-width: 860px) {
+  html:root {
+    --font-size: 17px;
+  }
+}
+
+@media print {
+  html {
+    color: var(--base00);
+    background: var(--base07);
+    overflow: auto;
+  }
+}

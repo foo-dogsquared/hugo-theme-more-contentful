@@ -1,0 +1,21 @@
+---
+title: "Hidden post test"
+date: 2020-05-12T21:29:52+08:00
+_build:
+    list: never
+
+categories:
+    - "category1"
+tags: 
+    - "tag1"
+    - "tag2"
+---
+
+= Hidden post test
+2020-05-12
+
+
+Hey!
+How did you find this?!
+
+Anyways, this is a test post for the hidden posts feature in Hugo Contentful.
