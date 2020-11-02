@@ -1,0 +1,27 @@
+---
+title: About
+---
+
+= About Contentful
+
+
+Ito ay Contentful, isang https://gohugo.io/[Hugo] theme nakapokus para sa iyong mga kuntento.
+Para sa layunin na ito, initinamtampok ng temang ito ang mga maaayos na default settings at magagandang layout.
+Ang temang ito ay inaplika rin ang mga typographic rules galing sa mga aralin ng https://practicaltypography.com/[Practical Typography], akda ni Matthew Butterick.
+
+Naitindihan ng Contentful na hindi lahat ng kaso ay puwedeng mailagay.
+Kaya naman ang temang ito ay may isa pang layunin na madaling mapalawak/baguhin ayon sa mga pangangailangan ng may-akda.
+Ang temang ito ay binubuo lamang ng iilang https://developer.mozilla.org/en-US/docs/Web/HTML[HTML] at https://developer.mozilla.org/en-US/docs/Web/CSS[CSS] files.
+
+Dahil sa mga layunin na ito, ang Contentful ay para sa mga taong gusto lang gumawa o kaya'y mga taong sabik na marumihan ang mga kamay.
+O, ang malikhaing bahagi ng paggawa ng mga tema at mga kuntento!
+
+Iilan sa mga tampok ng Contentful:
+
+* Isang simpleng default layout na may obserbasyon para sa typography.
+* Mga template para sa https://cyber.harvard.edu/rss/rss.html[RSS], https://tools.ietf.org/html/rfc4287[Atom], at https://jsonfeed.org/[JSON] feeds.
+* Dark mode.
+* Pokus sa web accessibility at search engine optimization (SEO) kabilang ang mga https://dev.twitter.com/cards[Twitter cards] and https://opengraphprotocol.org/[Open Graph protocol].
+* Google Analytics and Disqus integration.
+
+Para sa mga gustong baguhin ang tema, link:../articles/extending-contentful[mayroon isang panulat ukol dito].

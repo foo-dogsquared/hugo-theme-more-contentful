@@ -1,0 +1,81 @@
+{{- /*
+Here's where all of the inline partials are defined.
+If the partial is short enough, it should be put here.
+*/ -}}
+
+{{- /* This is a partial that creates an icon from the icon templates. */ -}}
+{{- define "partials/components/icon.html" }}
+  {{- $icon := . }}
+  {{- $res := resources.ExecuteAsTemplate (printf $icon.output $icon.id) $icon.id (resources.Get $icon.template) }}
+  <svg>
+    <use href="{{ $res.Permalink }}#{{ $icon.id }}"></use>
+  </svg>
+{{- end }}
+
+
+{{- /* A partial that aliases the Heroicon template from the icon partial */ -}}
+{{- define "partials/components/heroicon.html" }}
+  {{- partial "components/icon.html" (dict "id" . "output" "icons/generic/%s.svg" "template" "templates/heroicon.svg") }}
+{{ end }}
+
+
+{{- define "partials/components/theme-button.html" }}
+  {{- if gt (len (index $.Site.Data "more-contentful").themes) 1 }}
+  <div class="site__theme-btn" aria-label="Theme toggle">
+      {{ partial "components/heroicon.html" "color-swatch" }}
+      <div class="site__theme-dropdown">
+        {{- range $filename, $scheme := (index $.Site.Data "more-contentful").themes }}
+        {{- $name := cond (eq $filename "_index") (printf "%s (default)" .scheme) .scheme }}
+        <div class="site__theme-item" {{ if ne $filename "_index" }}data-theme="{{ .scheme }}"{{ end }}>{{ $name }}</div>
+        {{- end }}
+      </div>
+    </svg>
+  </div>
+  <script defer>
+    const themeDropdown = document.querySelector('.site__theme-btn');
+    themeDropdown.addEventListener('click', (event) => {
+      const { target } = event;
+      if (target.classList.contains("site__theme-item")) {
+        if (target.dataset.theme) {
+          theme = target.dataset.theme;
+          window.localStorage.setItem("theme", theme);
+          document.documentElement.dataset.theme = theme;
+        } else {
+          window.localStorage.removeItem("theme");
+          delete document.documentElement.dataset.theme;
+        }
+      }
+    });
+  </script>
+  {{- end }}
+{{- end }}
+
+
+{{- define "partials/components/post-meta.html" }}
+<div class="list post__meta">
+  {{- if ne (.Date.Format "2006") "0001" -}}
+  <time datetime="{{ .Date }}">
+    {{ partial "components/heroicon.html" "calendar" }}
+    <span style="margin-left: 0.5em;">{{ .Date.Format "2006-01-02" }}</span>
+  </time>
+  {{- end }}
+
+  {{- if and .GitInfo (ne (.Date.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
+  <time datetime="{{ .Lastmod }}">
+    {{ partial "components/heroicon.html" "refresh" }}
+    <span style="margin-left: 0.5em;">{{ .Lastmod.Format "2006-01-02" }}</span>
+  </time>
+  {{- end }}
+
+  {{- /* The authors are appended with 'et al' if there's more than one author in the map. */ -}}
+  {{ with .Params.author }}
+  {{ $author := index (first 1 .) 0 }}
+  <span data-authors="{{ jsonify . }}">
+    {{ partial "components/heroicon.html" "pencil" }}
+    <span style="margin-left: 0.5em;">
+      {{ $author.name }}{{ if ge (len .) 2 }}, et al.{{ end }}
+    </span>
+  </span>
+  {{ end }}
+</div>
+{{- end }}

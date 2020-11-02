@@ -1,0 +1,31 @@
+dist: bionic
+language: generic
+
+branches:
+  only:
+    - master
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install python3
+  - sudo apt-get install ruby wget
+  - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
+  - sudo dpkg -i *.deb
+  - sudo gem install asciidoctor
+
+script:
+  - hugo
+
+env:
+  global:
+    - PRODUCTION=true
+    - HUGO_RELEASE=0.76.0
+
+deploy:
+  local_dir: "./public/"
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  target_branch: gh-pages
+  on:
+    branch: demo

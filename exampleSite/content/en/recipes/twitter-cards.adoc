@@ -1,0 +1,27 @@
+---
+title: "Twitter cards"
+date: 2020-10-20T20:31:32+08:00
+
+categories:
+    - "recipe"
+tags: 
+    - "twitter"
+    - "social media"
+---
+
+= Twitter cards
+John Doe <johndoe@example.com>
+2020-10-20 20:31:32 +0800
+:stem: latexmath
+
+
+This will add https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started[Twitter cards] for your webpages.
+(Be sure to copy the `head` partial first in your own layout folder.)
+
+Thankfully, Hugo already has https://gohugo.io/templates/internal/#twitter-cards[an internal template for Twitter cards].
+Simply add  `{{- template "_internal/twitter_cards.html" . -}}` somewhere in your own copy.
+(For reference, https://github.com/gohugoio/hugo/blob/25a6b33693992e8c6d9c35bc1e781ce3e2bca4be/tpl/tplimpl/embedded/templates/twitter_cards.html[here's the source code for the internal template].)
+
+You could also roll your own Twitter cards but I recommend to modify the internal template instead fitting your specific needs.
+(Copy the internal template from the given link, create it as a partial in `layouts/partials/twitter_cards.html`, modify it, and insert the template with `{{- partial "twitter_cards.html" -}}`.)
+

@@ -1,0 +1,13 @@
+github.com/eimajtrebor/hugo-mod-heroicons v0.0.0-20201017130534-07f09dd2f2f8 h1:RYguOV/Ubdb+yxENNWtehJPDUCpvMFxAqe0CheLmCL8=
+github.com/eimajtrebor/hugo-mod-heroicons v0.0.0-20201017130534-07f09dd2f2f8/go.mod h1:la8aikeVFFYvTHYkbYJjccI/7KaP7DQMBOIeF9GfDXg=
+github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20201026173406-633714bb359d h1:TguVIF94zP80FbYjwlHZ8j3gIL4171o79nD6lrTOcxw=
+github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20201026173406-633714bb359d/go.mod h1:IqgEwYyo2L3mFR2RoelZZ3Ncwph7QTssrZ3deCaE0us=
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.0 h1:if43vUzFAipKlnobL9THtW+QsmXp9ZPMe/vXY/vBofs=
+github.com/foo-dogsquared/hugo-theme-contentful v2.0.0+incompatible h1:KcvDzjZR1AcecXmTmyj/uiXmCpyQtf18l0awyIU+Ry8=
+github.com/foo-dogsquared/hugo-theme-contentful v2.0.0+incompatible/go.mod h1:65D70b+PuQbQu0BQKQiSgp7K5vfmxrPQkcMSNIZ5nA8=
+github.com/iconfu/svg-inject v1.2.3 h1:6r6aFq9JELTHY+lR3pfjBCMFliXyJeqECF9feuH9GVc=
+github.com/iconfu/svg-inject v1.2.3/go.mod h1:Bw65kdn/PHpRM5Iu4KT6TJuyVlqt3TXIcPJoHp1yobU=
+github.com/refactoringui/heroicons v0.4.2/go.mod h1:82HsLWQga7MkEl5aK8TctxPPIBlXrsyWcVTB57uipuk=
+github.com/simple-icons/simple-icons v0.0.0-20200705072923-aa9011eabc5c h1:qAyMxvZlciWz+Lg5Otg0udYTSNAo6CQRkMnYmIaFKFc=
+github.com/simple-icons/simple-icons v0.0.0-20200705072923-aa9011eabc5c/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=
+github.com/simple-icons/simple-icons v0.0.0-20201025110046-413f781fd706/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=

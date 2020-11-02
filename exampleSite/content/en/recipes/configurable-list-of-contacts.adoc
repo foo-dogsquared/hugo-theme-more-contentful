@@ -1,0 +1,67 @@
+---
+title: "Configurable list of contacts"
+date: 2020-10-20T20:38:24+08:00
+
+categories:
+    - "recipe"
+---
+
+= Configurable list of contacts
+John Doe <johndoe@example.com>
+2020-10-20 20:38:24 +0800
+:stem: latexmath
+
+
+Most themes offer quick social media links with site configuration.
+However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
+
+To get around this, we'll make use of https://gohugo.io/templates/data-templates/[data templates].
+Let's create a quick game plan how does it work.
+
+The data is a top-level dictionary/object with each key contains an object with the following fields.
+
+* `url` is the... contact link itself and it is required to have it.
+
+* `name` is the text to appear in the output.
+Also required to have.
+
+* `weight` is an integer similar to how Hugo sorts the pages with the lower weight having high precedence;
+if this key is absent, it will be interpreted as 0.
+
+And here's the data example in TOML which is placed in `data/contact.toml`.
+
+```toml
+[github]
+    name = "GitHub"
+    url = "https://github.com/foo-dogsquared"
+
+[gitlab]
+    name = "Gitlab"
+    url = "https://gitlab.com/foo-dogsquared"
+
+[keybase]
+    name = "Keybase"
+    url = "https://keybase.io/foo_dogsquared"
+    weight = -1
+
+[twitter]
+    name = "Twitter"
+    url = "https://twitter.com/foo_dogsquared"
+```
+
+I want my Keybase profile to appear first than anything else for whatever reason so the `weight` key is set to -1.
+
+With this data, we can then create a template out of it.
+I've put the following template in a partial named `contacts` (i.e., `layouts/partials/contacts`).
+
+```go
+<address>
+{{- range (sort $.Site.Data.contacts "weight" "asc") -}}
+| <a rel="me" href="{{ .url }}">{{- .name -}}</a> |
+{{- end -}}
+</address>
+```
+
+A suggestion (and an exercise) for extending this is to create image links.
+Maybe add another key named `image` that accepts either URL.
+The `name` would now be the image alternative text.

@@ -1,0 +1,18 @@
+{{- range $name, $scheme := (index $.Site.Data "more-contentful").themes }}
+  // This is a template for a colorscheme based from a Base16 data file from https://github.com/chriskempson/base16.
+  @mixin createColorScheme($invert: false) {
+    {{- range $i := seq 0 15 }}
+    {{- $hex := upper (printf "%02x" $i) }}
+    {{- $key := printf "base%s" $hex }}
+    @if $invert {
+      --{{ $key }}: #{invert(#{{ index $scheme $key }}, 100%)};
+    } @else {
+      --{{ $key }}: #{{ index $scheme $key }};
+    }
+    {{- end }}
+  }
+
+  {{- if ne $name "_index" }}[data-theme="{{ .scheme }}"]{{ end }}:root {
+    @include createColorScheme;
+  }
+{{- end }}

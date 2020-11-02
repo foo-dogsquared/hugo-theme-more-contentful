@@ -1,0 +1,65 @@
+{{ $pag := .Paginator }}
+
+{{- /* The minimum pages starting from the first page */ -}}
+{{ $minimumPage := .minimumPage | default 1 }}
+
+{{- /* The number of pages to be shown with the active page. */ -}}
+{{ $activeNumberOfPages := .activeNumberOfPages | default 2 }}
+
+{{- /* Since the active page is also included when adding the in-between pages of the active page, we need to increment it to mitigate against it. */ -}}
+{{ $midpointPages := add $activeNumberOfPages 1 }}
+
+{{ if gt $pag.TotalPages 1 -}}
+<ul class="pagination">
+  {{- $ellipsed := false -}}
+  {{- $shouldEllipse := false -}}
+  {{- range $pag.Pagers -}}
+  {{ $minimumActivePage := sub $pag.PageNumber $activeNumberOfPages }}
+  {{ $maximumActivePage := add $pag.PageNumber $activeNumberOfPages }}
+
+  {{- /* Make all of the given number of pages starting from both ends to be visible */ -}}
+  {{- $showNumber := or (le .PageNumber $minimumPage) (lt (sub .TotalPages .PageNumber) $minimumPage) -}}
+
+  {{- /* Make all of the given number of pages between the active page number visible */ -}}
+  {{- $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber $midpointPages)) (lt .PageNumber (add $pag.PageNumber $midpointPages))) -}}
+
+  {{- /*
+    Make all of the page number that is just before/after the minimum page threshold to be visible.
+    This is applied to those situations where there's only one number remaining before the end
+  */ -}}
+  {{ if eq .PageNumber (sub $minimumActivePage 1) }}
+    {{ $showNumber = or $showNumber (eq (sub $minimumActivePage $minimumPage) (add $pag.First.PageNumber 1)) }}
+  {{ else if eq .PageNumber (add $maximumActivePage 1) }}
+    {{ $showNumber = or $showNumber (eq (add $maximumActivePage 1) (sub $pag.Last.PageNumber $minimumPage)) }}
+  {{ end }}
+
+  {{- if $showNumber -}}
+    {{- $ellipsed = false -}}
+    {{- $shouldEllipse = false -}}
+  {{- else -}}
+    {{- $shouldEllipse = not $ellipsed -}}
+    {{- $ellipsed = true -}}
+  {{- end -}}
+  {{- if $showNumber }}
+  <li>
+      <a class="page-link{{ if eq . $pag }}--active{{ end }}" href="{{ .URL }}"
+         {{- if eq (sub $pag.PageNumber .PageNumber) 1 }}
+            rel="prev"
+            aria-label="Previous"
+         {{- else if (eq (sub $pag.PageNumber .PageNumber) -1) }}
+            rel="next"
+            aria-label="Next"
+         {{- else if (eq $pag.PageNumber .PageNumber) }}
+            aria-label="Current"
+            aria-current="page"
+         {{- end -}}
+      >{{ .PageNumber }}</a>
+  </li>
+  {{- else if $shouldEllipse }}
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
+  {{- end -}}
+  {{- end }}
+</ul>
+{{ end }}

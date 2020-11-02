@@ -1,0 +1,130 @@
+baseURL = "https://foo-dogsquared.github.io/hugo-theme-contentful/"
+title = "Contentful"
+enableGitInfo = true
+paginate = 20
+rssLimit = 2
+
+
+[module]
+    [[module.imports]]
+      path = "github.com/foo-dogsquared/hugo-web-feeds"
+    [[module.imports]]
+      path = "github.com/foo-dogsquared/hugo-theme-more-contentful"
+
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+    [markup.asciidocExt]
+        preserveToc = false
+        [markup.asciidocExt.attributes]
+          toc = true
+          sectanchor = true
+          experimental = true
+
+
+
+[author]
+    [author.john_doe]
+        name = "John Doe"
+        email = "johndoe@example.com"
+
+
+[languages]
+    [languages.en]
+        # This key is used for more readable links.
+        # If this key is absent, it will use the object name (`en` in this case).
+        languageName = "English"
+
+        # This key is used for the Open Graph protocol `og:locale`.
+        # It should be in valid format as specified from the spec (https://opengraphprotocol.org/).
+        # The format is `$LANG-$TERRITORY` where: 
+        #   * `$LANG` is the ISO 639-1 two-letter language code (https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
+        #   * `$TERRITORY` is in ISO 3166-1 Alpha-2 code (https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes).
+        #
+        # If this key is absent, it will use the object name (still `en`).
+        languageCode = "en-us"
+        contentDir = "content/en"
+
+        [languages.en.menu]
+            [[languages.en.menu.main]]
+                name = "About"
+                url = "about/"
+
+            [[languages.en.menu.main]]
+                name = "Categories"
+                url = "categories/"
+            
+            [[languages.en.menu.main]]
+                name = "Tags"
+                url = "tags/"
+
+            [[languages.en.menu.main]]
+                name = "Recipes"
+                url = "recipes/"
+
+
+    [languages.tl]
+        languageName = "Tagalog"
+        languageCode = "tl"
+        contentDir = "content/tl"
+
+        [languages.tl.menu]
+            [[languages.tl.menu.main]]
+                name = "About"
+                url = "about/"
+
+            [[languages.tl.menu.main]]
+                name = "Categories"
+                url = "categories/"
+            
+            [[languages.tl.menu.main]]
+                name = "Tags"
+                url = "tags/"
+
+
+# Visit the following for more information:
+# https://gohugo.io/templates/output-formats
+
+# Defining the media type of the output formats
+# For JSON format, it doesn't need to be since it's already built-in into Hugo
+[mediaTypes]
+    [mediaTypes."application/atom+xml"]
+        suffixes = ["atom", "atom.xml"] # You can remove the "atom.xml" if you want
+    
+    # Redefining RSS media type for the additional suffix
+    [mediaTypes."application/rss+xml"]
+        suffixes = ["rss", "rss.xml"] # You can remove the "rss.xml" if you want
+
+    [mediaTypes."application/feed+json"]
+        suffixes = ["json"]
+
+
+# Including all of the feed output formats in the build
+[outputFormats]
+    [outputFormats.RSS]
+        mediaType = "application/rss+xml"
+        baseName = "feed"
+
+    [outputFormats.ATOM]
+        mediaType = "application/atom+xml"
+        baseName = "feed"
+    
+    [outputFormats.JSON]
+        mediaType = "application/feed+json"
+        baseName = "feed"
+
+
+# Indicating what output formats shall be included 
+# for the following kinds
+[outputs]
+    # .Site.BaseURL/$basename.* is available 
+    home = ["HTML", "JSON", "RSS", "ATOM"]
+
+    # .Site.BaseURL/$section/$basename.* is available
+    section = ["HTML", "JSON", "RSS", "ATOM"] 
+
+
+[params]
+  toc = true

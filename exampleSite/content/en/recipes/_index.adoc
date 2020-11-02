@@ -1,0 +1,17 @@
+---
+title: Recipes
+date: 2020-05-12T17:25:55+08:00
+
+categories:
+    - "guide"
+tags: 
+    - "theme"
+    - "extending"
+---
+
+= Extending Contentful
+2020-05-12
+
+Extending a Hugo theme is nothing new and a https://gohugo.io/content-management/sections/[few] http://hugocodex.org/add-ons/[places] provide a place for the most common extensions.
+In this section, I'll be listing a few personal recipes I've always used for extending a Hugo theme.
+Though this only applies specifically to Contentful and may need some tweaking when applying it other themes.
