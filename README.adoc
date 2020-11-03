@@ -10,27 +10,15 @@ Tested primarily with Chromium-based and Firefox-based browsers.
 
 
 
-== Project goals
+== Demo
 
-* Create a batteries-included theme that is easy to extend and/or modify.
-* Focus on the ease of migration of content and data in case the user wants to switch themes.
-* https://webaim.org/[Accessibility] for people with disabilities (PWD).
-* Make the theme browsable with the following text browsers:
-** https://www.brow.sh/[Browsh]
-** http://links.twibright.com/[Links]
-** https://invisible-island.net/lynx/[Lynx] (the ultimate challenge!)
-* Low https://addyosmani.com/blog/performance-budgets/[performance budget] of 30KB or even less, must load under 1 second on a mobile 3G connection, and has a Lighthouse score of >90.
-footnote:[It only considered with the default configuration and without non-textual resources such as images and videos.]
-* Make the theme functional on `<noscript>`.
+But first, a quick screenshot of the theme.
 
+image:./docs/demo-full.png[The theme in desktop-sized windows.]
 
-=== Non-goals
-
-* Include all of the modern things commonly found on today's web sites (or even Hugo themes).
-It may not fit with the requirements that a complex project demands.
-Thus, it is encouraged that the author should modify according to their settings.
-
-* Make every possible option as a setting or a toggle switch.
+Demo available at the `demo` branch of this Git repo.
+It is automatically deployed with Travis CI and its output is available in https://foo-dogsquared.github.io/hugo-theme-more-contentful.
+It also provides an example how to deploy your Hugo site with GitHub pages.
 
 
 
@@ -50,6 +38,31 @@ The following features highlights the differences from the original.
 
 This is mainly for personal blogs running a one-man show.
 footnote:[Still, this theme is designed with multiple authors in mind.]
+
+
+
+
+== Project goals
+
+* Create a batteries-included theme that is easy to extend and/or modify.
+* Focus on the ease of migration of content and data in case the user wants to switch themes.
+* https://webaim.org/[Accessibility] for people with disabilities (PWD).
+* Make the theme browsable with the following text browsers:
+** https://www.brow.sh/[Browsh]
+** http://links.twibright.com/[Links]
+** https://invisible-island.net/lynx/[Lynx] (the ultimate challenge!)
+* Low https://addyosmani.com/blog/performance-budgets/[performance budget] of 30KB or even less, must load under 1 second on a mobile 3G connection, and has a Lighthouse score of >90.
+footnote:[It only considered with the default configuration and without non-textual resources such as images and videos.]
+* Make the theme functional on `<noscript>` (preferably testing with https://www.gnu.org/software/librejs/[LibreJS] extension).
+
+
+=== Non-goals
+
+* Include all of the modern things commonly found on today's web sites (or even Hugo themes).
+It may not fit with the requirements that a complex project demands.
+Thus, it is encouraged that the author should modify according to their settings.
+
+* Make every possible option as a setting or a toggle switch.
 
 
 
@@ -101,7 +114,7 @@ Then, you can import the Hugo module in your site config.
   path = "github.com/foo-dogsquared/hugo-theme-more-contentful"
 ----
 
-You can also specify the tag by adding `@$TAG` at the end of the path.
+You can also specify the tag (e.g., `hugo-theme-more-contentful@v1.2.3`) or the commit (e.g., `hugo-theme-more-contentful@abcdefg`).
 For more information, you can see https://github.com/golang/go/wiki/Modules#how-to-upgrade-and-downgrade-dependencies[how to specify Go modules] since Hugo modules are built on top of it.
 
 Next, get the dependency by running `hugo mod get` and to update the component, run `hugo mod get -u`.
@@ -207,23 +220,23 @@ Indicating the author(s) is also the same with content pages.
 
 For completeness and best practice, the author object should be structured with the following schema.
 
-* `name`, as already mentioned, is the name of the author.
-* `url` that points to the homepage (or whatever link of their choosing) of the author.
-* `email` for the author's public email.
-* `img` points to a URL of the profile image of the author.
+* `name` (string), as already mentioned, is the name of the author.
+* `url` (string) that points to the homepage (or whatever link of their choosing) of the author.
+* `email` (string) for the author's public email.
+* `img` (string) points to a URL of the profile image of the author.
 It can also point relative to the Hugo project root.
 
 
 === Creating your own color scheme
+
+To create a color scheme, simply place a Base16 color scheme data file in `data/more-contentful/themes/`.
+For example, take the https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml[default Base16 dark scheme] which is also the default scheme for this theme.
 
 Creating your own color scheme has been simplified with the use of https://gohugo.io/templates/data-templates/#the-data-folder[data templates].
 Furthermore, with https://gohugo.io/hugo-pipes/bundling/#readout[asset bundling], CSS variables, and SCSS, it is ensured that all of the schemes will be kept in one resulting stylesheet.
 
 NOTE: In case you want to modify the stylesheet, the website has been styled according to the https://github.com/chriskempson/base16/blob/master/styling.md[Base16 styling guidelines] with some liberty.
 Not all Base16 color schemes follow the guideline strictly so it may result in a bad-looking color palette of the website.
-
-To create a color scheme, simply place a Base16 color scheme data file in `data/more-contentful/themes`.
-For example, take the https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml[default Base16 dark scheme] which is also the default scheme for this theme.
 
 [source, yaml]
 ----
@@ -247,12 +260,12 @@ base0E: "ba8baf"
 base0F: "a16946"
 ----
 
+You can also use https://github.com/chriskempson/base16#scheme-repositories[any of the existing color schemes] as a starting point.
+If you want to override the default scheme, you can place the file as `_index.{json,toml,yaml}` (of whatever appropriate data format of your choice).
+
 NOTE: Inheriting schemes is not possible and to change one color of the color scheme, you have to create a whole new file with the single change.
 Even though scheme inheritance can be implemented, it'll open a new gate of unpredictable problems so it is better to be explicit on everything for now.
 Sorry, it will never be added on the theme. :(
-
-You can also use https://github.com/chriskempson/base16#scheme-repositories[any of the existing color schemes] as a starting point.
-If you want to override the default scheme, you can place the file as `_index.{json,toml,yaml}` (of whatever appropriate data format of your choice).
 
 The schemes are pressed against a template (i.e., link:./assets/templates/theme.scss[`./assets/templates/theme.scss`]) then added to the resulting stylesheet.
 
@@ -313,7 +326,7 @@ The icon object with the smallest weight will be the first to appear in the list
 If a link object has the same weight, it will be ordered alphabetically by its `id`.
 
 Consider the example that I have a list of social media accounts and want my Keybase account to be listed first.
-Thus, the Keybase link object will have a weight of `-1`.
+Thus, the related object will have a weight of `-1`.
 
 [source, toml]
 ----
@@ -383,7 +396,7 @@ The following exhaustive list sets the following:
 * Install an https://editorconfig.org/[EditorConfig] plugin for your text editor.
 If it's not possible, follow the link:.editorconfig[the EditorConfig config].
 
-** It is optional but install https://github.com/editorconfig-checker/editorconfig-checker[editconfig-checker] for easier checking of the files.
+** It is optional but install https://github.com/editorconfig-checker/editorconfig-checker[editorconfig-checker] for easier checking of the files.
 
 * For theme-specific https://gohugo.io/templates/data-templates/[data templates], the data should be pulled from `./data/more-contentful/` directory.
 This is to make data migration easier for the user in case they want to switch themes.

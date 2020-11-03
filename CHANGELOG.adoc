@@ -9,6 +9,26 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 
 
+[appendix]
+== Extra notes
+
+* v0.1.1 has been versioned without any changes due to (speculated) GitHub caching with the `go.mod` file affecting the fetching of the Hugo module.
+
+
+
+
+== [0.1.2] - 2020-11-04
+
+=== Fixed
+
+* The page titles inside of `<title>` has been updated similarly to https://gohugo.io/[Hugo's way of titling pages].
+* Caching issue for the theme which causes a variety of unexpected behavior to pop up:
+** The inability to update the theme stylesheet and the theme button component.
+** The incorrect page titles.
+
+
+
+
 == [0.1.0] - 2020-11-02
 
 The initial release.

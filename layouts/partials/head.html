@@ -1,4 +1,4 @@
-<title>{{ if .IsHome }}{{ $.Site.Title | safeHTML }}{{ else }}{{ .Title | safeHTML }}{{ end }}</title>
+<title>{{ if not .IsHome }}{{ .Title | safeHTML }} |{{ end }} {{ $.Site.Title | safeHTML }}</title>
 
 {{- $stylesheets := slice }}
 
