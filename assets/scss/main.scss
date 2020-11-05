@@ -30,12 +30,6 @@
     @return str-slice($hex, $first, $first) + str-slice($hex, $second, $second)
 }
 
-@mixin content-separator {
-  content: " | ";
-  color: var(--base03);
-  margin: auto 0.5em;
-}
-
 @mixin header-link-hover-style {
   > *:hover {
     color: var(--base0C);

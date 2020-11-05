@@ -39,22 +39,22 @@
 
 {{- /* Linking all of the output formats for discovery. */ -}}
 {{- range .OutputFormats }}
-{{- printf "<link rel=%q type=%q href=%q />" .Rel .MediaType.Type .Permalink | safeHTML }}
+  {{- printf "<link rel=%q type=%q href=%q />" .Rel .MediaType.Type .Permalink | safeHTML }}
 {{- end }}
 
 
 {{- if hugo.IsProduction }}
-    {{ template "_internal/google_analytics_async.html" . }}
-    {{ template "_internal/disqus.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+  {{ template "_internal/disqus.html" . }}
 {{- end }}
 
 
 {{- /* Persistent theme.
 It's a very small script so there's little effect on perceived performance. */ -}}
 <script>
-    let theme = window.localStorage.getItem('theme'); 
-    if (theme) {
-        document.documentElement.dataset.theme = theme;
-    }
+  let theme = window.localStorage.getItem('theme'); 
+  if (theme) {
+    document.documentElement.dataset.theme = theme;
+  }
 </script>
 

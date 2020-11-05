@@ -143,7 +143,7 @@ paginate = 20
 
 [module]
   [[module.imports]]
-    path = "github.com/foo-dogsquared/hugo-theme-contentful"
+    path = "github.com/foo-dogsquared/hugo-theme-more-contentful"
   [[module.imports]]
     path = "github.com/foo-dogsquared/hugo-web-feeds"
 

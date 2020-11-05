@@ -17,6 +17,17 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 
 
+== [Unreleased]
+
+=== Fixed
+
+* Make a few tweaks with CSS.
+* Formatting of files.
+* Relative files in the contact links are now linked with `absLangURL` which is useful for linking web feeds.
+
+
+
+
 == [0.1.2] - 2020-11-04
 
 === Fixed

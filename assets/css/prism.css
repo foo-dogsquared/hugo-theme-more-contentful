@@ -1,13 +1,11 @@
 /**
- * Dracula Theme originally by Zeno Rocha [@zenorocha]
- * https://draculatheme.com/
- *
- * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ * This is a CSS stylesheet template for Prism in case you use that.
+ * This is based from a Prism CSS port by Albert Vallverdu [@byverdu].
  */
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: var(--base07);
+  color: var(--base05);
   background: none;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   text-align: left;

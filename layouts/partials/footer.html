@@ -5,12 +5,12 @@
 
 <!-- Linking to other languages' homepage. -->
 {{ if $.Site.IsMultiLingual }}
-<p>{{ i18n "multilingual" }}:
-<span class="list site__languages">
-{{ range $.Site.Languages }}
-  <a href="{{ . | relURL }}" hreflang="{{ .Lang }}">{{ with .LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a>
-{{ end }}
-</span>
+  <p>{{ i18n "multilingual" }}:
+  <span class="list site__languages">
+  {{ range $.Site.Languages }}
+    <a href="{{ . | relURL }}" hreflang="{{ .Lang }}">{{ with .LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a>
+  {{ end }}
+  </span>
 </p>
 {{ end }}
 
@@ -24,12 +24,12 @@
   {{ $links = sort $links "weight" "asc" }}
   {{- range $links -}}
   <li>
-    <a {{ if $useImage }}class="site__social-icon"{{ end }} rel="me" href="{{ .url }}" aria-label="{{ with .name }}{{ . }}{{ else }}{{ .id }}{{ end }}">
-  {{- if $useImage }}
-    {{- partial "components/icon.html" (dict "id" .id "output" "icons/brand/%s.svg" "template" "templates/simple-icon.svg") }}
-  {{- else }}
-    {{- .name }}
-  {{- end }}
+    <a {{ if $useImage }}class="site__social-icon"{{ end }} rel="me" href="{{ .url | absLangURL }}" aria-label="{{ with .name }}{{ . }}{{ else }}{{ .id }}{{ end }}">
+    {{- if $useImage }}
+      {{- partial "components/icon.html" (dict "id" .id "output" "icons/brand/%s.svg" "template" "templates/simple-icon.svg") }}
+    {{- else }}
+      {{- .name }}
+    {{- end }}
     </a>
   </li>
   {{- end -}}
