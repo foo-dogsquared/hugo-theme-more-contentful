@@ -208,6 +208,9 @@ paginate = 20
     mainSections = [ "posts", "recipes", "projects" ]
 ----
 
+As for the page variables, it uses no custom frontmatter variables.
+For more information, you can refer to https://gohugo.io/content-management/front-matter#predefined[the predefined variables that Hugo accepts].
+
 
 === Authors
 
@@ -229,14 +232,14 @@ It can also point relative to the Hugo project root.
 
 === Creating your own color scheme
 
-To create a color scheme, simply place a Base16 color scheme data file in `data/more-contentful/themes/`.
-For example, take the https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml[default Base16 dark scheme] which is also the default scheme for this theme.
-
 Creating your own color scheme has been simplified with the use of https://gohugo.io/templates/data-templates/#the-data-folder[data templates].
 Furthermore, with https://gohugo.io/hugo-pipes/bundling/#readout[asset bundling], CSS variables, and SCSS, it is ensured that all of the schemes will be kept in one resulting stylesheet.
 
-NOTE: In case you want to modify the stylesheet, the website has been styled according to the https://github.com/chriskempson/base16/blob/master/styling.md[Base16 styling guidelines] with some liberty.
+NOTE: In case you want to modify the stylesheet, the website has been styled according to the https://github.com/chriskempson/base16/blob/master/styling.md[Base16 styling guidelines] with some liberties applied.
 Not all Base16 color schemes follow the guideline strictly so it may result in a bad-looking color palette of the website.
+
+To create a color scheme, simply place a Base16 color scheme data file in `data/more-contentful/themes/`.
+For example, take the https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml[default Base16 dark scheme] which is also the default scheme for this theme.
 
 [source, yaml]
 ----
