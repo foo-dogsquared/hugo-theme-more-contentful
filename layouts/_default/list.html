@@ -9,7 +9,7 @@ Otherwise, we take the pages of a section. */ -}}
   {{- $pages = where $.Site.RegularPages "Type" "in" $.Site.Params.mainSections }}
 {{- end }}
 
-{{- range (where (.Paginate $pages).Pages "Params.hidden" "!=" true) }}
+{{- range (.Paginate $pages).Pages }}
 <article class="post">
   <h1><a href="{{ .Permalink }}" aria-label="{{ .Title }}">{{ .Title }}</a></h1>
   {{ partial "partials/components/post-meta.html" . }}

@@ -19,6 +19,12 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 == [Unreleased]
 
+=== Changed
+
+* All references to `.Date` are changed with `.PublishDate` as it is more reliable.
+The `.PublishDate` can be manually set with the `publishdate` frontmatter variable and if unset, it is the assumed to be the `date` variable.
+
+
 === Fixed
 
 * Make a few tweaks with CSS.

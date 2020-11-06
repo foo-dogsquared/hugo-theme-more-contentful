@@ -33,11 +33,11 @@
     <!-- Only show the creation date if the `date` field is valid. -->
     {{- if ne (.PublishDate.Format "2006") "0001" -}}
     <!-- Publication date. -->
-    <p data-content-publication-date="{{ .Date }}">{{ i18n "published_on" }}: <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "2006-01-02" }}</time></p>
+    <p data-content-publication-date="{{ .PublishDate }}">{{ i18n "published_on" }}: <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "2006-01-02" }}</time></p>
     {{- end }}
 
     <!-- Modification date (will only appear if the publication date is less than the modified date.) -->
-    {{- if ne .Date .Lastmod }}
+    {{- if ne .PublishDate .Lastmod }}
     <p data-content-modification-date="{{ .Lastmod }}">{{ i18n "updated_on" }}: <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time></p>
     {{- end }}
 
