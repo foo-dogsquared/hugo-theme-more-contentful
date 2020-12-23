@@ -6,18 +6,20 @@
 {{- range .Data.Terms }}
   {{- $pages := .Pages }}
   {{- if ge (len $pages) 1 }}
-  <header id="{{ .Page.Title | urlize }}" class="taxonomy__header">
-    <h2>{{ .Page.Title }}</h2>
-    <small>(<a href="{{ .Page.RelPermalink }}">{{ i18n "permalink" | default "Permalink" }}</a>)</small>
-  </header>
-  <ul class="taxonomy__pages">
-  {{- range $pages }}
-      <li class="taxonomy__page">
+  <section id="{{ .Page.Title | urlize }}">
+    <header class="taxonomy__header">
+      <h2>{{ .Page.Title }}</h2>
+      <small>(<a href="{{ .Page.RelPermalink }}">{{ i18n "permalink" | default "Permalink" }}</a>)</small>
+    </header>
+    <ul class="taxonomy__pages">
+    {{- range $pages }}
+        <li class="taxonomy__page">
           <date datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006-01-02" }}</date>
           <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-      </li>
-  {{- end }}
-  </ul>
+        </li>
+    {{- end }}
+    </ul>
+  </section>
   {{- end }}
 {{- end }}
 

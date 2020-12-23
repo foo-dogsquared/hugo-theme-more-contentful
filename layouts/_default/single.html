@@ -10,7 +10,7 @@
   {{ if (and $is_toc (gt (countrunes .TableOfContents) 0)) }}
   <style>
 #TableOfContents:not(:empty)::before {
-  content: "{{ i18n "table_of_contents" }}";
+  content: "{{ i18n "table_of_contents" | default "Table of contents" }}";
   font-weight: bold;
 }
   </style>

@@ -4,7 +4,9 @@
   <body>
     {{- partial "components/theme-button.html" . }}
     {{- partial "header.html" . -}}
+    <hr>
     {{- block "main" . }}{{- end }}
+    <hr>
     {{- partial "footer.html" . -}}
   </body>
 </html>
