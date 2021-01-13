@@ -22,7 +22,10 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 === Changed
 
 * Clean the layouts.
+
 * Change the style of the horizontal rule with colors.
+
+* Update the link:https://github.com/foo-dogsquared/hugo-mod-simple-icons[Simple Icons module].
 
 
 
