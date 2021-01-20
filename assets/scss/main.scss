@@ -13,6 +13,9 @@
   --border-style: var(--base06) solid 1px;
 }
 
+$mobile-breakpoint: 600px;
+$tablet-breakpoint: 860px;
+
 :root {
   font-family: var(--body-family);
   font-size: var(--font-size);

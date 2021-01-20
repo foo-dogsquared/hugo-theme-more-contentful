@@ -1,7 +1,17 @@
 *, *::before, *::after { box-sizing: border-box; }
 
+*:target {
+  animation: target-fade 3s 1;
+}
+
+@keyframes target-fade {
+  0% { background: var(--base0C); }
+  100% { background: unset; }
+}
+
+
 ::selection {
-  background: var(--base01);
+  background: var(--base0F);
 }
 
 body {
@@ -12,28 +22,15 @@ body {
 
 nav {
   margin: 1rem auto;
-
-  &[aria-label="Primary navigation"] {
-    @include header-link-hover-style;
-
-    a {
-      color: var(--base06);
-    }
-  }
 }
 
 article {
+  h1 { margin: 1rem auto; }
   h2 { margin-top: 3rem; }
   h3 { margin-top: 2rem; }
-}
-
-h2:target {
-  animation: target-fade 3s 1;
-}
-
-@keyframes target-fade {
-  0% { background: var(--base07); color: unset; }
-  100% { background-color: transparent; }
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+  }
 }
 
 
@@ -217,11 +214,13 @@ footer {
   flex-flow: column wrap;
   justify-content: space-evenly;
   text-align: center;
+
+
 }
 
 
 /* Mobile styles */
-@media all and (max-width: 860px) {
+@media all and (max-width: $tablet-breakpoint) {
   html:root {
     --font-size: 17px;
   }
