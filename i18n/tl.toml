@@ -1,0 +1,29 @@
+# Content
+[published_by]
+other = "Sinulat ni"
+
+[published_on]
+other = "Na-publish noong"
+
+[updated_on]
+other = "Binago noong"
+
+[available_translations]
+other = "Mga pagsasalin"
+
+[table_of_contents]
+other = "Talaan ng nilalaman"
+
+
+# General
+[and]
+other = "at"
+
+[back_to_home]
+other = "Balik sa homepage"
+
+[multilingual]
+other = "Ibang lengwahe"
+
+[page_not_found]
+other = "Hindi makita ang webpage na hinahanap mo"

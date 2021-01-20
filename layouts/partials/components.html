@@ -69,13 +69,16 @@ If the partial is short enough, it should be put here.
 
   {{- /* The authors are appended with 'et al' if there's more than one author in the map. */ -}}
   {{ with .Params.author }}
-  {{ $author := index (first 1 .) 0 }}
-  <span data-authors="{{ jsonify . }}">
+  {{- $names := slice }}
+  {{- range . }}{{ $names = $names | append .name }}{{ end }}
+  {{- $author := index (first 1 $names) 0 }}
+  <span data-authors="{{ jsonify $names }}">
     {{ partial "components/heroicon.html" "pencil" }}
     <span style="margin-left: 0.5em;">
-      {{ $author.name }}{{ if ge (len .) 2 }}, et al.{{ end }}
+      {{ $author }}{{ if ge (len .) 2 }}, et al.{{ end }}
     </span>
   </span>
   {{ end }}
+
 </div>
 {{- end }}

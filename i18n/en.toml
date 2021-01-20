@@ -1,0 +1,29 @@
+# Content
+[published_by]
+other = "Authors"
+
+[published_on]
+other = "Created"
+
+[updated_on]
+other = "Updated"
+
+[available_translations]
+other = "Translations"
+
+[table_of_contents]
+other = "Table of contents"
+
+
+# General
+[and]
+other = "and"
+
+[back_to_home]
+other = "Back to home"
+
+[multilingual]
+other = "Available in other languages"
+
+[page_not_found]
+other = "Page not found"

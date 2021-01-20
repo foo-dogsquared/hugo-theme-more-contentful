@@ -43,16 +43,16 @@
     {{- if $showNumber }}
     <li>
       <a class="page-link{{ if eq . $pag }}--active{{ end }}" href="{{ .URL }}"
-       {{- if eq (sub $pag.PageNumber .PageNumber) 1 }}
-          rel="prev"
-          aria-label="Previous"
-       {{- else if (eq (sub $pag.PageNumber .PageNumber) -1) }}
-          rel="next"
-          aria-label="Next"
-       {{- else if (eq $pag.PageNumber .PageNumber) }}
-          aria-label="Current"
-          aria-current="page"
-       {{- end -}}
+      {{- if eq (sub $pag.PageNumber .PageNumber) 1 }}
+        rel="prev"
+        aria-label="Previous"
+      {{- else if (eq (sub $pag.PageNumber .PageNumber) -1) }}
+        rel="next"
+        aria-label="Next"
+      {{- else if (eq $pag.PageNumber .PageNumber) }}
+        aria-label="Current"
+        aria-current="page"
+      {{- end -}}
       >{{ .PageNumber }}</a>
     </li>
     {{- else if $shouldEllipse }}
