@@ -390,9 +390,21 @@ If you belong in the former, you could override the theme by copying the file fr
 For a concrete example, if you want to customize the footer, copy link:./layouts/partials/footer.html[`./layouts/partials/footer.html`] of this theme (e.g., `./themes/more-contentful/layouts/partials/footer.html`) to `./layouts/partials/footer.html` and modify it there.
 
 If you want to customize the style, simply create a SCSS file at `assets/scss/extend.scss` and make your style there.
+One of the main things you should keep in mind is the Base16 color palette available in the stylesheet if you want a consistent look.
+They are available as link:https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties[CSS custom properties] from `base00` to `base0F`.
+They could be useful if you want to add your own styling or to integrate with other libraries such as link:https://d3js.org/[D3], link:https://mermaid-js.github.io/mermaid[Mermaid], and link:https://prismjs.com/[Prism].
 
 The downside when customizing it partially, updating the theme can be problematic.
-Thus, it is recommended to check out the project if its updated and 
+Thus, it is recommended to check out the project if its updated.
+Fortunately, this could be automated with the use of the GitHub API and a JSON parser such as link:https://stedolan.github.io/jq/manual/[jq] which makes it possible to update it in the shell.
+The following shell one-liner gets the latest version of the theme.
+
+[source, shell]
+----
+curl --silent --location https://api.github.com/repos/foo-dogsquared/hugo-theme-more-contentful/commits | jq '.[0].sha' --raw-output | xargs --replace='{}' hugo mod get -u "github.com/foo-dogsquared/hugo-theme-more-contentful@{}" && hugo mod tidy
+----
+
+TIP: You can then put the one-liner in a script or in a Makefile to make it easier.
 
 Otherwise, if you want to fully customize the theme, you can vendor this project into yours.
 Also, see the <<Development guidelines>> for more information.

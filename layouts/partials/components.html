@@ -7,7 +7,7 @@ If the partial is short enough, it should be put here.
 {{- define "partials/components/icon.html" }}
   {{- $icon := . }}
   {{- $res := resources.ExecuteAsTemplate (printf $icon.output $icon.id) $icon.id (resources.Get $icon.template) }}
-  <svg>
+  <svg class="icon">
     <use href="{{ $res.Permalink }}#{{ $icon.id }}"></use>
   </svg>
 {{- end }}
@@ -29,7 +29,7 @@ If the partial is short enough, it should be put here.
         <div class="site__theme-item" {{ if ne $filename "_index" }}data-theme="{{ .scheme }}"{{ end }}>{{ $name }}</div>
         {{- end }}
       </div>
-    </svg>
+    </div>
   </div>
   <script defer>
     const themeDropdown = document.querySelector('.site__theme-btn');

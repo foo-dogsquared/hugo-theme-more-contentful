@@ -24,6 +24,8 @@ nav {
   margin: 1rem auto;
 }
 
+h1 { margin: 1rem auto; }
+
 article {
   h1 { margin: 1rem auto; }
   h2 { margin-top: 3rem; }
@@ -166,12 +168,6 @@ figure {
 figcaption {
   text-align: center;
   font-size: 1rem;
-}
-
-svg {
-  height: 1rem;
-  width: 1rem;
-  fill: currentColor;
 }
 
 blockquote {
