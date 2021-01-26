@@ -37,7 +37,6 @@ footer[aria-label="Site footer"] {
   --size: 2rem;
   display: inline-block;
   font-size: var(--size);
-  line-height: var(--size);
   margin-bottom: unset;
   margin-right: 0.5rem;
 }
@@ -209,4 +208,12 @@ footer[aria-label="Site footer"] {
   background: var(--base01);
   font-size: 0.9em;
   padding: 1em;
+
+  // The styling is solely for consistency sake throughout the site.
+  > ul { padding-left: 1rem; }
+
+  ul {
+    list-style: disc;
+    padding-left: 1em;
+  }
 }

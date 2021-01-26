@@ -1,9 +1,21 @@
 {{- /*
-Here's where all of the inline partials are defined.
-If the partial is short enough, it should be put here.
+  Here's where all of the inline partials are defined.
+  If the partial is short enough, it should be put here.
 */ -}}
 
-{{- /* This is a partial that creates an icon from the icon templates. */ -}}
+{{- /*
+  This is a partial that creates an icon from the icon templates and links them from the created file.
+  Why not embed the text into the resulting document, you ask?
+  I just want to save a few kilobytes of the total site weight. :)
+
+  It accepts a dictionary with the specified keys:
+
+  - id - The name of the resource in a specific set.
+  - output - The output location of the resource relative to the base URL.
+             It can accept a formatted string (e.g., "icons/brand/%s.svg") where 'id' will be used.
+  - template - The template file to be used.
+               It should relative to the asset directory.
+*/ -}}
 {{- define "partials/components/icon.html" }}
   {{- $icon := . }}
   {{- $res := resources.ExecuteAsTemplate (printf $icon.output $icon.id) $icon.id (resources.Get $icon.template) }}
@@ -13,12 +25,19 @@ If the partial is short enough, it should be put here.
 {{- end }}
 
 
-{{- /* A partial that aliases the Heroicon template from the icon partial */ -}}
+{{- /*
+  A partial that aliases the Heroicon template from the icon partial.
+  It only needs a string of the ID from one of the icons.
+*/ -}}
 {{- define "partials/components/heroicon.html" }}
   {{- partial "components/icon.html" (dict "id" . "output" "icons/generic/%s.svg" "template" "templates/heroicon.svg") }}
 {{ end }}
 
 
+{{- /*
+  The theme button in its own bed.
+  Take note this component already has conditional rendering so a conditional is unnecessary.
+*/ -}}
 {{- define "partials/components/theme-button.html" }}
   {{- if gt (len (index $.Site.Data "more-contentful").themes) 1 }}
   <div class="site__theme-btn" aria-label="Theme toggle">
@@ -51,6 +70,10 @@ If the partial is short enough, it should be put here.
 {{- end }}
 
 
+{{- /*
+  The component where it will display the metadata of the post.
+  This is used on list templates but feel free to change that.
+*/ -}}
 {{- define "partials/components/post-meta.html" }}
 <div class="list post__meta">
   {{- if ne (.PublishDate.Format "2006") "0001" -}}
