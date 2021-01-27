@@ -15,6 +15,7 @@ before_install:
   - sudo gem install asciidoctor
 
 script:
+  - curl https://api.github.com/repos/foo-dogsquared/hugo-theme-more-contentful | jq '.[0].sha' --raw-output | xargs -I{} hugo mod get "github.com/foo-dogsquared/hugo-theme-more-contentful@{}" && hugo mod tidy
   - hugo
 
 env:
@@ -29,4 +30,6 @@ deploy:
   github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   target_branch: gh-pages
   on:
-    branch: demo
+    branch:
+        - demo
+        - master
