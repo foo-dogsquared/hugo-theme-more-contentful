@@ -175,6 +175,24 @@ footer[aria-label="Site footer"] {
   }
 }
 
+.posts--list {
+  list-style: none;
+  padding-left: 1em;
+  margin: 1em auto;
+}
+
+.post--list {
+  display: flex;
+
+  & > * {
+    margin-right: 0.5em;
+  }
+}
+
+.post--list__date {
+  white-space: nowrap;
+}
+
 .taxonomy__header {
   display: flex;
   align-items: center;
@@ -183,24 +201,6 @@ footer[aria-label="Site footer"] {
   & > * {
     margin: 0;
     margin-right: 0.25em;
-  }
-}
-
-.taxonomy__pages {
-  list-style: none;
-  padding-left: 1em;
-  margin: 1em auto;
-}
-
-.taxonomy__page {
-  display: flex;
-
-  & :first-child {
-    white-space: nowrap;
-  }
-
-  & > * {
-    margin-right: 0.5em;
   }
 }
 
@@ -217,3 +217,4 @@ footer[aria-label="Site footer"] {
     padding-left: 1em;
   }
 }
+

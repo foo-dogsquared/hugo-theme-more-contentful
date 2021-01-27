@@ -11,11 +11,11 @@
       <h2>{{ .Page.Title }}</h2>
       <small>(<a href="{{ .Page.RelPermalink }}">{{ i18n "permalink" | default "Permalink" }}</a>)</small>
     </header>
-    <ul class="taxonomy__pages">
+    <ul class="posts--list">
     {{- range $pages }}
-        <li class="taxonomy__page">
-          <date datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006-01-02" }}</date>
-          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        <li class="post--list">
+          <date class="post--list__date" datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006-01-02" }}</date>
+          <a class="post--list__title" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
         </li>
     {{- end }}
     </ul>

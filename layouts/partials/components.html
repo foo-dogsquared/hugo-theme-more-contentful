@@ -12,9 +12,9 @@
 
   - id - The name of the resource in a specific set.
   - output - The output location of the resource relative to the base URL.
-             It can accept a formatted string (e.g., "icons/brand/%s.svg") where 'id' will be used.
+    It can accept a formatted string (e.g., "icons/brand/%s.svg") where 'id' will be used.
   - template - The template file to be used.
-               It should relative to the asset directory.
+    It should be relative to the asset directory.
 */ -}}
 {{- define "partials/components/icon.html" }}
   {{- $icon := . }}

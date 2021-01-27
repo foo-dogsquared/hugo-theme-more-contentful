@@ -448,40 +448,47 @@ This is to make future references easier for the user and developers.
 
 == Frequently asked questions (FAQ)
 
-* Add scheme inheritance?
-** It will not be considered since it will open a lot of unpredictable problems (or at least I think it is) and it is easy to create errors with them.
+[qanda]
+Add scheme inheritance?::
+It will not be considered since it will open a lot of unpredictable problems (or at least I think it is) and it is easy to create errors with them.
 For now, being explicit with the schemes is better despite more cumbersome.
 
-* How to extend with custom styling?
-** Simply create `assets/scss/extend.scss` and you're on your merry way.
+How are my content hidden?::
+Your content may either be link:https://gohugo.io/getting-started/usage/#draft-future-and-expired-content[draft (i.e., `draft` is set to `true` ), future (i.e., the date is set in the future compared to the build time), or expired (i.e., when the `expirydate` is passed)].
+It may also be hidden from the link:https://gohugo.io/content-management/build-options/[build options] (i.e., `_build.render` is set to `false`).
+Please check if the appropriate keys are set (or unset).
+
+How to extend with custom styling?::
+Simply create `assets/scss/extend.scss` and you're on your merry way.
 This will be appended with the main stylesheet so it will still be in one file.
 In fact, with the capabilities of http://sass-lang.com/[Sass], it is enough for you to fully extend and/or modify the styling with its features —  imports, mixins, greater string interpolations, etc.
 
-* How to hide a post from being listed?
-** You can make use of link:https://gohugo.io/content-management/build-options/[the build options] with `_build.list` have a value of `never`.
+How to hide a post from being listed?::
+You can make use of link:https://gohugo.io/content-management/build-options/[the build options] with `_build.list` have a value of `never`.
 Though, this is only available in Hugo v0.65.0 and above.
 
-* How to minimize the total site weight as much as possible?
-** If you're including your links, do not use images and go with the text instead.
-** Make use of https://gohugo.io/hugo-pipes/postcss/[PostCSS] to minimize the CSS further with https://purgecss.com/[PurgeCSS].
+How to minimize the total site weight as much as possible?::
+If you're including your links, do not use images and go with the text instead.
+Make use of https://gohugo.io/hugo-pipes/postcss/[PostCSS] to minimize the CSS further with https://purgecss.com/[PurgeCSS].
 
-* How to modify the homepage?
-** Copy link:./layouts/_default/list.html[`./layouts/_default/list.html`] to `layouts/index.html` and modify it to your heart's content.
+How to modify the homepage?::
+Copy link:./layouts/_default/list.html[`./layouts/_default/list.html`] to `layouts/index.html` and modify it to your heart's content.
 
-* Support for Asciidoctor?
-** Hugo now has link:https://gohugo.io/content-management/formats/#external-helper-asciidoctor[support for other formats] though this theme is not styled with Asciidoctor or any other formats in mind.
+Support for Asciidoctor?::
+Hugo now has link:https://gohugo.io/content-management/formats/#external-helper-asciidoctor[support for other formats] though this theme is not styled with Asciidoctor or any other formats in mind.
 There is no style associated with Asciidoctor output (as it has multiple HTML-based backend) so you'll have to style it yourself.
+For starters, you can take a look at https://github.com/foo-dogsquared/foo-dogsquared.github.io/blob/84a012cb490e1669cc9063f5086bb024487f625b/assets/scss/extend.scss[my modified stylesheet that styles some of the Asciidoctor components (with the default backend)].
 
-* Syntax highlighting without the `highlight` shortcode?
-** You can make use of existing highlighting libraries such as https://highlightjs.org/[highlight.js].
+Syntax highlighting without the `highlight` shortcode?::
+You can make use of existing highlighting libraries such as https://highlightjs.org/[highlight.js].
 I recommend link:https://prismjs.com/[Prism] for its small core size and solely because of its https://prismjs.com/plugins/autoloader/[autoloader plugin].
 Just link it in your page and it will automatically download the script for the detected languages.
 Pretty convenient.
 If you choose Prism, I also have a link:./assets/css/prism.css[Prism stylesheet for the theme].
 It is not included in the final output so you'll have to override link:./layouts/partials/head.html[`./layouts/partials/head.html`] with your own modifications.
 
-* Table of contents for Asciidoctor?
-** You can enable it with `markup.asciidocExt.attributes.toc` set to `true` in the site config.
+Table of contents for Asciidoctor?::
+You can enable it with `markup.asciidocExt.attributes.toc` set to `true` in the site config.
 Then enable it with `params.toc` (e.g., `params.toc = true`) also in the site config to globally apply to all posts.
 You can also enable it in your content with the `toc` frontmatter.
 
