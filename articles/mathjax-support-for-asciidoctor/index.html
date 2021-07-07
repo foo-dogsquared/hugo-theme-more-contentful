@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en-us"><title>MathJax Support for Asciidoctor | Contentful</title>
+
+
+
+
+<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/css/main.min.e06bc29e2cb00a8f461bfefc0ea9543b9bf61688266d3ca51fcb4d2121242b0a.css" /><meta name="generator" content="Hugo 0.76.0" />
+<meta charset="utf-8">
+<meta name="author" content="John Doe" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="This is just an article for testing MathJax in Asciidoctor files.
+ You can use this as a testing template for all of your LaTeX math needs.
+   Basics This should be an inline math content \(\LaTeX\) with the LaTeX symbol.
+ The following block content should contain a sentence with the LaTeX symbol.
+ \[\LaTeX\text{ is awesome.}\]   Whitespace LaTeX treats whitespace characters such as tabs and spaces uniformly as one unit of space." /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MathJax Support for Asciidoctor"/>
+<meta name="twitter:description" content="This is just an article for testing MathJax in Asciidoctor files.
+ You can use this as a testing template for all of your LaTeX math needs.
+   Basics This should be an inline math content \(\LaTeX\) with the LaTeX symbol.
+ The following block content should contain a sentence with the LaTeX symbol.
+ \[\LaTeX\text{ is awesome.}\]   Whitespace LaTeX treats whitespace characters such as tabs and spaces uniformly as one unit of space."/>
+<meta property="og:title" content="MathJax Support for Asciidoctor" />
+<meta property="og:description" content="This is just an article for testing MathJax in Asciidoctor files.
+ You can use this as a testing template for all of your LaTeX math needs.
+   Basics This should be an inline math content \(\LaTeX\) with the LaTeX symbol.
+ The following block content should contain a sentence with the LaTeX symbol.
+ \[\LaTeX\text{ is awesome.}\]   Whitespace LaTeX treats whitespace characters such as tabs and spaces uniformly as one unit of space." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/mathjax-support-for-asciidoctor/" />
+<meta property="article:published_time" content="2019-08-28T01:47:02+08:00" />
+<meta property="article:modified_time" content="2020-11-02T23:58:07+08:00" />
+<link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/mathjax-support-for-asciidoctor/" />
+  
+  <script>
+  let theme = window.localStorage.getItem('theme'); 
+  if (theme) {
+    document.documentElement.dataset.theme = theme;
+  }
+</script>
+
+<body>
+  <div class="site__theme-btn" aria-label="Theme toggle">
+      
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/color-swatch.svg#color-swatch"></use>
+  </svg>
+
+      <div class="site__theme-dropdown">
+        <div class="site__theme-item" >Default Dark (default)</div>
+        <div class="site__theme-item" data-theme="Dracula">Dracula</div>
+        <div class="site__theme-item" data-theme="Nord">Nord</div>
+      </div>
+    </svg>
+  </div>
+  <script defer>
+    const themeDropdown = document.querySelector('.site__theme-btn');
+    themeDropdown.addEventListener('click', (event) => {
+      const { target } = event;
+      if (target.classList.contains("site__theme-item")) {
+        if (target.dataset.theme) {
+          theme = target.dataset.theme;
+          window.localStorage.setItem("theme", theme);
+          document.documentElement.dataset.theme = theme;
+        } else {
+          window.localStorage.removeItem("theme");
+          delete document.documentElement.dataset.theme;
+        }
+      }
+    });
+  </script><nav aria-label="Primary navigation">
+  <a class="site__title" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful">Contentful</a>
+  <div class="list site__links">
+    
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/about/">About</a>
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/">Categories</a>
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/">Recipes</a>
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/">Tags</a>
+      
+    
+  </div>
+</nav>
+
+
+<article class="post--single">
+  <header>
+    <h1>MathJax Support for Asciidoctor</h1>
+  </header>
+  
+<div class="list post__meta"><time datetime="2019-08-28 01:47:02 &#43;0800 &#43;0800">
+    
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
+  </svg>
+
+    <span style="margin-left: 0.5em;">2019-08-28</span>
+  </time>
+  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
+    
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
+  </svg>
+
+    <span style="margin-left: 0.5em;">2020-11-02</span>
+  </time>
+</div>
+
+  
+  
+  <style>
+#TableOfContents:not(:empty)::before {
+  content: "Table of contents";
+  font-weight: bold;
+}
+  </style>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_basics">Basics</a>
+      <ul>
+        <li><a href="#_whitespace">Whitespace</a></li>
+        <li><a href="#_commands">Commands</a></li>
+        <li><a href="#_reserved_characters">Reserved characters</a></li>
+      </ul>
+    </li>
+    <li><a href="#_text_formatting">Text formatting</a>
+      <ul>
+        <li><a href="#_literal_text">Literal text</a></li>
+        <li><a href="#_boldface_text">Boldface text</a></li>
+        <li><a href="#_italic_text">Italic text</a></li>
+        <li><a href="#_monospaced_text">Monospaced text</a></li>
+        <li><a href="#_text_in_sans_serif_font_equivalent">Text in sans-serif font equivalent</a></li>
+        <li><a href="#_more_options">More options</a></li>
+      </ul>
+    </li>
+    <li><a href="#_math_formatting">Math formatting</a>
+      <ul>
+        <li><a href="#_fractions">Fractions</a></li>
+        <li><a href="#_roots">Roots</a></li>
+        <li><a href="#_superscripts">Superscripts</a></li>
+        <li><a href="#_subscripts">Subscripts</a></li>
+        <li><a href="#_greek_letters">Greek letters</a></li>
+        <li><a href="#_mathematical_sizing">Mathematical sizing</a></li>
+        <li><a href="#_a_lot_more">A lot more!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  
+
+  <main>
+    
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is just an article for testing MathJax in Asciidoctor files.</p>
+</div>
+<div class="paragraph">
+<p>You can use this as a testing template for all of your LaTeX math needs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basics">Basics</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This should be an inline math content \(\LaTeX\) with the LaTeX symbol.</p>
+</div>
+<div class="paragraph">
+<p>The following block content should contain a sentence with the LaTeX symbol.</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\LaTeX\text{ is awesome.}\]
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whitespace">Whitespace</h3>
+<div class="paragraph">
+<p>LaTeX treats whitespace characters such as tabs and spaces uniformly as one unit
+of space.
+A text that is composed of two tabs and 10 spaces consecutively is one space.</p>
+</div>
+<div class="paragraph">
+<p>This is especially prominent in math mode (which MathJax is…​ always).</p>
+</div>
+<div class="paragraph">
+<p>Try to render this, for example.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">This is a LaTeX sentence (or I guess in MathJax).</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And it’ll render as the following:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\[ This is a LaTeX sentence (or I guess in MathJax).\]
+</div>
+</div>
+<div class="paragraph">
+<p>Since MathJax is in…​ perpetual math mode and specifically made for rendering
+math formulae, we shouldn’t have a problem with maintaining it.</p>
+</div>
+<div class="paragraph">
+<p>Just a heads up.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_commands">Commands</h3>
+<div class="paragraph">
+<p>One of the main syntax you should mind in MathJax are the LaTeX commands.
+Think of it like the HTML tags in LaTeX (although not really).</p>
+</div>
+<div class="paragraph">
+<p>Here’s the basic construct of a LaTeX command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\commandname[option1,option2,...]{argument1}{argument2}...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Within commands and if allowed, you can nest commands.
+Take this example for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\sum_{i=0}^{6} = \frac{i^{2}}{ 2 \bmod (i * 4)} + i^{3}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[ \sum_{i=0}^{6} = \frac{i^{2}}{ 2 \bmod (i * 4)} + i^{3}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reserved_characters">Reserved characters</h3>
+<div class="paragraph">
+<p>The following characters have special meaning to LaTeX.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code># $ % ^ &amp; _ { } ~ \</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[# $ % ^ &amp; _ { } ~ \\]
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see, it should result in an error or not rendered
+properly.</p>
+</div>
+<div class="paragraph">
+<p>In order to render them in text, you need to add an escape character.
+In this case, it’s a backslash.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\# \$ \% \^ \&amp; \_ \{ \} \~ \\</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\# \$ \% \^{} \&amp; \_ \{ \} \~{} \textbackslash{}\]
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Some of them may not render properly due to MathJax lack of support for
+the following. (We don’t really need those when using MathJax anyway)
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_text_formatting">Text formatting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can do a little text formatting in a LaTeX math content (though it’s pointless
+to do so).</p>
+</div>
+<div class="sect2">
+<h3 id="_literal_text">Literal text</h3>
+<div class="paragraph">
+<p>You can make a text with <code>\text{}</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\text{The quick brown fox jumps over the lazy dog.}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\text{The quick brown fox jumps over the lazy dog.}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boldface_text">Boldface text</h3>
+<div class="paragraph">
+<p>You can make a text boldface with <code>\textbf{}</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\textbf{The quick brown fox jumps over the lazy dog.}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\textbf{The quick brown fox jumps over the lazy dog.}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_italic_text">Italic text</h3>
+<div class="paragraph">
+<p>To make a text block italic, enclose it with a <code>\textit{}</code> command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\textit{The quick brown fox jumps over the lazy dog.}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\textit{The quick brown fox jumps over the lazy dog.}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_monospaced_text">Monospaced text</h3>
+<div class="paragraph">
+<p>In order for the text to be monospaced, enclose it with a <code>\texttt{}</code> (text teletype) command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\texttt{The quick brown fox jumps over the lazy dog.}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\texttt{The quick brown fox jumps over the lazy dog.}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_text_in_sans_serif_font_equivalent">Text in sans-serif font equivalent</h3>
+<div class="paragraph">
+<p>Most importantly, you can make a text rendered in sans-serif with <code>\textsf{}</code> command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\textsf{The quick brown fox jumps over the lazy dog.}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\textsf{The quick brown fox jumps over the lazy dog.}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_more_options">More options</h3>
+<div class="paragraph">
+<p>You can see a lot more options from <a href="https://en.wikibooks.org/wiki/LaTeX/Fonts">this reference</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_math_formatting">Math formatting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is what you mostly came for, right?</p>
+</div>
+<div class="paragraph">
+<p>All righty then.
+Let’s see what MathJax in Asciidoctor (M in A?) can do.</p>
+</div>
+<div class="sect2">
+<h3 id="_fractions">Fractions</h3>
+<div class="paragraph">
+<p>For rendering fractions, you need to use the <code>\frac</code> command.
+The command simply needs two positional arguments.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\frac{NUMERATOR}{DENOMINATOR}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For a bit of an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\frac{x_1 + y_2}{x_2 + y_1}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\frac{x_1 + y_2}{x_2 + y_1}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_roots">Roots</h3>
+<div class="paragraph">
+<p>In order to create roots, you need the <code>\sqrt</code> command.
+It only needs the content to be put inside of it as the argument.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\sqrt{2a + b}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\sqrt{2a + b}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Yes, you can nest some stuff.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\sqrt{\frac{2a + b}{a^2 - b^2}}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\sqrt{\frac{2a + b}{a^2 - b^2}}\]
+</div>
+</div>
+<div class="paragraph">
+<p>You can specify an optional argument to change the magnitude.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\sqrt[\frac{1}{2}]{2a + b}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\sqrt[\frac{1}{2}]{2a + b}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_superscripts">Superscripts</h3>
+<div class="paragraph">
+<p>In order to make superscripts, place it next to a caret character (<code>^</code>).
+To render it in more than one character, enclose it in curly brackets (<code>{}</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">2^2 * 2^{23} = 2^{25}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[2^2 * 2^{23} = 2^{25}\]
+</div>
+</div>
+<div class="paragraph">
+<p>You can also nest it within a superscript like so.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">2^{2^{10}} * 2^{23^2} = \infty</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[ 2^{2^{10}} * 2^{23^2} = \infty\]
+</div>
+</div>
+<div class="paragraph">
+<p>OK, I’ve gone overboard with the scale so I just put infinity as the
+answer instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_subscripts">Subscripts</h3>
+<div class="paragraph">
+<p>For making subscripts, place it next to the underscore (<code>_</code>).
+Like the superscript command, if you include more than one character,
+enclose it in a pair of curly brackets (<code>{}</code>).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">a_1 + a_2 + a_3 + ... + a_{14} = \frac{a_1 * a_{14}}{2}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[a_1 + a_2 + a_3 + ... + a_{14} = \frac{a_1 * a_{14}}{2}\]
+</div>
+</div>
+<div class="paragraph">
+<p>Like superscripts and most of the commands, you can nest subscripts
+to another subscript (and other commands).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">a_{2_{1}} + a_{2_{2}} = b_{2_{1}} + b_{2_{2}}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[ a_{2_{1}} + a_{2_{2}} = b_{2_{1}} + b_{2_{2}}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_greek_letters">Greek letters</h3>
+<div class="paragraph">
+<p>You can render Greek letters with the appropriate command.</p>
+</div>
+<div class="paragraph">
+<p><code>\alpha</code> for lowercase Greek letter alpha,
+<code>\beta</code> for lowercase Greek letter beta,
+<code>\gamma</code> for lowercase Greek letter gamma,
+<code>\Gamma</code> for uppercase Greek letter gamma,
+you get the point.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\alpha, \beta, \gamma, \Gamma, \pi, \Pi, \phi, \varphi, \mu, \Phi</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\alpha, \beta, \gamma, \Gamma, \pi, \Pi, \phi, \varphi, \mu, \Phi\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mathematical_sizing">Mathematical sizing</h3>
+<div class="paragraph">
+<p>Oftentimes, you might need to align and resize certain characters like
+the parenthesis or the brackets that enclose a formula or an example.</p>
+</div>
+<div class="paragraph">
+<p>You can use the <code>\left</code>, <code>\right</code>, and <code>\middle</code> commands to resize
+the delimiters.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\left(\frac{x^2}{y^3}\right)</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\left(\frac{x^2}{y^3}\right)\]
+</div>
+</div>
+<div class="paragraph">
+<p>Since curly braces have semantic meaning to \(\LaTeX\), you need to
+escape it.
+Pretty much, it’ll look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-latex" data-lang="latex">\left\{\frac{x^2}{y^3}\right\}</code></pre>
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\left\{\frac{x^2}{y^3}\right\}\]
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_a_lot_more">A lot more!</h3>
+<div class="paragraph">
+<p>You have a whole slew of mathematical symbols available.
+Please refer to
+<a href="https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols">this list of LaTeX mathematical symbols</a>.
+Though I don’t know what’s missing symbols and whatnot (since I don’t MathJax often) but
+it should be enough.</p>
+</div>
+<div class="paragraph">
+<p>You can also go to
+<a href="https://math-on-quora.surge.sh/">this web page that details using MathJax on Quora</a>
+by Gilles Castel.
+It is specifically made for writing \(\LaTeX\) on Quora but it
+can be used as a general MathJax guide, anyways.</p>
+</div>
+</div>
+</div>
+</div>
+
+  </main>
+
+  <hr>
+  <div class="post__meta--single">
+    
+
+    
+    <p data-content-publication-date="2019-08-28 01:47:02 &#43;0800 &#43;0800">Created: <time datetime="2019-08-28">2019-08-28</time></p>
+
+    
+    <p data-content-modification-date="2020-11-02 23:58:07 &#43;0800 &#43;0800">Updated: <time datetime="2020-11-02">2020-11-02</time></p>
+
+    
+  </div>
+</article>
+
+<hr>
+<footer>
+
+<p><a href="#top">Back to top</a></p>
+
+
+
+  <p>Available in other languages:
+  <span class="list site__languages">
+  
+    <a href="/hugo-theme-more-contentful/en" hreflang="en">English</a>
+  
+    <a href="/hugo-theme-more-contentful/tl" hreflang="tl">Tagalog</a>
+  
+  </span>
+</p>
+
+
+
+
+
+<ul class="list site__socials">
+  
+
+  
+  <li>
+    <a class="site__social-icon" rel="me" href="https://keybase.io/foo_dogsquared" aria-label="Keybase">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/keybase.svg#keybase"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://github.com/foo-dogsquared/" aria-label="GitHub">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/github.svg#github"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://gitlab.com/foo-dogsquared/" aria-label="GitLab">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/gitlab.svg#gitlab"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://twitter.com/foo_dogsquared" aria-label="Twitter">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/twitter.svg#twitter"></use>
+  </svg>
+    </a>
+  </li></ul>
+
+
+
+
+<p>© 2021 Contentful</p>
+</footer>
+
+</body>
+</html>

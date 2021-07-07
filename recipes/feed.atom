@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Recipes on Contentful</title>
+  
+    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss"/><rights>© 2021 </rights>
+  <generator uri="https://gohugo.io/" version="0.76.0">Hugo</generator>
+  <updated>2020-05-12T17:25:55+08:00</updated>
+  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
+  <author>
+    <name>John Doe</name>
+    <email>johndoe@example.com</email>
+    </author><entry>
+    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/simple-icons-integration/</id>
+    <title type="text">Simple Icons integration with Hugo modules</title>
+    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/simple-icons-integration/" hreflang="en" title="Simple Icons integration with Hugo modules"/><category term="tag1"/><category term="tag2"/>
+    <published>2020-10-20T21:36:34+08:00</published>
+    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/simple-icons/simple-icons&#34;&gt;Simple Icons&lt;/a&gt; is a free and open source icon set for popular brands including social media sites such as Twitter, YouTube, Twitch, GitHub, and so on.
+This is a perfect component for getting social media icons.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Usually to make use of this icon set in Hugo, you would have to download each icon you need.
+Luckily, there’s an easier way to make use of the set with &lt;a href=&#34;https://gohugo.io/hugo-modules/&#34;&gt;Hugo modules&lt;/a&gt;.
+In the future, Hugo will have an easier way to &lt;a href=&#34;https://discourse.gohugo.io/t/esbuild-looks-like-we-can-finally-get-solid-hugo-modules-support/28757&#34;&gt;integrate&lt;/a&gt; &lt;a href=&#34;https://gohugo.io/commands/hugo_mod_npm/#readout&#34;&gt;with JavaScript modules&lt;/a&gt;.
+&lt;sup class=&#34;footnote&#34;&gt;[&lt;a id=&#34;_footnoteref_1&#34; class=&#34;footnote&#34; href=&#34;#_footnotedef_1&#34; title=&#34;View footnote.&#34;&gt;1&lt;/a&gt;]&lt;/sup&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;To get started, simply initialize your Hugo site as a Hugo module with &lt;code&gt;hugo mod init $HUGO_MOD_NAME&lt;/code&gt; where &lt;code&gt;$HUGO_MOD_NAME&lt;/code&gt; is simply the name of the Hugo module which could be anything.
+For example, if you host your Hugo site on GitHub pages, you might want to name your module like &lt;code&gt;github.com/$USER/$HUGO_SITE_REPO&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Then, add the Simple Icons repo as a dependency module in your site configuration.
+The following configuration gets the icon set and the metadata and places them at &lt;code&gt;assets/icons&lt;/code&gt; and &lt;code&gt;data/simple-icons.json&lt;/code&gt; respectively.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[[module.imports]]
+  path = &amp;#34;github.com/simple-icons/simple-icons&amp;#34;
+  [[module.imports.mounts]]
+    source = &amp;#34;icons&amp;#34;
+    target = &amp;#34;assets/icons&amp;#34;
+  [[module.imports.mounts]]
+    source = &amp;#34;_data/simple-icons.json&amp;#34;
+    target = &amp;#34;data/simple-icons.json&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Onto the interesting point which is using the icons itself.
+Since the icon set is stored in the assets folder, we can then use it in our templates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;{{ $github_icon := resources.Get &amp;#34;icons/github.svg&amp;#34; }}
+{{ $github_icon.Content | safeHTML }}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;And the SVG source will be applied inline to the resulting page.
+This opens up a lot of uses with the icon set.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Let’s reimplement the &lt;a href=&#34;../configurable-list-of-contacts.html&#34;&gt;configurable list of contacts&lt;/a&gt; with added feature of adding an icon from the set with each key serves as the icon to be displayed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&amp;lt;address&amp;gt;
+{{- range (sort $.Site.Data.contacts &amp;#34;weight&amp;#34; &amp;#34;asc&amp;#34;) -}}
+&amp;lt;a rel=&amp;#34;me&amp;#34; href=&amp;#34;{{ .url }}&amp;#34; aria-contact=&amp;#34;{{ .name }}&amp;#34;&amp;gt;
+    {{ $location := printf &amp;#34;icons/%s.svg&amp;#34; .id }}
+    {{ with resources.Get $location }}{{ .Content | safeHTML }}{{ end }}&amp;lt;/a&amp;gt; |
+{{- end -}}
+&amp;lt;/address&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Unfortunately, this doesn’t take account for missing icons so a fallback would be handy.
+For now, we’ll use text as our fallback even though it’s not going to be pretty.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&amp;lt;address&amp;gt;
+{{- range (sort $.Site.Data.contacts &amp;#34;weight&amp;#34; &amp;#34;asc&amp;#34;) -}}
+&amp;lt;a rel=&amp;#34;me&amp;#34; href=&amp;#34;{{ .url }}&amp;#34; aria-contact=&amp;#34;{{ .name }}&amp;#34;&amp;gt;
+    {{ $location := printf &amp;#34;icons/%s.svg&amp;#34; .id }}
+    {{ $icon := resources.Get $location }}
+    {{ if (countrunes $icon.Content) }}
+        {{ .Content | safeHTML }}
+    {{ else }}
+        {{ .name }}
+    {{ end }}
+&amp;lt;/a&amp;gt; |
+{{- end -}}
+&amp;lt;/address&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;footnotes&#34;&gt;
+&lt;hr/&gt;
+&lt;div class=&#34;footnote&#34; id=&#34;_footnotedef_1&#34;&gt;
+&lt;a href=&#34;#_footnoteref_1&#34;&gt;1&lt;/a&gt;. Or integrating with NPM which &lt;a href=&#34;https://gohugo.io/news/0.75.0-relnotes/&#34;&gt;Hugo&lt;/a&gt; certain has more support in the upcoming version.
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry><entry>
+    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</id>
+    <title type="text">Configurable list of contacts</title>
+    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
+    <published>2020-10-20T20:38:24+08:00</published>
+    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Most themes offer quick social media links with site configuration.
+However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;To get around this, we’ll make use of &lt;a href=&#34;https://gohugo.io/templates/data-templates/&#34;&gt;data templates&lt;/a&gt;.
+Let’s create a quick game plan how does it work.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;The data is a top-level dictionary/object with each key contains an object with the following fields.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;url&lt;/code&gt; is the…​ contact link itself and it is required to have it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;name&lt;/code&gt; is the text to appear in the output.
+Also required to have.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;weight&lt;/code&gt; is an integer similar to how Hugo sorts the pages with the lower weight having high precedence;
+if this key is absent, it will be interpreted as 0.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;And here’s the data example in TOML which is placed in &lt;code&gt;data/contact.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[github]
+    name = &amp;#34;GitHub&amp;#34;
+    url = &amp;#34;https://github.com/foo-dogsquared&amp;#34;
+
+[gitlab]
+    name = &amp;#34;Gitlab&amp;#34;
+    url = &amp;#34;https://gitlab.com/foo-dogsquared&amp;#34;
+
+[keybase]
+    name = &amp;#34;Keybase&amp;#34;
+    url = &amp;#34;https://keybase.io/foo_dogsquared&amp;#34;
+    weight = -1
+
+[twitter]
+    name = &amp;#34;Twitter&amp;#34;
+    url = &amp;#34;https://twitter.com/foo_dogsquared&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;I want my Keybase profile to appear first than anything else for whatever reason so the &lt;code&gt;weight&lt;/code&gt; key is set to -1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;With this data, we can then create a template out of it.
+I’ve put the following template in a partial named &lt;code&gt;contacts&lt;/code&gt; (i.e., &lt;code&gt;layouts/partials/contacts&lt;/code&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&amp;lt;address&amp;gt;
+{{- range (sort $.Site.Data.contacts &amp;#34;weight&amp;#34; &amp;#34;asc&amp;#34;) -}}
+| &amp;lt;a rel=&amp;#34;me&amp;#34; href=&amp;#34;{{ .url }}&amp;#34;&amp;gt;{{- .name -}}&amp;lt;/a&amp;gt; |
+{{- end -}}
+&amp;lt;/address&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;A suggestion (and an exercise) for extending this is to create image links.
+Maybe add another key named &lt;code&gt;image&lt;/code&gt; that accepts either URL.
+The &lt;code&gt;name&lt;/code&gt; would now be the image alternative text.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry></feed>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>category1 on Contentful</title>
+    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/categories/category1/</link>
+    <description>Recent content in category1 on Contentful</description>
+    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>tl</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+        <lastBuildDate>Tue, 12 May 2020 21:28:27 +0800</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-2-0-1</docs>
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/categories/category1/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/categories/category1/" rel="canonical" type="text/html" />
+  </channel>
+</rss>

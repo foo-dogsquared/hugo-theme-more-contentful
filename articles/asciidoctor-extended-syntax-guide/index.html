@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en-us"><title>Asciidoctor Extended Syntax Guide | Contentful</title>
+
+
+
+
+<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/css/main.min.e06bc29e2cb00a8f461bfefc0ea9543b9bf61688266d3ca51fcb4d2121242b0a.css" /><meta name="generator" content="Hugo 0.76.0" />
+<meta charset="utf-8">
+<meta name="author" content="John Doe" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="no-referrer" />
+<meta name="description" content="The purpose of this article to make sure not-so-common features of Asciidoctor (i.e. admonition blocks, callouts) are styled and fit to the theme. It also serves as a quick introduction to more Asciidoctor as well. Feel free to steal this if you want a template for this.
+   Admonition blocks Admonition blocks contain content that are not a part of the main content but you’ll want to draw attention to the audience anyways." /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Asciidoctor Extended Syntax Guide"/>
+<meta name="twitter:description" content="The purpose of this article to make sure not-so-common features of Asciidoctor (i.e. admonition blocks, callouts) are styled and fit to the theme. It also serves as a quick introduction to more Asciidoctor as well. Feel free to steal this if you want a template for this.
+   Admonition blocks Admonition blocks contain content that are not a part of the main content but you’ll want to draw attention to the audience anyways."/>
+<meta property="og:title" content="Asciidoctor Extended Syntax Guide" />
+<meta property="og:description" content="The purpose of this article to make sure not-so-common features of Asciidoctor (i.e. admonition blocks, callouts) are styled and fit to the theme. It also serves as a quick introduction to more Asciidoctor as well. Feel free to steal this if you want a template for this.
+   Admonition blocks Admonition blocks contain content that are not a part of the main content but you’ll want to draw attention to the audience anyways." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/" />
+<meta property="article:published_time" content="2019-08-29T22:09:16+08:00" />
+<meta property="article:modified_time" content="2020-11-02T23:58:07+08:00" />
+<link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/" />
+  
+  <script>
+  let theme = window.localStorage.getItem('theme'); 
+  if (theme) {
+    document.documentElement.dataset.theme = theme;
+  }
+</script>
+
+<body>
+  <div class="site__theme-btn" aria-label="Theme toggle">
+      
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/color-swatch.svg#color-swatch"></use>
+  </svg>
+
+      <div class="site__theme-dropdown">
+        <div class="site__theme-item" >Default Dark (default)</div>
+        <div class="site__theme-item" data-theme="Dracula">Dracula</div>
+        <div class="site__theme-item" data-theme="Nord">Nord</div>
+      </div>
+    </svg>
+  </div>
+  <script defer>
+    const themeDropdown = document.querySelector('.site__theme-btn');
+    themeDropdown.addEventListener('click', (event) => {
+      const { target } = event;
+      if (target.classList.contains("site__theme-item")) {
+        if (target.dataset.theme) {
+          theme = target.dataset.theme;
+          window.localStorage.setItem("theme", theme);
+          document.documentElement.dataset.theme = theme;
+        } else {
+          window.localStorage.removeItem("theme");
+          delete document.documentElement.dataset.theme;
+        }
+      }
+    });
+  </script><nav aria-label="Primary navigation">
+  <a class="site__title" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful">Contentful</a>
+  <div class="list site__links">
+    
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/about/">About</a>
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/">Categories</a>
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/">Recipes</a>
+      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/">Tags</a>
+      
+    
+  </div>
+</nav>
+
+
+<article class="post--single">
+  <header>
+    <h1>Asciidoctor Extended Syntax Guide</h1>
+  </header>
+  
+<div class="list post__meta"><time datetime="2019-08-29 22:09:16 &#43;0800 &#43;0800">
+    
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
+  </svg>
+
+    <span style="margin-left: 0.5em;">2019-08-29</span>
+  </time>
+  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
+    
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
+  </svg>
+
+    <span style="margin-left: 0.5em;">2020-11-02</span>
+  </time>
+</div>
+
+  
+  
+  <style>
+#TableOfContents:not(:empty)::before {
+  content: "Table of contents";
+  font-weight: bold;
+}
+  </style>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#_admonition_blocks">Admonition blocks</a></li>
+    <li><a href="#_callouts">Callouts</a></li>
+    <li><a href="#_passthroughs">Passthroughs</a></li>
+  </ul>
+</nav>
+  
+
+  <main>
+    
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The purpose of this article to make sure not-so-common features of
+Asciidoctor (i.e. admonition blocks, callouts) are styled and
+fit to the theme.
+It also serves as a quick introduction to more Asciidoctor as well.
+Feel free to steal this if you want a template for this.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_admonition_blocks">Admonition blocks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Admonition blocks contain content that are not a part of the main
+content but you’ll want to draw attention to the audience anyways.</p>
+</div>
+<div class="paragraph">
+<p>By default, Asciidoctor provides five labels for admonitions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>TIP</code></p>
+</li>
+<li>
+<p><code>NOTE</code></p>
+</li>
+<li>
+<p><code>IMPORTANT</code></p>
+</li>
+<li>
+<p><code>CAUTION</code></p>
+</li>
+<li>
+<p><code>WARNING</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title"><code>CAUTION</code> vs <code>WARNING</code></div>
+<div class="paragraph">
+<p>As the <a href="https://asciidoctor.org/docs/user-manual/#admonition">user manual</a>
+has said, <code>CAUTION</code> and <code>WARNING</code> should be used with different semantics.</p>
+</div>
+<div class="paragraph">
+<p><code>CAUTION</code> basically advises the user to observe care.
+<code>WARNING</code> warns the user about the dangers or consequences that’ll exist.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Writing an admonition is intuitively easy, simply write the label
+in all uppercase and append with a colon.
+Then write the content after.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">TIP: Lorem ipsum dolor sit amet consectetur adipiscing elit varius cursus
+orci nulla, fames nisl sodales scelerisque eu consequat sem imperdiet ac mi
+vivamus tempor, accumsan ad justo odio viverra praesent senectus class egestas duis.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It’ll render as this:</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Lorem ipsum dolor sit amet consectetur adipiscing elit varius cursus
+orci nulla, fames nisl sodales scelerisque eu consequat sem imperdiet ac mi
+vivamus tempor, accumsan ad justo odio viverra praesent senectus class egestas duis.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="paragraph">
+<p>In case you want to style the labels differently such as assigning
+appropriate colors or an icon to the rest of the labels,
+here’s the rest of them:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Malesuada mattis aenean ultrices netus cursus viverra vivamus ultricies,
+velit molestie penatibus phasellus in ante luctus, habitant suspendisse eros
+turpis taciti risus himenaeos.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Velit fringilla feugiat nibh id faucibus scelerisque facilisis ac,
+suscipit quisque odio libero ullamcorper curabitur fames nascetur, elementum
+tristique hac nisl etiam dictumst dapibus.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+Tempus dui aptent tempor torquent lacinia sem cursus porta cras semper
+accumsan feugiat, himenaeos mi ullamcorper pharetra enim class eget auctor conubia
+metus curabitur.
+</td>
+</tr>
+</tbody></table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tbody><tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Aliquet ut maecenas mollis id enim nibh suscipit quisque posuere cum fusce,
+dignissim ad curabitur odio ac diam pharetra platea vivamus eleifend.
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_callouts">Callouts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Callouts are used to add annotations within a verbatim block.
+This is especially useful for code listings in order to effectively explain what
+is going on within the code.</p>
+</div>
+<div class="paragraph">
+<p>Here’s an example of using callouts.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">[source,python]
+----
+from pathlib import Path
+from re import compile, match
+
+current_directory = Path(&#34;.&#34;) &lt;1&gt;
+notes_directory = current_directory / &#34;notes/&#34; &lt;2&gt;
+----
+&lt;1&gt; Created a Path object
+&lt;2&gt; Appending a Path object with &#34;/&#34;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And it’ll render as:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">from pathlib import Path
+from re import compile, match
+
+current_directory = Path(&#34;.&#34;) # <b class="conum">(1)</b>
+notes_directory = current_directory / &#34;notes/&#34; # <b class="conum">(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>Created a <code>Path</code> object</p>
+</li>
+<li>
+<p>Appending a <code>Path</code> object with &#34;/&#34;</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>One of the most important you should style is the callout number
+on the code listings block.
+Normally, when a user wants to copy-paste (even though I don’t personally
+encourage it), the callout number gets in the way and they have to
+manually remove them which can be annoying.</p>
+</div>
+<div class="paragraph">
+<p>Either attach the property <code>user-select</code> with it or take a part from the
+default Asciidoctor stylesheet and include it in your own stylesheet.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_passthroughs">Passthroughs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <a href="https://asciidoctor.org/docs/user-manual/#passthroughs">passthrough</a> passes the input as it is on the final output.
+This is useful for web-based outputs, for example passing raw HTML for interactive scripts or to create a live result.</p>
+</div>
+<div class="paragraph">
+<p>Below is a very simple example with a <a href="https://p5js.org/">p5.js</a> sketch.</p>
+</div>
+<div id="example-sketch"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+<script>
+const sketchuuuuu = ( sketch ) => {
+  let x = 100;
+  let y = 100;
+
+  sketch.setup = () => {
+    sketch.createCanvas(300, 380);
+  };
+
+  sketch.draw = () => {
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(x,y,50,50);
+    sketch.ellipse(sketch["mouseX"], sketch["mouseY"], 20);
+  };
+};
+
+let example_sketch = new p5(sketchuuuuu, "example-sketch")
+</script>
+<div class="paragraph">
+<p>Here is the input from the source code of this document.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-asciidoctor" data-lang="asciidoctor">++++
+&lt;div id=&#34;example-sketch&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+const sketchuuuuu = ( sketch ) =&gt; {
+  let x = 100;
+  let y = 100;
+
+  sketch.setup = () =&gt; {
+    sketch.createCanvas(300, 380);
+  };
+
+  sketch.draw = () =&gt; {
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(x,y,50,50);
+    sketch.ellipse(sketch[&#34;mouseX&#34;], sketch[&#34;mouseY&#34;], 20);
+  };
+};
+
+let example_sketch = new p5(sketchuuuuu, &#34;example-sketch&#34;)
+&lt;/script&gt;
+++++</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the closest instance of <a href="https://en.wikipedia.org/wiki/Literate_programming">literate programming</a> in the web when using Asciidoctor.
+(Sadly, not as flexible or cool as <a href="https://orgmode.org/">Org-Mode</a> or <a href="https://jupyter.org/">Jupyter Notebooks</a>.)</p>
+</div>
+</div>
+</div>
+
+  </main>
+
+  <hr>
+  <div class="post__meta--single">
+    
+
+    
+    <p data-content-publication-date="2019-08-29 22:09:16 &#43;0800 &#43;0800">Created: <time datetime="2019-08-29">2019-08-29</time></p>
+
+    
+    <p data-content-modification-date="2020-11-02 23:58:07 &#43;0800 &#43;0800">Updated: <time datetime="2020-11-02">2020-11-02</time></p>
+
+    
+  </div>
+</article>
+
+<hr>
+<footer>
+
+<p><a href="#top">Back to top</a></p>
+
+
+
+  <p>Available in other languages:
+  <span class="list site__languages">
+  
+    <a href="/hugo-theme-more-contentful/en" hreflang="en">English</a>
+  
+    <a href="/hugo-theme-more-contentful/tl" hreflang="tl">Tagalog</a>
+  
+  </span>
+</p>
+
+
+
+
+
+<ul class="list site__socials">
+  
+
+  
+  <li>
+    <a class="site__social-icon" rel="me" href="https://keybase.io/foo_dogsquared" aria-label="Keybase">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/keybase.svg#keybase"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://github.com/foo-dogsquared/" aria-label="GitHub">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/github.svg#github"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://gitlab.com/foo-dogsquared/" aria-label="GitLab">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/gitlab.svg#gitlab"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://twitter.com/foo_dogsquared" aria-label="Twitter">
+  <svg>
+    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/twitter.svg#twitter"></use>
+  </svg>
+    </a>
+  </li></ul>
+
+
+
+
+<p>© 2021 Contentful</p>
+</footer>
+
+</body>
+</html>

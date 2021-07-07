@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asciidoctor on Contentful</title>
+    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/asciidoctor/</link>
+    <description>Recent content in asciidoctor on Contentful</description>
+    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+        <lastBuildDate>Thu, 29 Aug 2019 22:09:16 +0800</lastBuildDate>
+    <docs>https://www.rssboard.org/rss-2-0-1</docs>
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/asciidoctor/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/asciidoctor/" rel="canonical" type="text/html" />
+    <item>
+      <title>Asciidoctor Extended Syntax Guide</title>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/</link>
+      <category>asciidoctor</category>
+      <category>guide</category>
+
+      <pubDate>Thu, 29 Aug 2019 22:09:16 +0800</pubDate>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MathJax Support for Asciidoctor</title>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/mathjax-support-for-asciidoctor/</link>
+      <category>asciidoctor</category>
+      <category>mathjax</category>
+      <category>guide</category>
+
+      <pubDate>Wed, 28 Aug 2019 01:47:02 +0800</pubDate>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/mathjax-support-for-asciidoctor/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Articles on Contentful</title>
+  
+    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/feed.rss"/><rights>© 2021 </rights>
+  <generator uri="https://gohugo.io/" version="0.76.0">Hugo</generator>
+  <updated>2020-05-12T21:29:52+08:00</updated>
+  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
+  <author>
+    <name>John Doe</name>
+    <email>johndoe@example.com</email>
+    </author><entry>
+    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/</id>
+    <title type="text">RSS, Atom, and JSON Feed Support</title>
+    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/" hreflang="en" title="RSS, Atom, and JSON Feed Support"/><author>
+      <name>John Doe</name>
+    </author><author>
+      <name>Jane Doe</name>
+    </author><category term="this is a test tag"/><category term="tag2"/>
+    <published>2019-09-04T17:22:44+08:00</published>
+    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Web feeds are one of the most common ways for a visitor to keep up with someone who creates content.
+Nowadays, most social media has that feature such as the subscribing YouTube channels, following Twitter accounts, and watching Deviantart artists.
+Outside of those, we have simpler things like &lt;a href=&#34;https://www.rssboard.org/rss-2-0-1&#34;&gt;RSS&lt;/a&gt; and &lt;a href=&#34;https://www.jsonfeed.org/&#34;&gt;JSON&lt;/a&gt; feeds where they are just plain text files describing the content.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;The Contentful theme doesn’t have a web feed export but we can have it with &lt;a href=&#34;https://gohugo.io/hugo-modules/theme-components/&#34;&gt;theme components&lt;/a&gt;.
+For this demo, we’ll use the &lt;a href=&#34;https://github.com/foo-dogsquared/hugo-web-feeds&#34;&gt;web feed component&lt;/a&gt; created by &lt;a href=&#34;https://foo-dogsquared.github.io/&#34;&gt;foo-dogsquared&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;If you’re settling with this option, here’s an example template for installing the web feed module and exporting all of the feed formats all in one fell swoop.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[[module.imports]]
+    path = &amp;#34;github.com/foo-dogsquared/hugo-web-feeds&amp;#34;
+
+# Visit the following for more information:
+# https://gohugo.io/templates/output-formats
+
+# Defining the media type of the output formats
+# For JSON format, it doesn&amp;#39;t need to be since it&amp;#39;s already built-in into Hugo
+[mediaTypes]
+    [mediaTypes.&amp;#34;application/atom+xml&amp;#34;]
+        suffixes = [&amp;#34;atom&amp;#34;, &amp;#34;atom.xml&amp;#34;] # You can remove the &amp;#34;atom.xml&amp;#34; if you want
+
+    # Redefining RSS media type for the additional suffix
+    [mediaTypes.&amp;#34;application/rss+xml&amp;#34;]
+        suffixes = [&amp;#34;rss&amp;#34;, &amp;#34;rss.xml&amp;#34;] # You can remove the &amp;#34;rss.xml&amp;#34; if you want
+
+    [mediaTypes.&amp;#34;application/feed+json&amp;#34;]
+        suffixes = [&amp;#34;json&amp;#34;] # You can remove the &amp;#34;rss.xml&amp;#34; if you want
+
+
+# Including all of the feed output formats in the build
+[outputFormats]
+    [outputFormats.Rss]
+        mediaType = &amp;#34;application/rss+xml&amp;#34;
+        baseName = &amp;#34;feed&amp;#34;
+
+    [outputFormats.Atom]
+        mediaType = &amp;#34;application/atom+xml&amp;#34;
+        baseName = &amp;#34;feed&amp;#34;
+
+    [outputFormats.Json]
+        mediaType = &amp;#34;application/feed+json&amp;#34;
+        baseName = &amp;#34;feed&amp;#34;
+
+
+# Indicating what output formats shall be included
+# for the following kinds
+[outputs]
+    # .Site.BaseURL/index.* is available
+    home = [&amp;#34;HTML&amp;#34;, &amp;#34;JSON&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;ATOM&amp;#34;]
+
+    # .Site.BaseURL/$section/index.* is available
+    section = [&amp;#34;HTML&amp;#34;, &amp;#34;JSON&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;ATOM&amp;#34;]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry><entry>
+    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/</id>
+    <title type="text">Asciidoctor Extended Syntax Guide</title>
+    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/" hreflang="en" title="Asciidoctor Extended Syntax Guide"/><category term="asciidoctor"/><category term="guide"/>
+    <published>2019-08-29T22:09:16+08:00</published>
+    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">
+&lt;div id=&#34;preamble&#34;&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;The purpose of this article to make sure not-so-common features of
+Asciidoctor (i.e. admonition blocks, callouts) are styled and
+fit to the theme.
+It also serves as a quick introduction to more Asciidoctor as well.
+Feel free to steal this if you want a template for this.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_admonition_blocks&#34;&gt;Admonition blocks&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Admonition blocks contain content that are not a part of the main
+content but you’ll want to draw attention to the audience anyways.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;By default, Asciidoctor provides five labels for admonitions:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;TIP&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;NOTE&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;IMPORTANT&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CAUTION&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;WARNING&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sidebarblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;div class=&#34;title&#34;&gt;&lt;code&gt;CAUTION&lt;/code&gt; vs &lt;code&gt;WARNING&lt;/code&gt;&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;As the &lt;a href=&#34;https://asciidoctor.org/docs/user-manual/#admonition&#34;&gt;user manual&lt;/a&gt;
+has said, &lt;code&gt;CAUTION&lt;/code&gt; and &lt;code&gt;WARNING&lt;/code&gt; should be used with different semantics.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;code&gt;CAUTION&lt;/code&gt; basically advises the user to observe care.
+&lt;code&gt;WARNING&lt;/code&gt; warns the user about the dangers or consequences that’ll exist.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Writing an admonition is intuitively easy, simply write the label
+in all uppercase and append with a colon.
+Then write the content after.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-asciidoc&#34; data-lang=&#34;asciidoc&#34;&gt;TIP: Lorem ipsum dolor sit amet consectetur adipiscing elit varius cursus
+orci nulla, fames nisl sodales scelerisque eu consequat sem imperdiet ac mi
+vivamus tempor, accumsan ad justo odio viverra praesent senectus class egestas duis.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;It’ll render as this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonitionblock tip&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td class=&#34;icon&#34;&gt;
+&lt;div class=&#34;title&#34;&gt;Tip&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class=&#34;content&#34;&gt;
+Lorem ipsum dolor sit amet consectetur adipiscing elit varius cursus
+orci nulla, fames nisl sodales scelerisque eu consequat sem imperdiet ac mi
+vivamus tempor, accumsan ad justo odio viverra praesent senectus class egestas duis.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;In case you want to style the labels differently such as assigning
+appropriate colors or an icon to the rest of the labels,
+here’s the rest of them:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonitionblock note&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td class=&#34;icon&#34;&gt;
+&lt;div class=&#34;title&#34;&gt;Note&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class=&#34;content&#34;&gt;
+Malesuada mattis aenean ultrices netus cursus viverra vivamus ultricies,
+velit molestie penatibus phasellus in ante luctus, habitant suspendisse eros
+turpis taciti risus himenaeos.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonitionblock important&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td class=&#34;icon&#34;&gt;
+&lt;div class=&#34;title&#34;&gt;Important&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class=&#34;content&#34;&gt;
+Velit fringilla feugiat nibh id faucibus scelerisque facilisis ac,
+suscipit quisque odio libero ullamcorper curabitur fames nascetur, elementum
+tristique hac nisl etiam dictumst dapibus.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonitionblock caution&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td class=&#34;icon&#34;&gt;
+&lt;div class=&#34;title&#34;&gt;Caution&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class=&#34;content&#34;&gt;
+Tempus dui aptent tempor torquent lacinia sem cursus porta cras semper
+accumsan feugiat, himenaeos mi ullamcorper pharetra enim class eget auctor conubia
+metus curabitur.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;admonitionblock warning&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td class=&#34;icon&#34;&gt;
+&lt;div class=&#34;title&#34;&gt;Warning&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class=&#34;content&#34;&gt;
+Aliquet ut maecenas mollis id enim nibh suscipit quisque posuere cum fusce,
+dignissim ad curabitur odio ac diam pharetra platea vivamus eleifend.
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_callouts&#34;&gt;Callouts&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Callouts are used to add annotations within a verbatim block.
+This is especially useful for code listings in order to effectively explain what
+is going on within the code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Here’s an example of using callouts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-asciidoc&#34; data-lang=&#34;asciidoc&#34;&gt;[source,python]
+----
+from pathlib import Path
+from re import compile, match
+
+current_directory = Path(&amp;#34;.&amp;#34;) &amp;lt;1&amp;gt;
+notes_directory = current_directory / &amp;#34;notes/&amp;#34; &amp;lt;2&amp;gt;
+----
+&amp;lt;1&amp;gt; Created a Path object
+&amp;lt;2&amp;gt; Appending a Path object with &amp;#34;/&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;And it’ll render as:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;from pathlib import Path
+from re import compile, match
+
+current_directory = Path(&amp;#34;.&amp;#34;) # &lt;b class=&#34;conum&#34;&gt;(1)&lt;/b&gt;
+notes_directory = current_directory / &amp;#34;notes/&amp;#34; # &lt;b class=&#34;conum&#34;&gt;(2)&lt;/b&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;colist arabic&#34;&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Created a &lt;code&gt;Path&lt;/code&gt; object&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Appending a &lt;code&gt;Path&lt;/code&gt; object with &amp;#34;/&amp;#34;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;One of the most important you should style is the callout number
+on the code listings block.
+Normally, when a user wants to copy-paste (even though I don’t personally
+encourage it), the callout number gets in the way and they have to
+manually remove them which can be annoying.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Either attach the property &lt;code&gt;user-select&lt;/code&gt; with it or take a part from the
+default Asciidoctor stylesheet and include it in your own stylesheet.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect1&#34;&gt;
+&lt;h2 id=&#34;_passthroughs&#34;&gt;Passthroughs&lt;/h2&gt;
+&lt;div class=&#34;sectionbody&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;A &lt;a href=&#34;https://asciidoctor.org/docs/user-manual/#passthroughs&#34;&gt;passthrough&lt;/a&gt; passes the input as it is on the final output.
+This is useful for web-based outputs, for example passing raw HTML for interactive scripts or to create a live result.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Below is a very simple example with a &lt;a href=&#34;https://p5js.org/&#34;&gt;p5.js&lt;/a&gt; sketch.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;example-sketch&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+const sketchuuuuu = ( sketch ) =&gt; {
+  let x = 100;
+  let y = 100;
+
+  sketch.setup = () =&gt; {
+    sketch.createCanvas(300, 380);
+  };
+
+  sketch.draw = () =&gt; {
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(x,y,50,50);
+    sketch.ellipse(sketch[&#34;mouseX&#34;], sketch[&#34;mouseY&#34;], 20);
+  };
+};
+
+let example_sketch = new p5(sketchuuuuu, &#34;example-sketch&#34;)
+&lt;/script&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Here is the input from the source code of this document.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-asciidoctor&#34; data-lang=&#34;asciidoctor&#34;&gt;++++
+&amp;lt;div id=&amp;#34;example-sketch&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script src=&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script&amp;gt;
+const sketchuuuuu = ( sketch ) =&amp;gt; {
+  let x = 100;
+  let y = 100;
+
+  sketch.setup = () =&amp;gt; {
+    sketch.createCanvas(300, 380);
+  };
+
+  sketch.draw = () =&amp;gt; {
+    sketch.background(0);
+    sketch.fill(255);
+    sketch.rect(x,y,50,50);
+    sketch.ellipse(sketch[&amp;#34;mouseX&amp;#34;], sketch[&amp;#34;mouseY&amp;#34;], 20);
+  };
+};
+
+let example_sketch = new p5(sketchuuuuu, &amp;#34;example-sketch&amp;#34;)
+&amp;lt;/script&amp;gt;
+++++&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;This is the closest instance of &lt;a href=&#34;https://en.wikipedia.org/wiki/Literate_programming&#34;&gt;literate programming&lt;/a&gt; in the web when using Asciidoctor.
+(Sadly, not as flexible or cool as &lt;a href=&#34;https://orgmode.org/&#34;&gt;Org-Mode&lt;/a&gt; or &lt;a href=&#34;https://jupyter.org/&#34;&gt;Jupyter Notebooks&lt;/a&gt;.)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry></feed>

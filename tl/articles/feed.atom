@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Articles on Contentful</title>
+  
+    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/feed.rss"/><rights>© 2021 </rights>
+  <generator uri="https://gohugo.io/" version="0.76.0">Hugo</generator>
+  <updated>2020-05-12T21:28:27+08:00</updated>
+  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
+  <author>
+    <name>John Doe</name>
+    <email>johndoe@example.com</email>
+    </author><entry>
+    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/rss-atom-and-json-feed-support/</id>
+    <title type="text">Supporta para sa RSS, Atom, at JSON feeds</title>
+    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/rss-atom-and-json-feed-support/" hreflang="tl" title="Supporta para sa RSS, Atom, at JSON feeds"/><author>
+      <name>Juan dela Cruz</name>
+    </author><author>
+      <name>Juana dela Cruz</name>
+    </author><author>
+      <name>Mang Kanor</name>
+    </author><category term="this is a test tag"/><category term="tag2"/>
+    <published>2019-09-04T17:22:44+08:00</published>
+    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Ang Hugo theme na ito ay mayroon mga templates para sa RSS, Atom, and JSON feeds.
+Ito ay nakatutulong para sa madaling pag-publish ng iyong mga gawa.
+Ang mga output ng mga templates ay napatunayan laban sa mga validator na may wastong marka.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Ito ang mga sanggunian ng ginamit upang maisagawa ang mga templates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://tools.ietf.org/html/rfc4287&#34;&gt;Atom 1.0 - IETF RFC4287&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://jsonfeed.org/version/1&#34;&gt;JSON Feed version 1 specifications&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://cyber.harvard.edu/rss/rss.html&#34;&gt;RSS 2.0 specifications&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Naka-activate ang mga web feeds at maaaring mo makita ang mga iyon sa sumusunod na weblinks:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;RSS&lt;/strong&gt;: &lt;code&gt;$HUGO_URL/feed.rss&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Atom&lt;/strong&gt;: &lt;code&gt;$HUGO_URL/feed.atom&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;JSON&lt;/strong&gt;: &lt;code&gt;$HUGO_URL/feed.json&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Para i-enable ang mga web feeds, kailangan mong gumamit ng &lt;a href=&#34;https://gohugo.io/templates/output-formats&#34;&gt;output formats&lt;/a&gt; sa iyong site configuration.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Ang sumusunod ay ang parte ng site configuration para sa web feeds ng demo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;# Visit the following for more information:
+# https://gohugo.io/templates/output-formats
+
+# Defining the media type of the output formats
+# For JSON format, it doesn&amp;#39;t need to be since it&amp;#39;s already built-in into Hugo
+[mediaTypes]
+    [mediaTypes.&amp;#34;application/atom+xml&amp;#34;]
+        suffixes = [&amp;#34;atom&amp;#34;, &amp;#34;atom.xml&amp;#34;] # You can remove the &amp;#34;atom.xml&amp;#34; if you want
+
+    # Redefining RSS media type for the additional suffix
+    [mediaTypes.&amp;#34;application/rss+xml&amp;#34;]
+        suffixes = [&amp;#34;rss&amp;#34;, &amp;#34;rss.xml&amp;#34;] # You can remove the &amp;#34;rss.xml&amp;#34; if you want
+
+
+
+# Including all of the feed output formats in the build
+[outputFormats]
+    [outputFormats.Rss]
+        mediaType = &amp;#34;application/rss+xml&amp;#34;
+        baseName = &amp;#34;feed&amp;#34;
+
+    [outputFormats.Atom]
+        mediaType = &amp;#34;application/atom+xml&amp;#34;
+        baseName = &amp;#34;feed&amp;#34;
+
+    [outputFormats.Json]
+        mediaType = &amp;#34;application/json&amp;#34;
+        baseName = &amp;#34;feed&amp;#34;
+
+
+# Indicating what output formats shall be included
+# for the following kinds
+[outputs]
+    # .Site.BaseURL/index.* is available
+    home = [&amp;#34;HTML&amp;#34;, &amp;#34;JSON&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;ATOM&amp;#34;]
+
+    # .Site.BaseURL/$section/index.* is available
+    section = [&amp;#34;HTML&amp;#34;, &amp;#34;JSON&amp;#34;, &amp;#34;RSS&amp;#34;, &amp;#34;ATOM&amp;#34;]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry></feed>
