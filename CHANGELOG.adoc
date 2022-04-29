@@ -38,6 +38,12 @@ For reference, it is from link:https://github.com/simple-icons/simple-icons/comm
 * Format the files correctly as specified from the EditorConfig file.
 
 
+== Removed
+
+* Setting the default theme with `./data/more-contentful/themes/_index.{yaml,json,toml}`.
+It has been replaced with setting system themes with `./data/more-contentful/themes/_{light,dark}.{yaml,json,toml}`.
+
+
 
 
 == [0.1.3] - 2020-11-06

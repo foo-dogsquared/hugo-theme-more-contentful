@@ -43,10 +43,37 @@
   <div class="site__theme-btn" aria-label="Theme toggle">
       {{ partial "components/heroicon.html" "color-swatch" }}
       <div class="site__theme-dropdown">
+        <div class="site__theme-dropdown-list">
         {{- range $filename, $scheme := (index $.Site.Data "more-contentful").themes }}
-        {{- $name := cond (eq $filename "_index") (printf "%s (default)" .scheme) .scheme }}
-        <div class="site__theme-item" {{ if ne $filename "_index" }}data-theme="{{ .scheme }}"{{ end }}>{{ $name }}</div>
+          {{- $isLight := false }}
+          {{- $isDark := false }}
+
+          {{- $name := cond (eq $filename "_index") (printf "%s (default)" .scheme) .scheme }}
+          {{- if eq $filename "_light" }}
+            {{- $name = i18n "theme_light" }}
+            {{- $isLight = true }}
+          {{- else if eq $filename "_dark" }}
+            {{- $name = i18n "theme_dark" }}
+            {{- $isDark = true }}
+          {{- end }}
+
+          {{- $hasSystemTheme := (or $isDark $isLight) }}
+          {{ if $hasSystemTheme }}
+            {{ .Scratch.Set "has-system-theme" $hasSystemTheme }}
+          {{ end }}
+
+          <div class="site__theme-item"
+            data-theme="{{ .scheme }}"
+            {{ if $isDark }}data-theme-dark{{ end }}
+            {{ if $isLight }}data-theme-light{{ end }}
+          >{{ $name }}</div>
         {{- end }}
+
+        {{ .Scratch.Get "has-system-theme" }}
+          <div class="site__theme-item" data-theme-system>
+            {{ i18n "theme_os_default" }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

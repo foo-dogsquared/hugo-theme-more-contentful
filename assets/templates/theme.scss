@@ -12,7 +12,21 @@
     {{- end }}
   }
 
-  {{- if ne $name "_index" }}[data-theme="{{ .scheme }}"]{{ end }}:root {
+  {{- if eq $name "_light" }}
+    @media (prefers-color-scheme: light) {
+      :root {
+        @include createColorScheme
+      }
+    }
+  {{- else if eq $name "_dark" }}
+    @media (prefers-color-scheme: dark) {
+      :root {
+        @include createColorScheme
+      }
+    }
+  {{- end }}
+
+  [data-theme="{{ .scheme }}"]:root {
     @include createColorScheme;
   }
 {{- end }}

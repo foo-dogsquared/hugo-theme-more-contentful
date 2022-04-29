@@ -27,3 +27,14 @@ other = "Ibang lengwahe"
 
 [page_not_found]
 other = "Hindi makita ang webpage na hinahanap mo"
+
+
+# Themes
+[theme_dark]
+other = "Dark"
+
+[theme_light]
+other = "Light"
+
+[theme_os_default]
+other = "OS default"

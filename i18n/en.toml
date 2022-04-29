@@ -27,3 +27,13 @@ other = "Available in other languages"
 
 [page_not_found]
 other = "Page not found"
+
+# Themes
+[theme_dark]
+other = "Dark"
+
+[theme_light]
+other = "Light"
+
+[theme_os_default]
+other = "OS default"

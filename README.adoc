@@ -281,9 +281,11 @@ base0F: "a16946"
 You can also use https://github.com/chriskempson/base16#scheme-repositories[any of the existing color schemes] as a starting point.
 If you want to override the default scheme, you can place the file as `_index.{json,toml,yaml}` (of whatever appropriate data format of your choice).
 
-NOTE: Inheriting schemes is not possible and to change one color of the color scheme, you have to create a whole new file with the single change.
-Even though scheme inheritance can be implemented, it'll open a new gate of unpredictable problems so it is better to be explicit on everything for now.
-Sorry, it will never be added on the theme. :(
+CAUTION: Setting the default theme through `_index` is deprecated.
+Please set them through the dark/light theme instead.
+
+You can also set the light and dark theme for your website by naming them `_light.{json,toml,yaml}` and `_dark.{json,toml,yaml}`, respectively.
+This will add certain options in the theme selection button as well as the ability to set the OS default.
 
 The schemes are pressed against a template (i.e., link:./assets/templates/theme.scss[`./assets/templates/theme.scss`]) then added to the resulting stylesheet.
 

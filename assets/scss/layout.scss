@@ -64,16 +64,11 @@ footer[aria-label="Site footer"] {
 
 .site__theme-btn {
   background: var(--base00);
-  border: var(--border-style);
-  position: absolute;
   padding: 0.5em;
-  right: 0;
-  top: 0;
+  position: relative;
+  float: right;
 
   &:hover {
-    & svg {
-      display: none;
-    }
     & .site__theme-dropdown {
       display: unset;
     }
@@ -81,13 +76,26 @@ footer[aria-label="Site footer"] {
 }
 
 .site__theme-dropdown {
+  background: var(--base00);
+  border: var(--border-style);
   display: none;
-  position: relative;
-  left: 0;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  width: max-content;
+}
+
+.site__theme-dropdown-list {
+  display: flex;
+  flex-flow: column;
 }
 
 .site__theme-item {
   padding: 0 0.5em;
+
+  &[data-theme-light] { order: -1; }
+  &[data-theme-dark] { order: -1; }
+  &[data-theme-system] { order: -2; }
 
   .site__theme-dropdown &:hover {
     background: var(--base0C);
