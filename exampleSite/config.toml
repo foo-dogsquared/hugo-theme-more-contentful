@@ -1,8 +1,13 @@
 baseURL = "https://example.com"
-title = "Contentful"
+title = "More Contentful"
 enableGitInfo = true
 paginate = 20
 rssLimit = 2
+
+[security]
+  enableInlineShortcodes = true
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^asciidoctor$']
 
 
 [module]
@@ -55,7 +60,7 @@ rssLimit = 2
             [[languages.en.menu.main]]
                 name = "Categories"
                 url = "categories/"
-            
+
             [[languages.en.menu.main]]
                 name = "Tags"
                 url = "tags/"
@@ -78,7 +83,7 @@ rssLimit = 2
             [[languages.tl.menu.main]]
                 name = "Categories"
                 url = "categories/"
-            
+
             [[languages.tl.menu.main]]
                 name = "Tags"
                 url = "tags/"
@@ -92,7 +97,7 @@ rssLimit = 2
 [mediaTypes]
     [mediaTypes."application/atom+xml"]
         suffixes = ["atom", "atom.xml"] # You can remove the "atom.xml" if you want
-    
+
     # Redefining RSS media type for the additional suffix
     [mediaTypes."application/rss+xml"]
         suffixes = ["rss", "rss.xml"] # You can remove the "rss.xml" if you want
@@ -110,7 +115,7 @@ rssLimit = 2
     [outputFormats.ATOM]
         mediaType = "application/atom+xml"
         baseName = "feed"
-    
+
     [outputFormats.JSON]
         mediaType = "application/feed+json"
         baseName = "feed"
@@ -119,11 +124,11 @@ rssLimit = 2
 # Indicating what output formats shall be included 
 # for the following kinds
 [outputs]
-    # .Site.BaseURL/$basename.* is available 
-    home = ["HTML", "JSON", "RSS", "ATOM"]
+  # .Site.BaseURL/$basename.* is available 
+  home = ["HTML", "JSON", "RSS", "ATOM"]
 
-    # .Site.BaseURL/$section/$basename.* is available
-    section = ["HTML", "JSON", "RSS", "ATOM"] 
+  # .Site.BaseURL/$section/$basename.* is available
+  section = ["HTML", "JSON", "RSS", "ATOM"] 
 
 
 [params]

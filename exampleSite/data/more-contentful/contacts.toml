@@ -2,21 +2,57 @@ useImage = true
 
 [[links]]
 id = "twitter"
-url = "https://twitter.com/foo_dogsquared"
+url = "https://example.org/twitter"
 name = "Twitter"
 
 [[links]]
 id = "github"
-url = "https://github.com/foo-dogsquared/"
+url = "https://example.org/github/"
 name = "GitHub"
 
 [[links]]
 id = "gitlab"
-url = "https://gitlab.com/foo-dogsquared/"
+url = "https://example.org/gitlab"
 name = "GitLab"
 
 [[links]]
 id = "keybase"
-url = "https://keybase.io/foo_dogsquared"
+url = "https://example.org/keybase"
 name = "Keybase"
+weight = -1
+
+[[links]]
+id = "picartodottv"
+url = "https://example.org/picartodottv"
+name = "Picarto.tv"
+
+[[links]]
+id = "lichess"
+url = "https://example.org/lichess"
+name = "Lichess"
+
+[[links]]
+id = "pixiv"
+url = "https://example.org/pixiv"
+name = "Pixiv"
+
+[[links]]
+id = "devdotto"
+url = "https://example.org/devdotto"
+name = "Dev.to"
+
+[[links]]
+id = "twitch"
+url = "https://example.org/twitch"
+name = "Twitch"
+
+[[links]]
+id = "youtube"
+url = "https://example.org/youtube"
+name = "YouTube"
+
+[[links]]
+id = "gmail"
+url = "https://example.org/gmail"
+name = "E-mail"
 weight = -1

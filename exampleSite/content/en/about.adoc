@@ -2,23 +2,18 @@
 title: About
 ---
 
-= About Contentful
+= About More Contentful
 
-This is Contentful, a https://gohugo.io/[Hugo] theme that focuses on your content.
-It aims to be simply beautiful with the sane defaults and tries to go out of your way when creating your content.
-
-Contentful understands that not all use cases can be applied for everyone which is why it was built from the ground up to be easily extensible.
-It is really just a few HTML files and a single CSS stylesheet with a few web feed templates, ready to be modified for your specific needs.
+This is More Contentful, a https://gohugo.io/[Hugo] theme that builds on top of link:https://github.com/foo-dogsquared/hugo-theme-contentful[Contentful].
+It aims to build more features that tries to go out of its way while letting you create your content with a nice reading interface.
 
 With this focus, it aims both for those who want to create content and for those who are willing to get their hands dirty.
 Oh, the creative side of making content and themes!
 
-Here are the sane default features that Contentful provides:
+On top of what Contentful already provides, here are some features this theme provides:
 
-* Beautifully simple default layout while made to be easily modified and extensible.
-* Provides a template for valid https://cyber.harvard.edu/rss/rss.html[RSS], https://tools.ietf.org/html/rfc4287[Atom], and https://jsonfeed.org/[JSON] feeds.
-* Dark mode toggle.
+* A (better) reading interface, almost the same extensible theme you know and love!
+* Multiple themes with Base16 themes including the ability to set the light and dark themes.
 * Focus on web accessibility and search engine optimization (SEO) including https://dev.twitter.com/cards[Twitter cards] and https://opengraphprotocol.org/[Open Graph protocol].
-* Google Analytics and Disqus integration.
 
-For those who want to extend Contentful, link:../articles/extending-contentful[a dedicated post on some useful recipes] is available.
+For those who want to extend More Contentful, link:../articles/extending-contentful[a dedicated post on some useful recipes] is available.
