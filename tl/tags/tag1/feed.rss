@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tag1 on Contentful</title>
-    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/tag1/</link>
-    <description>Recent content in tag1 on Contentful</description>
-    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>tl</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+    <title>tag1 on More Contentful</title>
+    <link>https://example.com/tl/tags/tag1/</link>
+    <description>Recent content in tag1 on More Contentful</description>
+    <generator>Hugo v0.96.0 -- gohugo.io</generator><language>tl</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 21:28:27 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/tag1/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/tag1/" rel="canonical" type="text/html" />
+        <atom:link href="https://example.com/tl/tags/tag1/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://example.com/tl/tags/tag1/" rel="canonical" type="text/html" />
+    <item>
+      <title>Isang hidden post test</title>
+      <link>https://example.com/tl/articles/hidden-post-test/</link>
+      <category>tag1</category>
+      <category>tag2</category>
+
+      <pubDate>Tue, 12 May 2020 21:28:27 +0800</pubDate>
+      <guid>https://example.com/tl/articles/hidden-post-test/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

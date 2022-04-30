@@ -1,111 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Recipes on Contentful</title>
+  <title>Recipes on More Contentful</title>
   
-    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss"/><rights>© 2021 </rights>
-  <generator uri="https://gohugo.io/" version="0.76.0">Hugo</generator>
+    <link rel="self" type="application/atom+xml" href="https://example.com/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://example.com/recipes/"/><link rel="alternate" type="application/feed+json" href="https://example.com/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://example.com/recipes/feed.rss"/><rights>© 2022 </rights>
+  <generator uri="https://gohugo.io/" version="0.96.0">Hugo</generator>
   <updated>2020-05-12T17:25:55+08:00</updated>
-  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
+  <id>https://example.com</id><icon>https://example.com/icon.png</icon>
   <author>
     <name>John Doe</name>
     <email>johndoe@example.com</email>
     </author><entry>
-    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/simple-icons-integration/</id>
-    <title type="text">Simple Icons integration with Hugo modules</title>
-    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/simple-icons-integration/" hreflang="en" title="Simple Icons integration with Hugo modules"/><category term="tag1"/><category term="tag2"/>
-    <published>2020-10-20T21:36:34+08:00</published>
-    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/simple-icons/simple-icons&#34;&gt;Simple Icons&lt;/a&gt; is a free and open source icon set for popular brands including social media sites such as Twitter, YouTube, Twitch, GitHub, and so on.
-This is a perfect component for getting social media icons.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Usually to make use of this icon set in Hugo, you would have to download each icon you need.
-Luckily, there’s an easier way to make use of the set with &lt;a href=&#34;https://gohugo.io/hugo-modules/&#34;&gt;Hugo modules&lt;/a&gt;.
-In the future, Hugo will have an easier way to &lt;a href=&#34;https://discourse.gohugo.io/t/esbuild-looks-like-we-can-finally-get-solid-hugo-modules-support/28757&#34;&gt;integrate&lt;/a&gt; &lt;a href=&#34;https://gohugo.io/commands/hugo_mod_npm/#readout&#34;&gt;with JavaScript modules&lt;/a&gt;.
-&lt;sup class=&#34;footnote&#34;&gt;[&lt;a id=&#34;_footnoteref_1&#34; class=&#34;footnote&#34; href=&#34;#_footnotedef_1&#34; title=&#34;View footnote.&#34;&gt;1&lt;/a&gt;]&lt;/sup&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;To get started, simply initialize your Hugo site as a Hugo module with &lt;code&gt;hugo mod init $HUGO_MOD_NAME&lt;/code&gt; where &lt;code&gt;$HUGO_MOD_NAME&lt;/code&gt; is simply the name of the Hugo module which could be anything.
-For example, if you host your Hugo site on GitHub pages, you might want to name your module like &lt;code&gt;github.com/$USER/$HUGO_SITE_REPO&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Then, add the Simple Icons repo as a dependency module in your site configuration.
-The following configuration gets the icon set and the metadata and places them at &lt;code&gt;assets/icons&lt;/code&gt; and &lt;code&gt;data/simple-icons.json&lt;/code&gt; respectively.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;[[module.imports]]
-  path = &amp;#34;github.com/simple-icons/simple-icons&amp;#34;
-  [[module.imports.mounts]]
-    source = &amp;#34;icons&amp;#34;
-    target = &amp;#34;assets/icons&amp;#34;
-  [[module.imports.mounts]]
-    source = &amp;#34;_data/simple-icons.json&amp;#34;
-    target = &amp;#34;data/simple-icons.json&amp;#34;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Onto the interesting point which is using the icons itself.
-Since the icon set is stored in the assets folder, we can then use it in our templates.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;{{ $github_icon := resources.Get &amp;#34;icons/github.svg&amp;#34; }}
-{{ $github_icon.Content | safeHTML }}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;And the SVG source will be applied inline to the resulting page.
-This opens up a lot of uses with the icon set.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Let’s reimplement the &lt;a href=&#34;../configurable-list-of-contacts.html&#34;&gt;configurable list of contacts&lt;/a&gt; with added feature of adding an icon from the set with each key serves as the icon to be displayed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&amp;lt;address&amp;gt;
-{{- range (sort $.Site.Data.contacts &amp;#34;weight&amp;#34; &amp;#34;asc&amp;#34;) -}}
-&amp;lt;a rel=&amp;#34;me&amp;#34; href=&amp;#34;{{ .url }}&amp;#34; aria-contact=&amp;#34;{{ .name }}&amp;#34;&amp;gt;
-    {{ $location := printf &amp;#34;icons/%s.svg&amp;#34; .id }}
-    {{ with resources.Get $location }}{{ .Content | safeHTML }}{{ end }}&amp;lt;/a&amp;gt; |
-{{- end -}}
-&amp;lt;/address&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Unfortunately, this doesn’t take account for missing icons so a fallback would be handy.
-For now, we’ll use text as our fallback even though it’s not going to be pretty.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
-&lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&amp;lt;address&amp;gt;
-{{- range (sort $.Site.Data.contacts &amp;#34;weight&amp;#34; &amp;#34;asc&amp;#34;) -}}
-&amp;lt;a rel=&amp;#34;me&amp;#34; href=&amp;#34;{{ .url }}&amp;#34; aria-contact=&amp;#34;{{ .name }}&amp;#34;&amp;gt;
-    {{ $location := printf &amp;#34;icons/%s.svg&amp;#34; .id }}
-    {{ $icon := resources.Get $location }}
-    {{ if (countrunes $icon.Content) }}
-        {{ .Content | safeHTML }}
-    {{ else }}
-        {{ .name }}
-    {{ end }}
-&amp;lt;/a&amp;gt; |
-{{- end -}}
-&amp;lt;/address&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;footnotes&#34;&gt;
-&lt;hr/&gt;
-&lt;div class=&#34;footnote&#34; id=&#34;_footnotedef_1&#34;&gt;
-&lt;a href=&#34;#_footnoteref_1&#34;&gt;1&lt;/a&gt;. Or integrating with NPM which &lt;a href=&#34;https://gohugo.io/news/0.75.0-relnotes/&#34;&gt;Hugo&lt;/a&gt; certain has more support in the upcoming version.
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry><entry>
-    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</id>
+    <id>https://example.com/recipes/configurable-list-of-contacts/</id>
     <title type="text">Configurable list of contacts</title>
-    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
+    <link rel="alternate" href="https://example.com/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
     <published>2020-10-20T20:38:24+08:00</published>
-    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-04-30T20:40:56+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Most themes offer quick social media links with site configuration.
 However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.&lt;/p&gt;
 &lt;/div&gt;
@@ -174,6 +83,67 @@ I’ve put the following template in a partial named &lt;code&gt;contacts&lt;/co
 &lt;p&gt;A suggestion (and an exercise) for extending this is to create image links.
 Maybe add another key named &lt;code&gt;image&lt;/code&gt; that accepts either URL.
 The &lt;code&gt;name&lt;/code&gt; would now be the image alternative text.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry><entry>
+    <id>https://example.com/recipes/creating-an-archive-page/</id>
+    <title type="text">Creating an archive page</title>
+    <link rel="alternate" href="https://example.com/recipes/creating-an-archive-page/" hreflang="en" title="Creating an archive page"/>
+    <published>2020-10-20T20:36:55+08:00</published>
+    <updated>2022-04-30T20:40:56+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;This will add an archive page similar to archive pages &lt;a href=&#34;https://davidtranscend.com/archives/&#34;&gt;like&lt;/a&gt; &lt;a href=&#34;https://lukesmith.xyz/blogindex.html&#34;&gt;these&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;{{- define &amp;#34;main&amp;#34; -}}
+
+&amp;lt;h1&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt;
+
+{{ .Content }}
+
+&amp;lt;hr&amp;gt;
+
+{{- /* Creating a section that lists out regular pages by year */ -}}
+{{ range $.Site.RegularPages.GroupByPublishDate &amp;#34;2006&amp;#34; }}
+    {{- /* Skip regular pages with an invalid creation date string. */ -}}
+    {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter. */ -}}
+    {{- /* We will also exclude hidden pages. */ -}}
+    {{ if ne .Key &amp;#34;0001&amp;#34; }}
+        &amp;lt;section data-year=&amp;#34;{{ .Key }}&amp;#34;&amp;gt;
+            &amp;lt;h2 id=&amp;#34;{{ .Key }}&amp;#34;&amp;gt;{{ .Key }}&amp;lt;/h2&amp;gt;
+            &amp;lt;ul&amp;gt;
+            {{- range where .Pages &amp;#34;Params.hidden&amp;#34; &amp;#34;!=&amp;#34; true -}}
+                &amp;lt;li&amp;gt;
+                    &amp;lt;date&amp;gt;{{ .Date.Format &amp;#34;2006-01-02&amp;#34; }}&amp;lt;/date&amp;gt; -
+                    &amp;lt;a aria-label=&amp;#34;{{ .Title }}&amp;#34; href=&amp;#34;{{ .Permalink }}&amp;#34;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;
+                &amp;lt;/li&amp;gt;
+            {{- end -}}
+            &amp;lt;/ul&amp;gt;
+        &amp;lt;/section&amp;gt;
+    {{- end }}
+{{ end }}
+
+{{- end -}}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;We will simply add this as a layout in our customized theme.
+Let’s call it &lt;code&gt;archives&lt;/code&gt; so we have to add a file in &lt;code&gt;layouts/_default/archives.html&lt;/code&gt; then set a page of our project with the &lt;code&gt;layout&lt;/code&gt; key in the frontmatter.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;We want the archives page to be accessed at &lt;code&gt;$.Site.BaseURL/archives&lt;/code&gt; so we’ll simply create &lt;code&gt;archives.adoc&lt;/code&gt; (&lt;a href=&#34;https://gohugo.io/content-management/formats/#list-of-content-formats&#34;&gt;any valid content files with certain file extensions can do&lt;/a&gt;, I’m using &lt;a href=&#34;https://asciidoctor.org/&#34;&gt;Asciidoctor&lt;/a&gt;) with the following example content.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;content&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-asciidoctor&#34; data-lang=&#34;asciidoctor&#34;&gt;---
+title: &amp;#34;Archives&amp;#34;
+layout: &amp;#34;archive&amp;#34;
+---
+
+= Archives
+
+This is the archives of the century.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </content>
   </entry></feed>

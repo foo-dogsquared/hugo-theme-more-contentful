@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-us"><title>Recipes | Contentful</title>
+<html lang="en-us"><title>Recipes | More Contentful</title>
 
 
 
 
-<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/css/main.min.e06bc29e2cb00a8f461bfefc0ea9543b9bf61688266d3ca51fcb4d2121242b0a.css" /><meta name="generator" content="Hugo 0.76.0" />
+<link rel="stylesheet" href="https://example.com/css/main.min.5d090a66d48ba0fbc708c638ff5378c00764130d0d5b2c89505d249cd84d663b.css" /><meta name="generator" content="Hugo 0.96.0" />
 <meta charset="utf-8">
 <meta name="author" content="John Doe" />
 
@@ -17,9 +17,9 @@
 <meta property="og:title" content="Recipes" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/" />
-<meta property="og:updated_time" content="2020-11-02T23:58:07+08:00" />
-<link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/" /><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json" /><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss" /><link rel="alternate" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom" />
+<meta property="og:url" content="https://example.com/recipes/" />
+
+<link rel="canonical" type="text/html" href="https://example.com/recipes/" /><link rel="alternate" type="application/feed+json" href="https://example.com/recipes/feed.json" /><link rel="alternate" type="application/rss+xml" href="https://example.com/recipes/feed.rss" /><link rel="alternate" type="application/atom+xml" href="https://example.com/recipes/feed.atom" />
   
   <script>
   let theme = window.localStorage.getItem('theme'); 
@@ -29,21 +29,81 @@
 </script>
 
 <body>
-  <div class="site__theme-btn" aria-label="Theme toggle">
-      
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/color-swatch.svg#color-swatch"></use>
+<div class="site__theme-btn" aria-label="Theme toggle">
+  
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/color-swatch.svg#color-swatch"></use>
   </svg>
 
-      <div class="site__theme-dropdown">
-        <div class="site__theme-item" >Default Dark (default)</div>
-        <div class="site__theme-item" data-theme="Dracula">Dracula</div>
-        <div class="site__theme-item" data-theme="Nord">Nord</div>
+  <div class="site__theme-dropdown">
+    <div class="site__theme-dropdown-list">
+      
+      
+      
+      
+
+      
+      
+        
+        
+      
+        
+          
+        
+
+        <div class="site__theme-item"
+             data-theme="Default Dark"
+             data-theme-dark
+             
+        >Dark</div>
+          
+        
+          
+        
+
+        <div class="site__theme-item"
+             data-theme="Default Light"
+             
+             data-theme-light
+        >Light</div>
+          
+        
+
+        <div class="site__theme-item"
+             data-theme="Dracula"
+             
+             
+        >Dracula</div>
+        
+
+        <div class="site__theme-item"
+             data-theme="Nord"
+             
+             
+        >Nord</div>
+        
+
+        <div class="site__theme-item"
+             data-theme="Solarized Dark"
+             
+             
+        >Solarized Dark</div>
+        
+
+        <div class="site__theme-item"
+             data-theme="Solarized Light"
+             
+             
+        >Solarized Light</div>
+
+      <div class="site__theme-item" data-theme-system>
+        OS default
       </div>
-    </svg>
+    </div>
   </div>
-  <script defer>
-    const themeDropdown = document.querySelector('.site__theme-btn');
+</div>
+<script defer>
+  const themeDropdown = document.querySelector('.site__theme-btn');
     themeDropdown.addEventListener('click', (event) => {
       const { target } = event;
       if (target.classList.contains("site__theme-item")) {
@@ -57,156 +117,137 @@
         }
       }
     });
-  </script><nav aria-label="Primary navigation">
-  <a class="site__title" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful">Contentful</a>
+</script>
+<nav aria-label="Site header">
+  <a class="site__title" href="https://example.com">More Contentful</a>
   <div class="list site__links">
     
-      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/about/">About</a>
-      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/">Categories</a>
-      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/">Recipes</a>
-      <a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/">Tags</a>
+      <a href="https://example.com/about/">About</a>
+      <a href="https://example.com/categories/">Categories</a>
+      <a href="https://example.com/recipes/">Recipes</a>
+      <a href="https://example.com/tags/">Tags</a>
       
     
   </div>
 </nav>
-
 <hr>
+<section>
 <div class="paragraph">
 <p>Extending a Hugo theme is nothing new and a <a href="https://gohugo.io/content-management/sections/">few</a> <a href="http://hugocodex.org/add-ons/">places</a> provide a place for the most common extensions.
 In this section, I’ll be listing a few personal recipes I’ve always used for extending a Hugo theme.
 Though this only applies specifically to Contentful and may need some tweaking when applying it other themes.</p>
 </div>
 
+</section>
 <article class="post">
-  <h1><a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/simple-icons-integration/" aria-label="Simple Icons integration with Hugo modules">Simple Icons integration with Hugo modules</a></h1>
-  
-<div class="list post__meta"><time datetime="2020-10-20 21:36:34 &#43;0800 &#43;0800">
+  <h1><a href="https://example.com/recipes/configurable-list-of-contacts/" aria-label="Configurable list of contacts">Configurable list of contacts</a></h1>
+  <div class="list post__meta"><time datetime="2020-10-20 20:38:24 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/calendar.svg#calendar"></use>
   </svg>
 
     <span style="margin-left: 0.5em;">2020-10-20</span>
   </time>
-  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
+  <time datetime="2022-04-30 20:40:56 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2020-11-02</span>
+    <span style="margin-left: 0.5em;">2022-04-30</span>
   </time>
 </div>
+
 </article>
 <article class="post">
-  <h1><a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/" aria-label="Configurable list of contacts">Configurable list of contacts</a></h1>
-  
-<div class="list post__meta"><time datetime="2020-10-20 20:38:24 &#43;0800 &#43;0800">
+  <h1><a href="https://example.com/recipes/creating-an-archive-page/" aria-label="Creating an archive page">Creating an archive page</a></h1>
+  <div class="list post__meta"><time datetime="2020-10-20 20:36:55 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/calendar.svg#calendar"></use>
   </svg>
 
     <span style="margin-left: 0.5em;">2020-10-20</span>
   </time>
-  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
+  <time datetime="2022-04-30 20:40:56 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2020-11-02</span>
+    <span style="margin-left: 0.5em;">2022-04-30</span>
   </time>
 </div>
+
 </article>
 <article class="post">
-  <h1><a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/" aria-label="Creating an archive page">Creating an archive page</a></h1>
-  
-<div class="list post__meta"><time datetime="2020-10-20 20:36:55 &#43;0800 &#43;0800">
+  <h1><a href="https://example.com/recipes/open-graph-protocol/" aria-label="Open graph protocol">Open graph protocol</a></h1>
+  <div class="list post__meta"><time datetime="2020-10-20 20:35:39 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/calendar.svg#calendar"></use>
   </svg>
 
     <span style="margin-left: 0.5em;">2020-10-20</span>
   </time>
-  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
+  <time datetime="2022-04-30 20:40:56 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2020-11-02</span>
+    <span style="margin-left: 0.5em;">2022-04-30</span>
   </time>
 </div>
+
 </article>
 <article class="post">
-  <h1><a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/open-graph-protocol/" aria-label="Open graph protocol">Open graph protocol</a></h1>
-  
-<div class="list post__meta"><time datetime="2020-10-20 20:35:39 &#43;0800 &#43;0800">
+  <h1><a href="https://example.com/recipes/twitter-cards/" aria-label="Twitter cards">Twitter cards</a></h1>
+  <div class="list post__meta"><time datetime="2020-10-20 20:31:32 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/calendar.svg#calendar"></use>
   </svg>
 
     <span style="margin-left: 0.5em;">2020-10-20</span>
   </time>
-  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
+  <time datetime="2022-04-30 20:40:56 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2020-11-02</span>
+    <span style="margin-left: 0.5em;">2022-04-30</span>
   </time>
 </div>
+
 </article>
 <article class="post">
-  <h1><a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/twitter-cards/" aria-label="Twitter cards">Twitter cards</a></h1>
-  
-<div class="list post__meta"><time datetime="2020-10-20 20:31:32 &#43;0800 &#43;0800">
+  <h1><a href="https://example.com/recipes/customizing-your-head/" aria-label="Customizing your head">Customizing your head</a></h1>
+  <div class="list post__meta"><time datetime="2020-10-20 20:29:42 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/calendar.svg#calendar"></use>
   </svg>
 
     <span style="margin-left: 0.5em;">2020-10-20</span>
   </time>
-  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
+  <time datetime="2022-04-30 20:40:56 &#43;0800 &#43;0800">
     
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
+  <svg class="icon">
+    <use href="https://example.com/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2020-11-02</span>
+    <span style="margin-left: 0.5em;">2022-04-30</span>
   </time>
 </div>
-</article>
-<article class="post">
-  <h1><a href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/customizing-your-head/" aria-label="Customizing your head">Customizing your head</a></h1>
-  
-<div class="list post__meta"><time datetime="2020-10-20 20:29:42 &#43;0800 &#43;0800">
-    
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/calendar.svg#calendar"></use>
-  </svg>
 
-    <span style="margin-left: 0.5em;">2020-10-20</span>
-  </time>
-  <time datetime="2020-11-02 23:58:07 &#43;0800 &#43;0800">
-    
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
-  </svg>
-
-    <span style="margin-left: 0.5em;">2020-11-02</span>
-  </time>
-</div>
 </article>
 
 
-<hr>
-<footer>
+
+    <hr><footer aria-label="Site footer">
 
 <p><a href="#top">Back to top</a></p>
 
@@ -215,9 +256,9 @@ Though this only applies specifically to Contentful and may need some tweaking w
   <p>Available in other languages:
   <span class="list site__languages">
   
-    <a href="/hugo-theme-more-contentful/en" hreflang="en">English</a>
+    <a href="/en" hreflang="en">English</a>
   
-    <a href="/hugo-theme-more-contentful/tl" hreflang="tl">Tagalog</a>
+    <a href="/tl" hreflang="tl">Tagalog</a>
   
   </span>
 </p>
@@ -231,27 +272,69 @@ Though this only applies specifically to Contentful and may need some tweaking w
 
   
   <li>
-    <a class="site__social-icon" rel="me" href="https://keybase.io/foo_dogsquared" aria-label="Keybase">
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/keybase.svg#keybase"></use>
+    <a class="site__social-icon" rel="me" href="https://example.org/gmail" aria-label="E-mail">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/gmail.svg#gmail"></use>
   </svg>
     </a>
   </li><li>
-    <a class="site__social-icon" rel="me" href="https://github.com/foo-dogsquared/" aria-label="GitHub">
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/github.svg#github"></use>
+    <a class="site__social-icon" rel="me" href="https://example.org/keybase" aria-label="Keybase">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/keybase.svg#keybase"></use>
   </svg>
     </a>
   </li><li>
-    <a class="site__social-icon" rel="me" href="https://gitlab.com/foo-dogsquared/" aria-label="GitLab">
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/gitlab.svg#gitlab"></use>
+    <a class="site__social-icon" rel="me" href="https://example.org/devdotto" aria-label="Dev.to">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/devdotto.svg#devdotto"></use>
   </svg>
     </a>
   </li><li>
-    <a class="site__social-icon" rel="me" href="https://twitter.com/foo_dogsquared" aria-label="Twitter">
-  <svg>
-    <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/brand/twitter.svg#twitter"></use>
+    <a class="site__social-icon" rel="me" href="https://example.org/github/" aria-label="GitHub">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/github.svg#github"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://example.org/gitlab" aria-label="GitLab">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/gitlab.svg#gitlab"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://example.org/lichess" aria-label="Lichess">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/lichess.svg#lichess"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://example.org/picartodottv" aria-label="Picarto.tv">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/picartodottv.svg#picartodottv"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://example.org/pixiv" aria-label="Pixiv">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/pixiv.svg#pixiv"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://example.org/twitch" aria-label="Twitch">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/twitch.svg#twitch"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://example.org/twitter" aria-label="Twitter">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/twitter.svg#twitter"></use>
+  </svg>
+    </a>
+  </li><li>
+    <a class="site__social-icon" rel="me" href="https://example.org/youtube" aria-label="YouTube">
+  <svg class="icon">
+    <use href="https://example.com/icons/brand/youtube.svg#youtube"></use>
   </svg>
     </a>
   </li></ul>
@@ -259,7 +342,7 @@ Though this only applies specifically to Contentful and may need some tweaking w
 
 
 
-<p>© 2021 Contentful</p>
+<p>© 2022 More Contentful</p>
 </footer>
 
 </body>

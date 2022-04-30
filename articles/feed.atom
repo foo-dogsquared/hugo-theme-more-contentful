@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Articles on Contentful</title>
+  <title>Articles on More Contentful</title>
   
-    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/feed.rss"/><rights>© 2021 </rights>
-  <generator uri="https://gohugo.io/" version="0.76.0">Hugo</generator>
+    <link rel="self" type="application/atom+xml" href="https://example.com/articles/feed.atom"/><link rel="canonical" type="text/html" href="https://example.com/articles/"/><link rel="alternate" type="application/feed+json" href="https://example.com/articles/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://example.com/articles/feed.rss"/><rights>© 2022 </rights>
+  <generator uri="https://gohugo.io/" version="0.96.0">Hugo</generator>
   <updated>2020-05-12T21:29:52+08:00</updated>
-  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
+  <id>https://example.com</id><icon>https://example.com/icon.png</icon>
   <author>
     <name>John Doe</name>
     <email>johndoe@example.com</email>
     </author><entry>
-    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/</id>
+    <id>https://example.com/articles/rss-atom-and-json-feed-support/</id>
     <title type="text">RSS, Atom, and JSON Feed Support</title>
-    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/" hreflang="en" title="RSS, Atom, and JSON Feed Support"/><author>
+    <link rel="alternate" href="https://example.com/articles/rss-atom-and-json-feed-support/" hreflang="en" title="RSS, Atom, and JSON Feed Support"/><author>
       <name>John Doe</name>
     </author><author>
       <name>Jane Doe</name>
     </author><category term="this is a test tag"/><category term="tag2"/>
     <published>2019-09-04T17:22:44+08:00</published>
-    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-04-30T20:40:56+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Web feeds are one of the most common ways for a visitor to keep up with someone who creates content.
 Nowadays, most social media has that feature such as the subscribing YouTube channels, following Twitter accounts, and watching Deviantart artists.
 Outside of those, we have simpler things like &lt;a href=&#34;https://www.rssboard.org/rss-2-0-1&#34;&gt;RSS&lt;/a&gt; and &lt;a href=&#34;https://www.jsonfeed.org/&#34;&gt;JSON&lt;/a&gt; feeds where they are just plain text files describing the content.&lt;/p&gt;
@@ -79,11 +79,11 @@ For this demo, we’ll use the &lt;a href=&#34;https://github.com/foo-dogsquared
 &lt;/div&gt;
 </content>
   </entry><entry>
-    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/</id>
+    <id>https://example.com/articles/asciidoctor-extended-syntax-guide/</id>
     <title type="text">Asciidoctor Extended Syntax Guide</title>
-    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/asciidoctor-extended-syntax-guide/" hreflang="en" title="Asciidoctor Extended Syntax Guide"/><category term="asciidoctor"/><category term="guide"/>
+    <link rel="alternate" href="https://example.com/articles/asciidoctor-extended-syntax-guide/" hreflang="en" title="Asciidoctor Extended Syntax Guide"/><category term="asciidoctor"/><category term="guide"/>
     <published>2019-08-29T22:09:16+08:00</published>
-    <updated>2020-11-02T23:58:07+08:00</updated><content type="html">
+    <updated>2022-04-30T20:40:56+08:00</updated><content type="html">
 &lt;div id=&#34;preamble&#34;&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;

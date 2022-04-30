@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recipes on Contentful</title>
-    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/</link>
-    <description>Recent content in Recipes on Contentful</description>
-    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+    <title>Recipes on More Contentful</title>
+    <link>https://example.com/recipes/</link>
+    <description>Recent content in Recipes on More Contentful</description>
+    <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 17:25:55 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/" rel="canonical" type="text/html" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json" rel="alternate" type="application/feed+json" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom" rel="alternate" type="application/atom+xml" />
+        <atom:link href="https://example.com/recipes/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://example.com/recipes/" rel="canonical" type="text/html" />
+        <atom:link href="https://example.com/recipes/feed.json" rel="alternate" type="application/feed+json" />
+        <atom:link href="https://example.com/recipes/feed.atom" rel="alternate" type="application/atom+xml" />
     <item>
-      <title>Simple Icons integration with Hugo modules</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/simple-icons-integration/</link>
-      <category>tag1</category>
-      <category>tag2</category>
+      <title>Configurable list of contacts</title>
+      <link>https://example.com/recipes/configurable-list-of-contacts/</link>
 
-      <pubDate>Tue, 20 Oct 2020 21:36:34 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/simple-icons-integration/</guid>
+      <pubDate>Tue, 20 Oct 2020 20:38:24 +0800</pubDate>
+      <guid>https://example.com/recipes/configurable-list-of-contacts/</guid>
       <description></description>
     </item>
     <item>
-      <title>Configurable list of contacts</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</link>
+      <title>Creating an archive page</title>
+      <link>https://example.com/recipes/creating-an-archive-page/</link>
 
-      <pubDate>Tue, 20 Oct 2020 20:38:24 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</guid>
+      <pubDate>Tue, 20 Oct 2020 20:36:55 +0800</pubDate>
+      <guid>https://example.com/recipes/creating-an-archive-page/</guid>
       <description></description>
     </item>
   </channel>

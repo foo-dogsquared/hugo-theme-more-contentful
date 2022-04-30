@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Contentful</title>
-    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/</link>
-    <description>Recent content in Categories on Contentful</description>
-    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
-        <lastBuildDate>Tue, 20 Oct 2020 21:36:34 +0800</lastBuildDate>
+    <title>Categories on More Contentful</title>
+    <link>https://example.com/categories/</link>
+    <description>Recent content in Categories on More Contentful</description>
+    <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
+        <lastBuildDate>Tue, 20 Oct 2020 20:38:24 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/" rel="canonical" type="text/html" />
+        <atom:link href="https://example.com/categories/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://example.com/categories/" rel="canonical" type="text/html" />
     <item>
       <title>recipe</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/recipe/</link>
+      <link>https://example.com/categories/recipe/</link>
 
-      <pubDate>Tue, 20 Oct 2020 21:36:34 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/recipe/</guid>
+      <pubDate>Tue, 20 Oct 2020 20:38:24 +0800</pubDate>
+      <guid>https://example.com/categories/recipe/</guid>
       <description></description>
     </item>
     <item>
       <title>category1</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/category1/</link>
+      <link>https://example.com/categories/category1/</link>
 
       <pubDate>Tue, 12 May 2020 21:29:52 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/category1/</guid>
+      <guid>https://example.com/categories/category1/</guid>
       <description></description>
     </item>
   </channel>

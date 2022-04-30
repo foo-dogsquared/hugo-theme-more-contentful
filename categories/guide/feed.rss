@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>guide on Contentful</title>
-    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/guide/</link>
-    <description>Recent content in guide on Contentful</description>
-    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+    <title>guide on More Contentful</title>
+    <link>https://example.com/categories/guide/</link>
+    <description>Recent content in guide on More Contentful</description>
+    <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 17:25:55 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/guide/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/guide/" rel="canonical" type="text/html" />
+        <atom:link href="https://example.com/categories/guide/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://example.com/categories/guide/" rel="canonical" type="text/html" />
     <item>
       <title>Recipes</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/</link>
+      <link>https://example.com/recipes/</link>
       <category>theme</category>
       <category>extending</category>
 
       <pubDate>Tue, 12 May 2020 17:25:55 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/</guid>
+      <guid>https://example.com/recipes/</guid>
       <description></description>
     </item>
     <item>
       <title>RSS, Atom, and JSON Feed Support</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/</link>
+      <link>https://example.com/articles/rss-atom-and-json-feed-support/</link>
       <category>this is a test tag</category>
       <category>tag2</category>
 
       <pubDate>Wed, 04 Sep 2019 17:22:44 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/</guid>
+      <guid>https://example.com/articles/rss-atom-and-json-feed-support/</guid>
       <description></description>
     </item>
   </channel>

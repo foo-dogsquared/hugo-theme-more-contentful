@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Contentful</title>
-    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/</link>
-    <description>Recent content in Tags on Contentful</description>
-    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>tl</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+    <title>Tags on More Contentful</title>
+    <link>https://example.com/tl/tags/</link>
+    <description>Recent content in Tags on More Contentful</description>
+    <generator>Hugo v0.96.0 -- gohugo.io</generator><language>tl</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 21:28:27 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/" rel="canonical" type="text/html" />
+        <atom:link href="https://example.com/tl/tags/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://example.com/tl/tags/" rel="canonical" type="text/html" />
     <item>
       <title>tag1</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/tag1/</link>
+      <link>https://example.com/tl/tags/tag1/</link>
 
       <pubDate>Tue, 12 May 2020 21:28:27 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/tag1/</guid>
+      <guid>https://example.com/tl/tags/tag1/</guid>
       <description></description>
     </item>
     <item>
       <title>tag2</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/tag2/</link>
+      <link>https://example.com/tl/tags/tag2/</link>
 
       <pubDate>Tue, 12 May 2020 21:28:27 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/tags/tag2/</guid>
+      <guid>https://example.com/tl/tags/tag2/</guid>
       <description></description>
     </item>
   </channel>

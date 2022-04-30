@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>seo on Contentful</title>
-    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/seo/</link>
-    <description>Recent content in seo on Contentful</description>
-    <generator>Hugo v0.76.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2021 to the author(s) behind Contentful</copyright>
+    <title>seo on More Contentful</title>
+    <link>https://example.com/tags/seo/</link>
+    <description>Recent content in seo on More Contentful</description>
+    <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 20 Oct 2020 20:35:39 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/seo/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/seo/" rel="canonical" type="text/html" />
+        <atom:link href="https://example.com/tags/seo/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://example.com/tags/seo/" rel="canonical" type="text/html" />
     <item>
       <title>Open graph protocol</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/open-graph-protocol/</link>
+      <link>https://example.com/recipes/open-graph-protocol/</link>
       <category>seo</category>
       <category>social media</category>
 
       <pubDate>Tue, 20 Oct 2020 20:35:39 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/open-graph-protocol/</guid>
+      <guid>https://example.com/recipes/open-graph-protocol/</guid>
       <description></description>
     </item>
     <item>
       <title>Customizing your head</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/customizing-your-head/</link>
+      <link>https://example.com/recipes/customizing-your-head/</link>
       <category>seo</category>
 
       <pubDate>Tue, 20 Oct 2020 20:29:42 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/customizing-your-head/</guid>
+      <guid>https://example.com/recipes/customizing-your-head/</guid>
       <description></description>
     </item>
   </channel>
