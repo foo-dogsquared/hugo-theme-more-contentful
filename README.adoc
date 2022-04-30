@@ -2,6 +2,8 @@
 :toc:
 
 
+image::./docs/logo.svg[The project logo (for the kicks), width=100%,height=100%]
+
 A https://gohugo.io/hugo-modules/theme-components/#readout[Hugo theme] extending the https://github.com/foo-dogsquared/hugo-theme-contentful[Contentful theme] to be more modern.
 It features modern aesthetics and some optimizations making full use of https://gohugo.io/[Hugo]'s feature set.
 

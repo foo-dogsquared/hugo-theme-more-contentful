@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="183.16942mm"
+   height="60.442341mm"
+   viewBox="0 0 183.16942 60.442341"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0498187"
+     inkscape:cx="333.86716"
+     inkscape:cy="115.25799"
+     inkscape:document-units="px"
+     inkscape:current-layer="g241"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="699"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0"
+     fit-margin-top="10"
+     lock-margins="true"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-4.7219745,-41.012959)">
+    <g
+       id="g241">
+      <g
+         id="g250">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;line-height:1.25;font-family:'IBM Plex Serif';-inkscape-font-specification:'IBM Plex Serif Bold';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+           x="13.451977"
+           y="87.916237"
+           id="text12"><tspan
+             sodipodi:role="line"
+             id="tspan10"
+             x="13.451977"
+             y="87.916237"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:'IBM Plex Serif';-inkscape-font-specification:'IBM Plex Serif Bold';stroke-width:0.264583">Hugo <tspan
+   style="fill:#800000"
+   id="tspan14">More</tspan> Contentful</tspan></text>
+        <g
+           id="g152"
+           transform="translate(-12.576303)">
+          <rect
+             style="fill:#800000;stroke-width:0.264583"
+             id="rect24"
+             width="90.072716"
+             height="20.007072"
+             x="58.637802"
+             y="51.012959" />
+          <rect
+             style="fill:#800000;stroke-width:0.190477"
+             id="rect26"
+             width="5.0363669"
+             height="13.675387"
+             x="150.11151"
+             y="54.085434" />
+          <rect
+             style="fill:#800000;stroke-width:0.103756"
+             id="rect147"
+             width="2.7433875"
+             height="7.4491963"
+             x="156.38477"
+             y="57.470493" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
