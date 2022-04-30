@@ -35,69 +35,6 @@
 
 
 {{- /*
-  The theme button in its own bed.
-  Take note this component already has conditional rendering so a conditional is unnecessary.
-*/ -}}
-{{- define "partials/components/theme-button.html" }}
-  {{- if gt (len (index $.Site.Data "more-contentful").themes) 1 }}
-  <div class="site__theme-btn" aria-label="Theme toggle">
-      {{ partial "components/heroicon.html" "color-swatch" }}
-      <div class="site__theme-dropdown">
-        <div class="site__theme-dropdown-list">
-        {{- range $filename, $scheme := (index $.Site.Data "more-contentful").themes }}
-          {{- $isLight := false }}
-          {{- $isDark := false }}
-
-          {{- $name := cond (eq $filename "_index") (printf "%s (default)" .scheme) .scheme }}
-          {{- if eq $filename "_light" }}
-            {{- $name = i18n "theme_light" }}
-            {{- $isLight = true }}
-          {{- else if eq $filename "_dark" }}
-            {{- $name = i18n "theme_dark" }}
-            {{- $isDark = true }}
-          {{- end }}
-
-          {{- $hasSystemTheme := (or $isDark $isLight) }}
-          {{ if $hasSystemTheme }}
-            {{ .Scratch.Set "has-system-theme" $hasSystemTheme }}
-          {{ end }}
-
-          <div class="site__theme-item"
-            data-theme="{{ .scheme }}"
-            {{ if $isDark }}data-theme-dark{{ end }}
-            {{ if $isLight }}data-theme-light{{ end }}
-          >{{ $name }}</div>
-        {{- end }}
-
-        {{ .Scratch.Get "has-system-theme" }}
-          <div class="site__theme-item" data-theme-system>
-            {{ i18n "theme_os_default" }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script defer>
-    const themeDropdown = document.querySelector('.site__theme-btn');
-    themeDropdown.addEventListener('click', (event) => {
-      const { target } = event;
-      if (target.classList.contains("site__theme-item")) {
-        if (target.dataset.theme) {
-          theme = target.dataset.theme;
-          window.localStorage.setItem("theme", theme);
-          document.documentElement.dataset.theme = theme;
-        } else {
-          window.localStorage.removeItem("theme");
-          delete document.documentElement.dataset.theme;
-        }
-      }
-    });
-  </script>
-  {{- end }}
-{{- end }}
-
-
-{{- /*
   The component where it will display the metadata of the post.
   This is used on list templates but feel free to change that.
 */ -}}

@@ -21,14 +21,27 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 === Changed
 
+* Increase the minimum version required to v0.95.0 due to using much of the new features found on the release.
+
 * Clean the layouts.
 
 * Change the style of the horizontal rule with colors.
+
+* The theme button is placed in the site header instead of the top-rightmost side of the viewport.
 
 * Update the link:https://github.com/foo-dogsquared/hugo-mod-simple-icons[Simple Icons module].
 For reference, it is from link:https://github.com/simple-icons/simple-icons/commit/6f83d1dd85662360353c73d42c6b6b4ca75d6e14[this commit].
 
 * Improve the list template to be more considerable to easy eyeing of the posts.
+
+* Fallback themes are now enforced to be implemented into two themes: one for light and one for dark theme.
+This is changed from a single `_index` Base16 scheme to `_{dark,light}` Base16 scheme.
+The Hugo theme also has fallbacks for certain cases.
+
+** If the user gives only one system theme, the Hugo theme will generate the appropriate counterpart theme.
+E.g., if there is only `_dark`, the Hugo theme will generate the light theme.
+
+** If given neither, fallback themes will be used.
 
 
 === Fixed

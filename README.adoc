@@ -32,8 +32,8 @@ The following features highlights the differences from the original.
 * Clean(er) reader mode interface for a nice reading experience for your readers.
 * Uses https://sass-lang.com/[SCSS] instead of CSS for more concise formatting. footnote:needs-hugo-extended[It needs Hugo extended version.]
 * More colors with a http://chriskempson.com/projects/base16/[base-16]-based color scheme. footnote:needs-hugo-extended[]
-* Create more custom color schemes easily with https://github.com/chriskempson/base16[Base16 color schemes] without touching any CSS!
-* Link your social media platforms with icons from the entire set from https://simpleicons.org/[Simple Icons] featuring more than 1000 icons!
+* Create more custom color schemes easily with https://github.com/chriskempson/base16[Base16 color schemes] without touching any CSS! footnote:needs-hugo-extended[]
+* Link your social media platforms with icons from the entire set from https://simpleicons.org/[Simple Icons] featuring more than 2000 icons!
 * With most of the features retained from the original theme (except fancier).
 
 This is mainly for personal blogs running a one-man show.
@@ -278,14 +278,10 @@ base0E: "ba8baf"
 base0F: "a16946"
 ----
 
-You can also use https://github.com/chriskempson/base16#scheme-repositories[any of the existing color schemes] as a starting point.
-If you want to override the default scheme, you can place the file as `_index.{json,toml,yaml}` (of whatever appropriate data format of your choice).
-
-CAUTION: Setting the default theme through `_index` is deprecated.
-Please set them through the dark/light theme instead.
-
-You can also set the light and dark theme for your website by naming them `_light.{json,toml,yaml}` and `_dark.{json,toml,yaml}`, respectively.
-This will add certain options in the theme selection button as well as the ability to set the OS default.
+By default, this theme enforces setting system themes with a light and a dark theme.
+You can set the custom themes for both system light and dark theme for your website by naming them `_light.{json,toml,yaml}` and `_dark.{json,toml,yaml}`, respectively.
+If either theme is missing, the theme will generate one for you with the assumption that the user-given theme is set correctly (e.g., `_dark` is a dark theme and the theme will generate a light theme).
+If neither system themes are given, the theme will use the fallback system themes.
 
 The schemes are pressed against a template (i.e., link:./assets/templates/theme.scss[`./assets/templates/theme.scss`]) then added to the resulting stylesheet.
 

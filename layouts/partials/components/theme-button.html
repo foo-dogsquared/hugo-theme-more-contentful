@@ -1,0 +1,84 @@
+{{- /*
+  The theme button in its own bed.
+  Take note this component already has conditional rendering so a conditional is unnecessary.
+*/ -}}
+{{- if gt (len (index $.Site.Data "more-contentful").themes) 1 }}
+<div class="site__theme-btn" aria-label="Theme toggle">
+  {{ partial "components/heroicon.html" "color-swatch" }}
+  <div class="site__theme-dropdown">
+    <div class="site__theme-dropdown-list">
+      {{ $themes := (index $.Site.Data "more-contentful").themes }}
+      {{ $hasLight := $themes._light }}
+      {{ $hasDark := $themes._dark }}
+      {{ $hasSystemTheme := or $hasLight $hasDark }}
+
+      {{/* This list should only need the scheme name of the themes. */}}
+      {{ if (and $hasLight (not $hasDark)) }}
+        {{ $darkTheme := dict
+          "scheme" (printf "%s (dark)" $hasLight.scheme)
+        }}
+        {{ $themes = merge $themes (dict "_dark" $darkTheme) }}
+      {{ else if (and $hasDark (not $hasLight)) }}
+        {{ $lightTheme := dict
+          "scheme" (printf "%s (light)" $hasDark.scheme)
+        }}
+        {{ $themes = merge $themes (dict "_light" $lightTheme) }}
+      {{ else if not $hasSystemTheme }}
+        {{ $systemThemes := dict
+            "_dark" $themes._dark_fallback
+            "_light" $themes._light_fallback
+        }}
+        {{ $themes = merge $themes $systemThemes }}
+      {{ end }}
+
+      {{- range $filename, $scheme := $themes }}
+        {{- if (or (eq $filename "_light_fallback") (eq $filename "_dark_fallback")) }}
+          {{ continue }}
+        {{- end }}
+
+        {{- $isLight := false }}
+        {{- $isDark := false }}
+        {{- $name := cond (eq $filename "_index") (printf "%s (default)" .scheme) .scheme }}
+        {{- if eq $filename "_light" }}
+          {{- $name = i18n "theme_light" }}
+          {{- $isLight = true }}
+        {{- else if eq $filename "_dark" }}
+          {{- $name = i18n "theme_dark" }}
+          {{- $isDark = true }}
+        {{- end }}
+
+        {{- $hasSystemTheme := (or $isDark $isLight) }}
+        {{ if $hasSystemTheme }}
+          {{ .Scratch.Set "has-system-theme" $hasSystemTheme }}
+        {{ end }}
+
+        <div class="site__theme-item"
+             data-theme="{{ .scheme }}"
+             {{ if $isDark }}data-theme-dark{{ end }}
+             {{ if $isLight }}data-theme-light{{ end }}
+        >{{ $name }}</div>
+      {{- end }}
+
+      <div class="site__theme-item" data-theme-system>
+        {{ i18n "theme_os_default" }}
+      </div>
+    </div>
+  </div>
+</div>
+<script defer>
+  const themeDropdown = document.querySelector('.site__theme-btn');
+    themeDropdown.addEventListener('click', (event) => {
+      const { target } = event;
+      if (target.classList.contains("site__theme-item")) {
+        if (target.dataset.theme) {
+          theme = target.dataset.theme;
+          window.localStorage.setItem("theme", theme);
+          document.documentElement.dataset.theme = theme;
+        } else {
+          window.localStorage.removeItem("theme");
+          delete document.documentElement.dataset.theme;
+        }
+      }
+    });
+</script>
+{{- end }}
