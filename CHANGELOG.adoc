@@ -44,6 +44,8 @@ E.g., if there is only `_dark`, the Hugo theme will generate the light theme.
 
 ** If given neither, fallback themes will be used.
 
+* Replace Travis CI with GitHub workflows.
+
 
 === Fixed
 

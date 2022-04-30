@@ -1,0 +1,19 @@
+name: "Build demo"
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    run-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v17
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+      - run: nix develop -c hugo -s ./exampleSite/
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages
+          folder: exampleSite/public
