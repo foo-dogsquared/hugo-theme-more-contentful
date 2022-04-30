@@ -4,8 +4,8 @@
 
 image::./docs/logo.svg[The project logo (for the kicks), width=100%,height=100%]
 
-A https://gohugo.io/hugo-modules/theme-components/#readout[Hugo theme] extending the https://github.com/foo-dogsquared/hugo-theme-contentful[Contentful theme] to be more modern.
-It features modern aesthetics and some optimizations making full use of https://gohugo.io/[Hugo]'s feature set.
+A batteries-included version of the https://github.com/foo-dogsquared/hugo-theme-contentful[Contentful Hugo theme].
+It features modern aesthetics and some optimizations making full use of https://gohugo.io/[Hugo]'s feature set while using as less dependencies as possible.
 
 Tested primarily with Chromium-based and Firefox-based browsers.
 
@@ -18,9 +18,9 @@ But first, a quick screenshot of the theme.
 
 image:./docs/demo-full.png[The theme in desktop-sized windows.]
 
-Demo available at the `demo` branch of this Git repo.
-It is automatically deployed with Travis CI and its output is available in https://foo-dogsquared.github.io/hugo-theme-more-contentful.
-It also provides an example how to deploy your Hugo site with GitHub pages.
+An example of a Hugo project configured with this theme is available at link:./exampleSite[`./exampleSite/`] directory.
+It is automatically deployed with GitHub workflow and its output is available in https://foo-dogsquared.github.io/hugo-theme-more-contentful.
+It also provides an example how to deploy your Hugo site with GitHub Pages.
 
 
 
@@ -76,7 +76,7 @@ Thus, it is encouraged that the author should modify according to their settings
 
 As a prerequisite, you need the following programs installed.
 
-* Hugo v0.74.0 extended version and above.
+* Hugo v0.95.0 extended version and above.
 * The latest version of https://golang.org/dl/[Go] runtime installed (as of 2020-11-01, the latest version is v1.15).
 * https://git-scm.com/[Git] since the project uses as the version control system.
 
@@ -87,20 +87,7 @@ NOTE: To verify you've the extended version installed, run `hugo version` and lo
 
 === Installation
 
-
-==== The theme folder
-
-NOTE: I don't see why not use the Hugo module since this project already requires them but you do you.
-
-You can install the theme by putting this project in `themes/`.
-Since this project is using a Git repo, you can simply `git clone` the project.
-
-[source, shell]
-----
-git clone https://github.com/foo-dogsquared/hugo-theme-more-contentful themes/more-contentful
-----
-
-If you intend to vendor this for major modifications, you can store the project as a https://git-scm.com/book/en/v2/Git-Tools-Submodules[Git submodule] (e.g., `git submodule add $GIT_REPO`) or a https://www.atlassian.com/git/tutorials/git-subtree[Git subtree] (e.g., `git subtree add --prefix ./themes/more-contentful $GIT_REPO --squash`).
+There are different ways to install a Hugo theme but I recommend using the Hugo modules especially now that this method is starting to get widespread.
 
 
 ==== Hugo modules
@@ -116,13 +103,29 @@ Then, you can import the Hugo module in your site config.
   path = "github.com/foo-dogsquared/hugo-theme-more-contentful"
 ----
 
-You can also specify the tag (e.g., `hugo-theme-more-contentful@v1.2.3`) or the commit (e.g., `hugo-theme-more-contentful@abcdefg`).
+It is also recommended to specify the tag (e.g., `hugo-theme-more-contentful@v1.2.3`) or the commit (e.g., `hugo-theme-more-contentful@abcdefg`) to prevent stray updates for the theme.
 For more information, you can see https://github.com/golang/go/wiki/Modules#how-to-upgrade-and-downgrade-dependencies[how to specify Go modules] since Hugo modules are built on top of it.
 
 Next, get the dependency by running `hugo mod get` and to update the component, run `hugo mod get -u`.
 (You could also run the server [i.e., `hugo server`] to download the modules.)
 
 If you want to fully modify the theme yourself, you can use `hugo mod vendor`.
+
+
+==== The theme folder
+
+CAUTION: It is recommended to use the Hugo module method instead.
+
+You can install the theme by putting this project in `themes/`.
+Since this project is using a Git repo, you can simply `git clone` the project.
+You should also checkout into the version tag 
+
+[source, shell]
+----
+git clone https://github.com/foo-dogsquared/hugo-theme-more-contentful themes/more-contentful
+----
+
+If you intend to vendor this for major modifications, you can store the project as a https://git-scm.com/book/en/v2/Git-Tools-Submodules[Git submodule] (e.g., `git submodule add $GIT_REPO`) or a https://www.atlassian.com/git/tutorials/git-subtree[Git subtree] (e.g., `git subtree add --prefix ./themes/more-contentful $GIT_REPO --squash`).
 
 
 
@@ -133,7 +136,7 @@ This theme, like the original, tries to use as little custom parameters as possi
 In fact, you can get started with only the `title` key in the site config and you'll be fine.
 
 I'll let the config do the talking.
-If you want to know more details about the modules, simply visit the path as a URL in your browser.
+If you want to know more details about the additional Hugo modules, simply visit the path as a URL in your browser.
 
 [source, toml]
 ----
@@ -280,12 +283,7 @@ base0E: "ba8baf"
 base0F: "a16946"
 ----
 
-By default, this theme enforces setting system themes with a light and a dark theme.
-You can set the custom themes for both system light and dark theme for your website by naming them `_light.{json,toml,yaml}` and `_dark.{json,toml,yaml}`, respectively.
-If either theme is missing, the theme will generate one for you with the assumption that the user-given theme is set correctly (e.g., `_dark` is a dark theme and the theme will generate a light theme).
-If neither system themes are given, the theme will use the fallback system themes.
-
-The schemes are pressed against a template (i.e., link:./assets/templates/theme.scss[`./assets/templates/theme.scss`]) then added to the resulting stylesheet.
+The schemes are then pressed against a template (i.e., link:./assets/templates/theme.scss[`./assets/templates/theme.scss`]) then added to the resulting stylesheet.
 
 [source, css]
 ----
@@ -307,6 +305,17 @@ The schemes are pressed against a template (i.e., link:./assets/templates/theme.
   --base0E: #ba8baf;
   --base0F: #a16946; }
 ----
+
+By default, this theme enforces setting system themes with a light and a dark theme.
+You can set the custom themes for both system light and dark theme for your website by naming them `_light.{json,toml,yaml}` and `_dark.{json,toml,yaml}`, respectively.
+This theme has kept some usecases in mind:
+
+* If either theme is missing, the theme will generate one for you with the assumption that the user-given color scheme is set correctly (e.g., `_dark` is a dark theme and the theme will generate a light theme).
+The color generation for the counterpart theme is not yet great (or even acceptable) so it is recommended to handcraft both of the system themes.
+
+* If neither system themes are given, the Hugo theme will use the fallback system themes which can be found at link:./data/more-contentful/themes[`./data/more-contentful/themes`].
+The fallback themes are named `_{dark,light}_fallback.yaml`.
+It is discouraged to change or override them.
 
 For practical purposes, you should build your own color palette.
 The theme is styled closer to color schemes that can have a suitable palette with 3 colors such as https://www.nordtheme.com/[Nord], https://github.com/chriskempson/base16-default-schemes/blob/master/default-dark.yaml[default-dark], https://draculatheme.com/[Dracula], and https://ethanschoonover.com/solarized/[Solarized].
