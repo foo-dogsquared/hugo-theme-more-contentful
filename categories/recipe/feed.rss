@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>recipe on More Contentful</title>
-    <link>https://example.com/categories/recipe/</link>
+    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/recipe/</link>
     <description>Recent content in recipe on More Contentful</description>
     <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 20 Oct 2020 20:38:24 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://example.com/categories/recipe/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://example.com/categories/recipe/" rel="canonical" type="text/html" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/recipe/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/recipe/" rel="canonical" type="text/html" />
     <item>
       <title>Configurable list of contacts</title>
-      <link>https://example.com/recipes/configurable-list-of-contacts/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</link>
 
       <pubDate>Tue, 20 Oct 2020 20:38:24 +0800</pubDate>
-      <guid>https://example.com/recipes/configurable-list-of-contacts/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</guid>
       <description></description>
     </item>
     <item>
       <title>Creating an archive page</title>
-      <link>https://example.com/recipes/creating-an-archive-page/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/</link>
 
       <pubDate>Tue, 20 Oct 2020 20:36:55 +0800</pubDate>
-      <guid>https://example.com/recipes/creating-an-archive-page/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/</guid>
       <description></description>
     </item>
   </channel>

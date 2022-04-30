@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>markdown on More Contentful</title>
-    <link>https://example.com/tags/markdown/</link>
+    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/markdown/</link>
     <description>Recent content in markdown on More Contentful</description>
     <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Wed, 28 Aug 2019 00:09:56 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://example.com/tags/markdown/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://example.com/tags/markdown/" rel="canonical" type="text/html" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/markdown/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/markdown/" rel="canonical" type="text/html" />
     <item>
       <title>MathJax Support for Markdown</title>
-      <link>https://example.com/articles/mathjax-support-for-markdown/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/mathjax-support-for-markdown/</link>
       <category>markdown</category>
       <category>mathjax</category>
       <category>guide</category>
 
       <pubDate>Wed, 28 Aug 2019 00:09:56 +0800</pubDate>
-      <guid>https://example.com/articles/mathjax-support-for-markdown/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/mathjax-support-for-markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://example.com/articles/markdown-syntax-guide/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/markdown-syntax-guide/</link>
       <category>markdown</category>
       <category>guide</category>
 
       <pubDate>Mon, 26 Aug 2019 00:08:27 +0800</pubDate>
-      <guid>https://example.com/articles/markdown-syntax-guide/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/markdown-syntax-guide/</guid>
       <description></description>
     </item>
   </channel>

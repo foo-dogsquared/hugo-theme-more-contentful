@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>twitter on More Contentful</title>
-    <link>https://example.com/tags/twitter/</link>
+    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/twitter/</link>
     <description>Recent content in twitter on More Contentful</description>
     <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 20 Oct 2020 20:31:32 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://example.com/tags/twitter/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://example.com/tags/twitter/" rel="canonical" type="text/html" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/twitter/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/twitter/" rel="canonical" type="text/html" />
     <item>
       <title>Twitter cards</title>
-      <link>https://example.com/recipes/twitter-cards/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/twitter-cards/</link>
       <category>twitter</category>
       <category>social media</category>
 
       <pubDate>Tue, 20 Oct 2020 20:31:32 +0800</pubDate>
-      <guid>https://example.com/recipes/twitter-cards/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/twitter-cards/</guid>
       <description></description>
     </item>
   </channel>

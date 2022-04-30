@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>theme on More Contentful</title>
-    <link>https://example.com/tags/theme/</link>
+    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/theme/</link>
     <description>Recent content in theme on More Contentful</description>
     <generator>Hugo v0.96.0 -- gohugo.io</generator><language>en-us</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 17:25:55 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://example.com/tags/theme/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://example.com/tags/theme/" rel="canonical" type="text/html" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/theme/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/theme/" rel="canonical" type="text/html" />
     <item>
       <title>Recipes</title>
-      <link>https://example.com/recipes/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/</link>
       <category>theme</category>
       <category>extending</category>
 
       <pubDate>Tue, 12 May 2020 17:25:55 +0800</pubDate>
-      <guid>https://example.com/recipes/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/</guid>
       <description></description>
     </item>
   </channel>

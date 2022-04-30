@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Articles on More Contentful</title>
-    <link>https://example.com/tl/articles/</link>
+    <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/</link>
     <description>Recent content in Articles on More Contentful</description>
     <generator>Hugo v0.96.0 -- gohugo.io</generator><language>tl</language><copyright>© 2022 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 21:28:27 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
-        <atom:link href="https://example.com/tl/articles/feed.rss" rel="self" type="application/rss+xml" />
-        <atom:link href="https://example.com/tl/articles/" rel="canonical" type="text/html" />
-        <atom:link href="https://example.com/tl/articles/feed.json" rel="alternate" type="application/feed+json" />
-        <atom:link href="https://example.com/tl/articles/feed.atom" rel="alternate" type="application/atom+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/feed.rss" rel="self" type="application/rss+xml" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/" rel="canonical" type="text/html" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/feed.json" rel="alternate" type="application/feed+json" />
+        <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/feed.atom" rel="alternate" type="application/atom+xml" />
     <item>
       <title>Isang hidden post test</title>
-      <link>https://example.com/tl/articles/hidden-post-test/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/hidden-post-test/</link>
       <category>tag1</category>
       <category>tag2</category>
 
       <pubDate>Tue, 12 May 2020 21:28:27 +0800</pubDate>
-      <guid>https://example.com/tl/articles/hidden-post-test/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/hidden-post-test/</guid>
       <description></description>
     </item>
     <item>
       <title>Supporta para sa RSS, Atom, at JSON feeds</title>
-      <link>https://example.com/tl/articles/rss-atom-and-json-feed-support/</link>
+      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/rss-atom-and-json-feed-support/</link>
       <category>this is a test tag</category>
       <category>tag2</category>
 
       <pubDate>Wed, 04 Sep 2019 17:22:44 +0800</pubDate>
-      <guid>https://example.com/tl/articles/rss-atom-and-json-feed-support/</guid>
+      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/rss-atom-and-json-feed-support/</guid>
       <description></description>
     </item>
   </channel>

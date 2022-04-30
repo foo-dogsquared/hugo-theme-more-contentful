@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Recipes on More Contentful</title>
   
-    <link rel="self" type="application/atom+xml" href="https://example.com/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://example.com/recipes/"/><link rel="alternate" type="application/feed+json" href="https://example.com/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://example.com/recipes/feed.rss"/><rights>© 2022 </rights>
+    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss"/><rights>© 2022 </rights>
   <generator uri="https://gohugo.io/" version="0.96.0">Hugo</generator>
   <updated>2020-05-12T17:25:55+08:00</updated>
-  <id>https://example.com</id><icon>https://example.com/icon.png</icon>
+  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
   <author>
     <name>John Doe</name>
     <email>johndoe@example.com</email>
     </author><entry>
-    <id>https://example.com/recipes/configurable-list-of-contacts/</id>
+    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</id>
     <title type="text">Configurable list of contacts</title>
-    <link rel="alternate" href="https://example.com/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
+    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
     <published>2020-10-20T20:38:24+08:00</published>
-    <updated>2022-04-30T20:40:56+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-04-30T21:03:17+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Most themes offer quick social media links with site configuration.
 However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.&lt;/p&gt;
 &lt;/div&gt;
@@ -86,11 +86,11 @@ The &lt;code&gt;name&lt;/code&gt; would now be the image alternative text.&lt;/p
 &lt;/div&gt;
 </content>
   </entry><entry>
-    <id>https://example.com/recipes/creating-an-archive-page/</id>
+    <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/</id>
     <title type="text">Creating an archive page</title>
-    <link rel="alternate" href="https://example.com/recipes/creating-an-archive-page/" hreflang="en" title="Creating an archive page"/>
+    <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/" hreflang="en" title="Creating an archive page"/>
     <published>2020-10-20T20:36:55+08:00</published>
-    <updated>2022-04-30T20:40:56+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-04-30T21:03:17+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;This will add an archive page similar to archive pages &lt;a href=&#34;https://davidtranscend.com/archives/&#34;&gt;like&lt;/a&gt; &lt;a href=&#34;https://lukesmith.xyz/blogindex.html&#34;&gt;these&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
