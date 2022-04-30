@@ -29,8 +29,9 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 * The theme button is placed in the site header instead of the top-rightmost side of the viewport.
 
-* Update the link:https://github.com/foo-dogsquared/hugo-mod-simple-icons[Simple Icons module].
-For reference, it is from link:https://github.com/simple-icons/simple-icons/commit/6f83d1dd85662360353c73d42c6b6b4ca75d6e14[this commit].
+* Update the link:https://github.com/foo-dogsquared/hugo-mod-simple-icons[Simple Icons module] to v6.19.0.
+
+* Update link:https://heroicons.com/[Heroicons module] to v1.0.6.
 
 * Improve the list template to be more considerable to easy eyeing of the posts.
 
