@@ -11,7 +11,8 @@
 
 
 ::selection {
-  background: var(--base0F);
+  background: var(--base05);
+  color: var(--base00);
 }
 
 body {
@@ -87,6 +88,7 @@ code, pre {
 }
 
 code {
+  background: var(--base01);
   font-family: var(--mono-family);
   font-size: 0.9em;
 }
@@ -108,8 +110,9 @@ code[class*=language-]::selection,
 code[class*=language-] ::selection,
 pre[class*=language-]::selection,
 pre[class*=language-] ::selection {
-  background: var(--base01);
+  background: var(--base02);
   font-size: var(--mono-font-size);
+  color: unset;
 }
 
 mark {
@@ -123,6 +126,7 @@ mark {
 
 hr {
   border-color: var(--base0C);
+  margin: 1em 0;
 }
 
 
@@ -210,8 +214,6 @@ footer {
   flex-flow: column wrap;
   justify-content: space-evenly;
   text-align: center;
-
-
 }
 
 
