@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://foo-dogsquared.github.io/hugo-theme-more-contentful"
 title = "More Contentful"
 enableGitInfo = true
 paginate = 20
