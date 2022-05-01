@@ -307,14 +307,14 @@ The schemes are then pressed against a template (i.e., link:./assets/templates/t
 ----
 
 By default, this theme enforces setting system themes with a light and a dark theme.
-You can set the custom themes for both system light and dark theme for your website by naming them `_light.{json,toml,yaml}` and `_dark.{json,toml,yaml}`, respectively.
+You can set the custom themes for both system light and dark theme for your website by naming them `+_light.{json,toml,yaml}+` and `+_dark.{json,toml,yaml}+`, respectively.
 This theme has kept some usecases in mind:
 
-* If either theme is missing, the theme will generate one for you with the assumption that the user-given color scheme is set correctly (e.g., `_dark` is a dark theme and the theme will generate a light theme).
+* If either theme is missing, the theme will generate one for you with the assumption that the user-given color scheme is set correctly (e.g., `+_dark+` is a dark theme and the theme will generate a light theme).
 The color generation for the counterpart theme is not yet great (or even acceptable) so it is recommended to handcraft both of the system themes.
 
 * If neither system themes are given, the Hugo theme will use the fallback system themes which can be found at link:./data/more-contentful/themes[`./data/more-contentful/themes`].
-The fallback themes are named `_{dark,light}_fallback.yaml`.
+The fallback themes are named `+_{dark,light}_fallback.yaml+`.
 It is discouraged to change or override them.
 
 For practical purposes, you should build your own color palette.
@@ -388,7 +388,7 @@ If the social platform icon is not included in the icon set, it will not have an
 Thus, it is recommended to display the text (i.e., `useImage = false`) instead.
 
 
-=== Editing the theme
+=== Extending the theme
 
 There are mainly two situations when you customize the theme.
 
@@ -416,15 +416,47 @@ curl --silent --location https://api.github.com/repos/foo-dogsquared/hugo-theme-
 TIP: You can then put the one-liner in a script or in a Makefile to make it easier.
 
 Otherwise, if you want to fully customize the theme, you can vendor this project into yours.
-Also, see the <<Development guidelines>> for more information.
+Also, see the <<development-guidelines>> for more information.
 
 * The recommended way is to fork the project, make your customizations there, and use it.
-* If you use Hugo modules, you can run `hugo mod vendor` and it will pull the files in `_vendor/`.
+* If you use Hugo modules, you can run `hugo mod vendor` and it will pull the files in `+_vendor/+`.
 * If you don't want to create another repo for the customized version of the theme intended only for one Hugo site, make the project as a https://www.atlassian.com/git/tutorials/git-subtree[a Git subtree] preferably in `themes/more-contentful/`.
 
 
+=== Theme conventions and guidelines
+
+If you're planning on extending the theme, warts and all, it can be frustrating to start by diving into the source code head-first.
+Here's a list of guidelines and conventions that the theme uses.
+It isn't exhaustive but it is a start.
+
+Like most guidelines, they are not followed to the absolute and not set in stone.
+You can also see the <<development-guidelines>> for more details.
+
+* For editing the CSS files...
+
+** It uses link:http://getbem.com/introduction/[BEM-style class names].
+
+** Each of the theme will generate a custom property of `--base00`, `--base01`, `--base02` up to `--base0F`.
+This should be treated as a palette, nothing more.
+
+** To set a color with a role, put it under a custom property and use that instead (e.g., if `--base05` will be used mainly for text color, then create a custom property named `--text-color` to be used for any text-related styles that changes its color).
+This will make maintaining the theme easier.
+You can see a sample of this from link:./assets/scss/main.scss[`./assets/scss/main.scss`] defined at `:root`.
+
+** Place all CSS global variables at link:./assets/scss/main.scss[`./assets/scss/main.scss`].
+
+* For setting assets in the theme, SVG icons are preferred.
+It should be optimized or sanitized to be able to easily set the color along with the text.
+In this case, the theme has a preferred use for link:https://heroicons.com/[Heroicons] which has the added bonus of consistency.
+
+* If an element should hold stateful data, make full use of link:https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes[`data-*` attributes].
+
+* Don't place `<script>` snippets at the end of the `<body>` mindlessly.
 
 
+
+
+[#development-guidelines]
 == Development guidelines
 
 This theme should provide an intuitive and smooth developer experience (DX) for more potential to new contributions and easier time customizing this theme.
@@ -464,7 +496,7 @@ For now, being explicit with the schemes is better despite more cumbersome.
 
 How are my content hidden?::
 Your content may either be link:https://gohugo.io/getting-started/usage/#draft-future-and-expired-content[draft (i.e., `draft` is set to `true` ), future (i.e., the date is set in the future compared to the build time), or expired (i.e., when the `expirydate` is passed)].
-It may also be hidden from the link:https://gohugo.io/content-management/build-options/[build options] (i.e., `_build.render` is set to `false`).
+It may also be hidden from the link:https://gohugo.io/content-management/build-options/[build options] (i.e., `+_build.render+` is set to `false`).
 Please check if the appropriate keys are set (or unset).
 
 How to extend with custom styling?::
@@ -473,7 +505,7 @@ This will be appended with the main stylesheet so it will still be in one file.
 In fact, with the capabilities of http://sass-lang.com/[Sass], it is enough for you to fully extend and/or modify the styling with its features —  imports, mixins, greater string interpolations, etc.
 
 How to hide a post from being listed?::
-You can make use of link:https://gohugo.io/content-management/build-options/[the build options] with `_build.list` have a value of `never`.
+You can make use of link:https://gohugo.io/content-management/build-options/[the build options] with `+_build.list+` have a value of `never`.
 Though, this is only available in Hugo v0.65.0 and above.
 
 How to minimize the total site weight as much as possible?::
