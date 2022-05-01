@@ -5,14 +5,14 @@
 }
 
 @keyframes target-fade {
-  0% { background: var(--base0C); }
+  0% { background: var(--accent-color); }
   100% { background: unset; }
 }
 
 
 ::selection {
-  background: var(--base05);
-  color: var(--base00);
+  background: var(--foreground);
+  color: var(--background);
 }
 
 body {
@@ -45,7 +45,7 @@ h4, h5, h6 {
 }
 
 a {
-  color: var(--base0C);
+  color: var(--accent-color);
   text-decoration: none;
 
   &:hover {
@@ -116,8 +116,8 @@ pre[class*=language-] ::selection {
 }
 
 mark {
-  background: var(--base05);
-  color: var(--base00);
+  background: var(--foreground);
+  color: var(--background);
 
   &::selection {
     color: var(--base06);
@@ -125,7 +125,7 @@ mark {
 }
 
 hr {
-  border-color: var(--base0C);
+  border-color: var(--accent-color);
   margin: 1em 0;
 }
 
@@ -150,7 +150,7 @@ thead, tbody {
 
 thead {
   background: var(--base07);
-  color: var(--base00);
+  color: var(--background);
 }
 
 th, td {
