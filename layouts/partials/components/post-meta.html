@@ -4,14 +4,14 @@
 */ -}}
 <div class="list post__meta">
   {{- if ne (.PublishDate.Format "2006") "0001" -}}
-  <time datetime="{{ .PublishDate }}">
+  <time datetime="{{ .PublishDate }}" title="{{ i18n "published_on" }}">
     {{ partial "components/heroicon.html" "calendar" }}
     <span style="margin-left: 0.5em;">{{ .PublishDate.Format "2006-01-02" }}</span>
   </time>
   {{- end }}
 
   {{- if and .GitInfo (ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
-  <time datetime="{{ .Lastmod }}">
+  <time datetime="{{ .Lastmod }}" title="{{ i18n "updated_on" }}">
     {{ partial "components/heroicon.html" "refresh" }}
     <span style="margin-left: 0.5em;">{{ .Lastmod.Format "2006-01-02" }}</span>
   </time>
@@ -22,7 +22,7 @@
   {{- $names := slice }}
   {{- range . }}{{ $names = $names | append .name }}{{ end }}
   {{- $author := index (first 1 $names) 0 }}
-  <span data-authors="{{ jsonify $names }}">
+  <span data-authors="{{ jsonify $names }}" title="{{ i18n "published_by" }}">
     {{ partial "components/heroicon.html" "pencil" }}
     <span style="margin-left: 0.5em;">
       {{ $author }}{{ if ge (len .) 2 }}, et al.{{ end }}
