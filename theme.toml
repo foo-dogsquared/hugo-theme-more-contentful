@@ -5,9 +5,9 @@ description = "A Hugo theme extending the Contentful theme to be more modern."
 homepage = "https://github.com/foo-dogsquared/hugo-theme-more-contentful"
 tags = [ "blog", "personal", "customizable", "minimalist", "responsive" ]
 features = [ "Easy addition of custom color schemes", "Multiple theme selection" ]
-min_version = "0.74"
+min_version = "0.95"
 
 [author]
   name = "Gabriel Arazas"
-  homepage = "https://foo-dogsquared.github.io/hugo-theme-more-contentful"
+  homepage = "https://foo-dogsquared.github.io"
 
