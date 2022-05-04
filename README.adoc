@@ -536,6 +536,14 @@ You can also enable it in your content with the `toc` frontmatter.
 
 
 
+== TODO
+
+* Improve the color scheme generation for the counterpart system theme.
+* Improve the taxonomies page layout.
+
+
+
+
 == Acknowledgments
 
 * https://github.com/foo-dogsquared/hugo-theme-contentful[My original theme, I guess] (does that really count?)

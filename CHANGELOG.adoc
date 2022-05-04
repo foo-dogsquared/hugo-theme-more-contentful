@@ -17,7 +17,7 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 
 
-== Unreleased
+== [0.2.0] - 2022-05-04
 
 === Changed
 
