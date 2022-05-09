@@ -102,6 +102,7 @@ pre {
   line-height: 1.5;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  max-height: var(--code-block-size);
   padding: 0.5rem;
   overflow: auto;
 }
@@ -229,6 +230,10 @@ footer {
     color: var(--base00);
     background: var(--base07);
     overflow: auto;
+  }
+
+  pre {
+    max-height: unset;
   }
 }
 
