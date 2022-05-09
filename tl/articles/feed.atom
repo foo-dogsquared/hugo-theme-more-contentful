@@ -14,7 +14,7 @@
     <title type="text">Isang hidden post test</title>
     <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/articles/hidden-post-test/" hreflang="tl" title="Isang hidden post test"/><category term="tag1"/><category term="tag2"/>
     <published>2020-05-12T21:28:27+08:00</published>
-    <updated>2022-05-04T12:42:09+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-05-09T20:15:52+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Kamusta!
 At papano mo nahanap to?!&lt;/p&gt;
 &lt;/div&gt;
@@ -33,7 +33,7 @@ At papano mo nahanap to?!&lt;/p&gt;
       <name>Mang Kanor</name>
     </author><category term="this is a test tag"/><category term="tag2"/>
     <published>2019-09-04T17:22:44+08:00</published>
-    <updated>2022-05-04T12:42:09+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-05-09T20:15:52+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Ang Hugo theme na ito ay mayroon mga templates para sa RSS, Atom, and JSON feeds.
 Ito ay nakatutulong para sa madaling pag-publish ng iyong mga gawa.
 Ang mga output ng mga templates ay napatunayan laban sa mga validator na may wastong marka.&lt;/p&gt;
