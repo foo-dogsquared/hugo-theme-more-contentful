@@ -95,7 +95,7 @@ code {
 
 pre {
   background: var(--base01);
-  color: var(--base06);
+  color: var(--base05);
   border: var(--border-style);
   font-family: var(--mono-family);
   font-size: 1rem;
@@ -120,7 +120,7 @@ mark {
   color: var(--background);
 
   &::selection {
-    color: var(--base06);
+    color: var(--base05);
   }
 }
 
@@ -186,8 +186,8 @@ blockquote footer {
 /* Form controls */
 button {
   background: unset;
-  border: var(--base06) solid 1px;
-  color: var(--base06);
+  border: var(--base05) solid 1px;
+  color: var(--base05);
   cursor: pointer;
   font-size: 1rem;
   padding: 0.5rem;
