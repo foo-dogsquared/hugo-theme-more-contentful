@@ -1,6 +1,6 @@
 module github.com/foo-dogsquared/hugo-theme-more-contentful
 
-go 1.15
+go 1.16
 
 require (
 	github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20220427232352-6d776459d165 // indirect

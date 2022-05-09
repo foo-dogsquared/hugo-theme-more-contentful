@@ -22,6 +22,9 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 === Updated
 
+* Minimum Go runtime version in `go.mod`.
+This is more like someone forgot to update it from the previous release but pay no mind for it. footnote:[Since recent Hugo versions require Go v1.16 at minimum, anyways. ;p]
+
 * The code block has maximum height for half the height of the viewport (`50vh`).
 
 * More consistent theming for the content text.
