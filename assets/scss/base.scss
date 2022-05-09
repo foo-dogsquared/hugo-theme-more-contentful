@@ -227,9 +227,11 @@ footer {
 
 @media print {
   html {
-    color: var(--base00);
-    background: var(--base07);
     overflow: auto;
+  }
+
+  p {
+    orphans: 3;
   }
 
   pre {
