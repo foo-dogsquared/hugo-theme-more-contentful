@@ -36,6 +36,8 @@ This is more like someone forgot to update it from the previous release but pay 
 
 * More styling for paged media.
 
+* Cleaner formatting for tables.
+
 
 
 
