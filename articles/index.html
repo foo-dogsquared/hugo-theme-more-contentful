@@ -4,7 +4,7 @@
 
 
 
-<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/css/main.min.ca00a0e2e1a042039a0ed5d0926695311d47d90329bdcc3b5728b3564d2c80c1.css" /><meta name="generator" content="Hugo 0.96.0" />
+<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/css/main.min.b7a3fd6dbeb523cf6f12eb30d411189ac6347fa6a4806f8369c381140f0ef99e.css" /><meta name="generator" content="Hugo 0.96.0" />
 <meta charset="utf-8">
 <meta name="author" content="John Doe" />
 
@@ -102,21 +102,36 @@
     </div>
   </div>
 </div>
-<script defer>
-  const themeDropdown = document.querySelector('.site__theme-btn');
-    themeDropdown.addEventListener('click', (event) => {
-      const { target } = event;
-      if (target.classList.contains("site__theme-item")) {
-        if (target.dataset.theme) {
-          theme = target.dataset.theme;
-          window.localStorage.setItem("theme", theme);
-          document.documentElement.dataset.theme = theme;
-        } else {
-          window.localStorage.removeItem("theme");
-          delete document.documentElement.dataset.theme;
-        }
+<script>
+  function styleTheme() {
+    const selectedTheme = window.localStorage.getItem("theme");
+    for (const el of document.querySelectorAll(".site__theme-item")) {
+      if (el.dataset.theme == selectedTheme) {
+        el.classList.add("site__theme-item--selected");
+      } else {
+        el.classList.remove("site__theme-item--selected");
       }
-    });
+    }
+  }
+
+  const themeDropdown = document.querySelector('.site__theme-btn');
+  themeDropdown.addEventListener('click', (event) => {
+    const { target } = event;
+    if (target.classList.contains("site__theme-item")) {
+      if (target.dataset.theme) {
+        theme = target.dataset.theme;
+        window.localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+      } else {
+        window.localStorage.removeItem("theme");
+        delete document.documentElement.dataset.theme;
+      }
+    }
+
+    styleTheme();
+  });
+
+  styleTheme();
 </script>
 <nav aria-label="Site header">
   <a class="site__title" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful">More Contentful</a>
@@ -144,13 +159,13 @@
 
     <span style="margin-left: 0.5em;">2019-09-04</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
   <span data-authors="[&#34;John Doe&#34;,&#34;Jane Doe&#34;]" title="Authors">
     
@@ -176,13 +191,13 @@
 
     <span style="margin-left: 0.5em;">2019-08-29</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 
@@ -197,13 +212,13 @@
 
     <span style="margin-left: 0.5em;">2019-08-28</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 
@@ -218,13 +233,13 @@
 
     <span style="margin-left: 0.5em;">2019-08-28</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 
@@ -239,13 +254,13 @@
 
     <span style="margin-left: 0.5em;">2019-08-28</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 
@@ -260,13 +275,13 @@
 
     <span style="margin-left: 0.5em;">2019-08-27</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 
@@ -281,13 +296,13 @@
 
     <span style="margin-left: 0.5em;">2019-08-26</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 
@@ -302,13 +317,13 @@
 
     <span style="margin-left: 0.5em;">2019-08-25</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 

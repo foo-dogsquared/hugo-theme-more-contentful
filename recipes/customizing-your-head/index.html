@@ -4,7 +4,7 @@
 
 
 
-<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/css/main.min.ca00a0e2e1a042039a0ed5d0926695311d47d90329bdcc3b5728b3564d2c80c1.css" /><meta name="generator" content="Hugo 0.96.0" />
+<link rel="stylesheet" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/css/main.min.b7a3fd6dbeb523cf6f12eb30d411189ac6347fa6a4806f8369c381140f0ef99e.css" /><meta name="generator" content="Hugo 0.96.0" />
 <meta charset="utf-8">
 <meta name="author" content="John Doe" />
 
@@ -24,13 +24,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/customizing-your-head/" /><meta property="article:section" content="recipes" />
 <meta property="article:published_time" content="2020-10-20T20:29:42+08:00" />
-<meta property="article:modified_time" content="2022-05-09T20:15:52+08:00" />
+<meta property="article:modified_time" content="2022-06-13T20:44:06+08:00" />
 
 <meta itemprop="name" content="Customizing your head">
 <meta itemprop="description" content="Let’s start with the most basic and perhaps most useful customization: modifying the &lt;head&gt;. This is useful for adding your own CSS and JavaScript files, changing certain metadata, or adding icons.
  First, copy the head partial from the theme (theme/contentful/layouts/partials/head.html) to your own (layouts/partials/head.html). We’re simply taking advantage of Hugo’s lookup order where we’ve override the head partial with our own copy.
  Then, feel free to add your own (or others&#39;) scripts and stylesheets, icons and other metadata, or whatever suitable things."><meta itemprop="datePublished" content="2020-10-20T20:29:42+08:00" />
-<meta itemprop="dateModified" content="2022-05-09T20:15:52+08:00" />
+<meta itemprop="dateModified" content="2022-06-13T20:44:06+08:00" />
 <meta itemprop="wordCount" content="296">
 <meta itemprop="keywords" content="seo," /><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/customizing-your-head/" />
   
@@ -115,21 +115,36 @@
     </div>
   </div>
 </div>
-<script defer>
-  const themeDropdown = document.querySelector('.site__theme-btn');
-    themeDropdown.addEventListener('click', (event) => {
-      const { target } = event;
-      if (target.classList.contains("site__theme-item")) {
-        if (target.dataset.theme) {
-          theme = target.dataset.theme;
-          window.localStorage.setItem("theme", theme);
-          document.documentElement.dataset.theme = theme;
-        } else {
-          window.localStorage.removeItem("theme");
-          delete document.documentElement.dataset.theme;
-        }
+<script>
+  function styleTheme() {
+    const selectedTheme = window.localStorage.getItem("theme");
+    for (const el of document.querySelectorAll(".site__theme-item")) {
+      if (el.dataset.theme == selectedTheme) {
+        el.classList.add("site__theme-item--selected");
+      } else {
+        el.classList.remove("site__theme-item--selected");
       }
-    });
+    }
+  }
+
+  const themeDropdown = document.querySelector('.site__theme-btn');
+  themeDropdown.addEventListener('click', (event) => {
+    const { target } = event;
+    if (target.classList.contains("site__theme-item")) {
+      if (target.dataset.theme) {
+        theme = target.dataset.theme;
+        window.localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+      } else {
+        window.localStorage.removeItem("theme");
+        delete document.documentElement.dataset.theme;
+      }
+    }
+
+    styleTheme();
+  });
+
+  styleTheme();
 </script>
 <nav aria-label="Site header">
   <a class="site__title" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful">More Contentful</a>
@@ -157,13 +172,13 @@
 
     <span style="margin-left: 0.5em;">2020-10-20</span>
   </time>
-  <time datetime="2022-05-09 20:15:52 &#43;0800 &#43;0800" title="Updated">
+  <time datetime="2022-06-13 20:44:06 &#43;0800 &#43;0800" title="Updated">
     
   <svg class="icon">
     <use href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/icons/generic/refresh.svg#refresh"></use>
   </svg>
 
-    <span style="margin-left: 0.5em;">2022-05-09</span>
+    <span style="margin-left: 0.5em;">2022-06-13</span>
   </time>
 </div>
 
@@ -235,7 +250,7 @@ Though, you have to set it as the default Markdown parser.</p>
     <p data-content-publication-date="2020-10-20 20:29:42 &#43;0800 &#43;0800">Created: <time datetime="2020-10-20">2020-10-20</time></p>
 
     
-    <p data-content-modification-date="2022-05-09 20:15:52 &#43;0800 &#43;0800">Updated: <time datetime="2022-05-09">2022-05-09</time></p>
+    <p data-content-modification-date="2022-06-13 20:44:06 &#43;0800 &#43;0800">Updated: <time datetime="2022-06-13">2022-06-13</time></p>
 
     
   </div>
