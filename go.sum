@@ -1,12 +1,7 @@
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20210127234705-3c689d14b093 h1:ArlMPrywcnbS3fv7TJ84LA5QnpufsZYmCZcRcgER0d0=
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20210127234705-3c689d14b093/go.mod h1:oUO71xDYAClgCeueyuISH8TC4+pHJ7Zf/NoDqR7pYvA=
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20220427232352-6d776459d165 h1:n9dYZ4rTj3uI5OgleWkqaDJQr6WRgfxH9l7Tc77nEcc=
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20220427232352-6d776459d165/go.mod h1:nIG0CtFAmtcZ4bNB4deINxypSoKB0K/h8hfOv37D4Ng=
-github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20201106111203-fd6a6c7a3839 h1:EmCHPgq800ntf7F7ME90g212BywSZRw5XlmpiP24Hdg=
-github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20201106111203-fd6a6c7a3839/go.mod h1:BL7L5CENEhUx+miRRaOZ9SVC92j9MAMztirBWtTpiPc=
-github.com/refactoringui/heroicons v0.4.2 h1:gLYH0RH4nLh81yxAC/JgyvKIeK0d+sBVF/I2XkPb6U8=
-github.com/refactoringui/heroicons v0.4.2/go.mod h1:82HsLWQga7MkEl5aK8TctxPPIBlXrsyWcVTB57uipuk=
+github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20220601232257-9d83599bb973 h1:E4G+xN0r88NDRTwQu1CtJNhdQHCvAOtRqvnYErkP54w=
+github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20220601232257-9d83599bb973/go.mod h1:hYdIy7u/yNx27ZDcThFZio08Gy4G+OVKp00hOiQgiBo=
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20220513103455-d83c3f8c6954 h1:ODhabu0XqJYNlXL6OEGRVMuz0dKR6Cp/TTkwoMD1m1A=
+github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20220513103455-d83c3f8c6954/go.mod h1:BL7L5CENEhUx+miRRaOZ9SVC92j9MAMztirBWtTpiPc=
 github.com/refactoringui/heroicons v1.0.6 h1:0+j+tb+i36SWT6hCXaxnOyAHkaPfM5MIg24pLwbY/e4=
 github.com/refactoringui/heroicons v1.0.6/go.mod h1:82HsLWQga7MkEl5aK8TctxPPIBlXrsyWcVTB57uipuk=
-github.com/simple-icons/simple-icons v0.0.0-20210124121502-a399e6c071f4/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=
-github.com/simple-icons/simple-icons v0.0.0-20220426192947-6553e31d3a6b/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=
+github.com/simple-icons/simple-icons v0.0.0-20220529101043-798d41484746/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=
