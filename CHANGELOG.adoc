@@ -20,6 +20,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+=== Added
+
+* Indicator for the selected theme in the dropdown menu.
+
+
 === Updated
 
 * Minimum Go runtime version in `go.mod`.

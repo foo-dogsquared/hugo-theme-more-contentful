@@ -65,20 +65,35 @@
     </div>
   </div>
 </div>
-<script defer>
-  const themeDropdown = document.querySelector('.site__theme-btn');
-    themeDropdown.addEventListener('click', (event) => {
-      const { target } = event;
-      if (target.classList.contains("site__theme-item")) {
-        if (target.dataset.theme) {
-          theme = target.dataset.theme;
-          window.localStorage.setItem("theme", theme);
-          document.documentElement.dataset.theme = theme;
-        } else {
-          window.localStorage.removeItem("theme");
-          delete document.documentElement.dataset.theme;
-        }
+<script>
+  function styleTheme() {
+    const selectedTheme = window.localStorage.getItem("theme");
+    for (const el of document.querySelectorAll(".site__theme-item")) {
+      if (el.dataset.theme == selectedTheme) {
+        el.classList.add("site__theme-item--selected");
+      } else {
+        el.classList.remove("site__theme-item--selected");
       }
-    });
+    }
+  }
+
+  const themeDropdown = document.querySelector('.site__theme-btn');
+  themeDropdown.addEventListener('click', (event) => {
+    const { target } = event;
+    if (target.classList.contains("site__theme-item")) {
+      if (target.dataset.theme) {
+        theme = target.dataset.theme;
+        window.localStorage.setItem("theme", theme);
+        document.documentElement.dataset.theme = theme;
+      } else {
+        window.localStorage.removeItem("theme");
+        delete document.documentElement.dataset.theme;
+      }
+    }
+
+    styleTheme();
+  });
+
+  styleTheme();
 </script>
 {{- end }}

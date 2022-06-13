@@ -103,6 +103,11 @@ footer[aria-label="Site footer"] {
     color: var(--background);
     cursor: pointer;
   }
+
+  &--selected {
+    background: var(--base05);
+    color: var(--background);
+  };
 }
 
 .pagination {
