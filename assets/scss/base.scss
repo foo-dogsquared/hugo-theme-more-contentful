@@ -34,6 +34,21 @@ article {
   h1, h2, h3 {
     margin-bottom: 1rem;
   }
+
+  main {
+    /* Select all links that are external. */
+    a[href]:not(:where(
+      a[href^="#"],
+      a[href^="./"],
+      a[href^="../"],
+      a[href^="/"]:not(a[href^="//"]),
+    ))::after, a[rel~="external"]::after {
+      color: var(--base05);
+      font-size: 0.50em;
+      content: " [🡕]";
+      vertical-align: super;
+    }
+  }
 }
 
 
