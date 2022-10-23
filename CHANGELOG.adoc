@@ -20,6 +20,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+
+
+== [0.3.0] - 2022-10-23
+
+
 === Added
 
 * Indicator for the selected theme in the dropdown menu.
