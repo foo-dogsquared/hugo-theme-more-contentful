@@ -12,7 +12,7 @@
 
   {{- if and .GitInfo (ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
   <time datetime="{{ .Lastmod }}" title="{{ i18n "updated_on" }}">
-    {{ partial "components/heroicon.html" "refresh" }}
+    {{ partial "components/heroicon.html" "arrow-path" }}
     <span style="margin-left: 0.5em;">{{ .Lastmod.Format "2006-01-02" }}</span>
   </time>
   {{- end }}

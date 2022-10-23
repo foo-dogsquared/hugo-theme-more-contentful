@@ -4,7 +4,7 @@
 */ -}}
 {{- if gt (len (index $.Site.Data "more-contentful").themes) 1 }}
 <div class="site__theme-btn" aria-label="Theme toggle">
-  {{ partial "components/heroicon.html" "color-swatch" }}
+  {{ partial "components/heroicon.html" "swatch" }}
   <div class="site__theme-dropdown">
     <div class="site__theme-dropdown-list">
       {{ $themes := (index $.Site.Data "more-contentful").themes }}
