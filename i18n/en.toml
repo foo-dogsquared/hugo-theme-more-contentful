@@ -19,8 +19,14 @@ other = "Table of contents"
 [and]
 other = "and"
 
+[back_to_top]
+other = "Back to top"
+
 [back_to_home]
 other = "Back to home"
+
+[permalink]
+other = "Permalink"
 
 [multilingual]
 other = "Available in other languages"
