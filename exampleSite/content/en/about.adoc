@@ -16,4 +16,4 @@ On top of what Contentful already provides, here are some features this theme pr
 * Multiple themes with Base16 themes including the ability to set the light and dark themes.
 * Focus on web accessibility and search engine optimization (SEO) including https://dev.twitter.com/cards[Twitter cards] and https://opengraphprotocol.org/[Open Graph protocol].
 
-For those who want to extend More Contentful, link:../articles/extending-contentful[a dedicated post on some useful recipes] is available.
+For those who want to extend More Contentful, link:../recipes[a dedicated post on some useful recipes] is available.

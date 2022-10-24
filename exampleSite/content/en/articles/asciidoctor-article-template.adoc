@@ -72,6 +72,32 @@ You could also do source code inputs with the following syntax.
 
 .Table title
 |===
+|Column heading 1 |Column heading 2 |Column heading 3 |Column heading 4
+
+|Column 1, row 1
+|Column 2, row 1
+|Column 3, row 1
+|Column 4, row 1
+
+|Column 1, row 2
+|Column 2, row 2
+|Column 3, row 2
+|Column 4, row 2
+
+|Column 1, row 3
+|Column 2, row 3
+|Column 3, row 3
+|Column 4, row 3
+
+|Column 1, row 4
+|Column 2, row 4
+|Column 3, row 4
+|Column 4, row 4
+|===
+
+Here's another table.
+
+|===
 |Column heading 1 |Column heading 2
 
 |Column 1, row 1
@@ -79,6 +105,9 @@ You could also do source code inputs with the following syntax.
 
 |Column 1, row 2
 |Column 2, row 2
+
+|Column 1, row 3
+|Column 2, row 3
 |===
 
 ====== Fifth level heading
