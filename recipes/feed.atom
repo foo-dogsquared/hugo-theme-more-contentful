@@ -14,7 +14,7 @@
     <title type="text">Configurable list of contacts</title>
     <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
     <published>2020-10-20T20:38:24+08:00</published>
-    <updated>2022-10-24T12:59:05+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-10-24T14:00:23+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Most themes offer quick social media links with site configuration.
 However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.&lt;/p&gt;
 &lt;/div&gt;
@@ -90,7 +90,7 @@ The &lt;code&gt;name&lt;/code&gt; would now be the image alternative text.&lt;/p
     <title type="text">Creating an archive page</title>
     <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/" hreflang="en" title="Creating an archive page"/>
     <published>2020-10-20T20:36:55+08:00</published>
-    <updated>2022-10-24T12:59:05+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2022-10-24T14:00:23+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;This will add an archive page similar to archive pages &lt;a href=&#34;https://davidtranscend.com/archives/&#34;&gt;like&lt;/a&gt; &lt;a href=&#34;https://lukesmith.xyz/blogindex.html&#34;&gt;these&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
