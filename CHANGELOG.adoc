@@ -20,6 +20,23 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+=== Added
+
+- Unstyling to internal links.
+
+
+=== Changed
+
+- Make external links styling site-wide.
+Now only certain parts should only have the links unstyled.
+
+
+=== Fixed
+
+- Fixes to Heroicon template.
+This should fix a bug involving missing icons.
+
+
 
 
 == [0.3.1] - 2022-10-24
