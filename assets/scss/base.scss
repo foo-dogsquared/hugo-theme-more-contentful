@@ -34,23 +34,31 @@ article {
   h1, h2, h3 {
     margin-bottom: 1rem;
   }
-
-  main {
-    /* Select all links that are external. */
-    a[href]:not(:where(
-      a[href^="#"],
-      a[href^="./"],
-      a[href^="../"],
-      a[href^="/"]:not(a[href^="//"]),
-    ))::after, a[rel~="external"]::after {
-      color: var(--base05);
-      font-size: 0.50em;
-      content: " [🡕]";
-      vertical-align: super;
-    }
-  }
 }
 
+/*
+Select all links that are external.
+
+In this case, we'll just exclude all links that are...
+
+- All internal anchors.
+- All links that points to a relative path.
+- All origin-relative URLs.
+
+Also, all links that are explicitly marked as external are obviously
+considered.
+*/
+a[href]:not(:where(
+  a[href^="#"],
+  a[href^="./"],
+  a[href^="../"],
+  a[href^="/"]:not(a[href^="//"]),
+))::after, a[rel~="external"]::after {
+  color: var(--base05);
+  font-size: 0.50em;
+  content: " [🡕]";
+  vertical-align: super;
+}
 
 /* Text formatting */
 h1, h2, h3,
@@ -228,6 +236,12 @@ aside {
   margin: 1rem 0;
   padding: 0.5rem;
   width: 100%;
+}
+
+header, footer {
+  a[href]::after {
+    content: unset;
+  }
 }
 
 footer {
