@@ -6,11 +6,11 @@
 {{- $main := resources.Get "scss/main.scss" | resources.ToCSS }}
 
 {{- /* Combine all of the custom schems in under one stylesheet */ -}}
-{{ $scheme_template := resources.Get "templates/theme.scss" }}
-{{- $themes := $scheme_template | resources.ExecuteAsTemplate "css/themes.css" . | resources.ToCSS }}
+{{- $themes := resources.Get "templates/theme.scss" | resources.ExecuteAsTemplate "css/themes.css" . | resources.ToCSS }}
+{{- $siteSpecificTheme := resources.Get "templates/site.scss" | resources.ExecuteAsTemplate "css/site.css" . | resources.ToCSS }}
 
 {{- /* Append the main stylesheet to be the last so the resulting stylesheet will make the custom colorschemes at the front. */ -}}
-{{ $stylesheets = $stylesheets | append $themes $main }}
+{{ $stylesheets = $stylesheets | append $themes $main $siteSpecificTheme }}
 
 {{ $style := $stylesheets | resources.Concat "css/main.css" }}
 

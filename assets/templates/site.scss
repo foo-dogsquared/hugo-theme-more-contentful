@@ -1,0 +1,15 @@
+{{/*
+  This is a site-specific styling that have to be generated.
+*/}}
+
+/* Internal links are not to be styled. */
+{{- $baseURL := urls.Parse $.Site.BaseURL }}
+a[href]:where(
+  a[href^="http://{{- $baseURL.Host -}}"],
+  a[href^="https://{{- $baseURL.Host -}}"],
+  a[href$="{{- $baseURL.Host -}}"],
+  a[href$="{{- $baseURL.Host -}}/"],
+  a[href^="{{- $.Site.BaseURL -}}"],
+)::after {
+  content: unset;
+}
