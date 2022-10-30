@@ -1,5 +1,4 @@
 {{ $data := newScratch }}
-@use "sass:color";
 
 {{/*
   Create an automatic way of generating system color schemes, if set by the user.
