@@ -22,19 +22,20 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 === Added
 
-- Unstyling to internal links.
-
+* References to favicons with `favicon.png`. footnote:[Somehow, I forgot about that.]
 
 === Changed
 
-- Make external links styling site-wide.
+* Make external links styling site-wide.
 Now only certain parts should only have the links unstyled.
 
 
 === Fixed
 
-- Fixes to Heroicon template.
+* Fixes to Heroicon template.
 This should fix a bug involving missing icons.
+
+* Unstyling to internal links.
 
 
 
