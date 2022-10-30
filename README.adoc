@@ -20,7 +20,7 @@ image:./docs/demo-full.png[The theme in desktop-sized windows.]
 
 An example of a Hugo project configured with this theme is available at link:./exampleSite[`./exampleSite/`] directory.
 It is automatically deployed with GitHub workflow and its output is available in https://foo-dogsquared.github.io/hugo-theme-more-contentful.
-It also provides an example how to deploy your Hugo site with GitHub Pages.
+It also provides an example how to deploy your Hugo site with GitHub Pages and how to use and configure this theme.
 
 
 
@@ -128,8 +128,23 @@ git clone https://github.com/foo-dogsquared/hugo-theme-more-contentful themes/mo
 If you intend to vendor this for major modifications, you can store the project as a https://git-scm.com/book/en/v2/Git-Tools-Submodules[Git submodule] (e.g., `git submodule add $GIT_REPO`) or a https://www.atlassian.com/git/tutorials/git-subtree[Git subtree] (e.g., `git subtree add --prefix ./themes/more-contentful $GIT_REPO --squash`).
 
 
+=== After installation
+
+Setting up shop for your new blog, there are some things this theme expects in order for things to just work.
+
+* Favicon are expected to be in `$BASE_URL/favicon.png`.
+This means you can simply plop the appropriate file in the static folder (i.e., `static`) of your project.
+
+* Markdown documents are the main supported markup format.
+Though Hugo do support other markup formats (e.g., Asciidoctor, org-mode), the layout and style is more expected for Markdown documents.
+Otherwise, you would have additional CSS styles to support those formats on your own.
+
+* There are things to configure most of which are mentioned in the <<configuration>> section.
+Some things include <<creating-your-color-scheme>> for your website to stand out and <<authors>> to set the appropriate metadata for content authors.
 
 
+
+[#configuration]
 == Configuration
 
 This theme, like the original, tries to use as little custom parameters as possible.
@@ -220,6 +235,7 @@ As for the page variables, it uses no custom frontmatter variables.
 For more information, you can refer to https://gohugo.io/content-management/front-matter#predefined[the predefined variables that Hugo accepts].
 
 
+[#authors]
 === Authors
 
 Despite this theme is aimed for personal blogs, it has support for multiple authors.
@@ -250,6 +266,7 @@ For completeness and best practice, the author object should be structured with 
 It can also point relative to the Hugo project root.
 
 
+[#creating-your-color-scheme]
 === Creating your own color scheme
 
 Creating your own color scheme has been simplified with the use of https://gohugo.io/templates/data-templates/#the-data-folder[data templates].
