@@ -20,6 +20,12 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+
+
+
+== [0.3.2] - 2022-11-12
+
+
 === Added
 
 * References to favicons with `favicon.png`. footnote:[Somehow, I forgot about that.]
