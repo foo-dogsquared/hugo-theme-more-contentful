@@ -235,6 +235,17 @@ As for the page variables, it uses no custom frontmatter variables.
 For more information, you can refer to https://gohugo.io/content-management/front-matter#predefined[the predefined variables that Hugo accepts].
 
 
+=== Site configuration keys
+
+Here are some of the assumptions made with certain keys from the site configuration:
+
+- `copyright` is a Markdown string to be rendered in the footer.
+
+- `params.mainSections` is a list of terms from link:https://gohugo.io/templates/section-templates/[the site sections] for its pages to be listed in the homepage (e.g., a value of `[ "posts" "projects" ]` lists all of the pages under `posts` and `projects`).
+
+- `params.toc` contains a boolean value to indicate whether a table of content should be present.
+
+
 [#authors]
 === Authors
 
