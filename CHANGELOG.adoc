@@ -20,6 +20,15 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+=== Fixed
+
+- Limit external link styling only to article content boxes.
+This is to limit stomping on custom site styles that often customize outside of the content.
+
+- Fix layout on section pages.
+
+- Correct stylesheet appending order.
+
 
 
 
