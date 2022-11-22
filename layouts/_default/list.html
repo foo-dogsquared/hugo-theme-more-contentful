@@ -1,7 +1,6 @@
 {{ define "main" }}
-<section>
-{{ .Content }}
-</section>
+<article>
+  <main>{{- .Content }}</main>
 
 {{- /* The homepage should show only pages from the given sections (with `$.Site.Params.mainSections`).
 Otherwise, we take the pages of a section. */ -}}
@@ -18,4 +17,5 @@ Otherwise, we take the pages of a section. */ -}}
 {{- end }}
 
 {{- partial "pagination.html" (dict "Paginator" .Paginator "activeNumberOfPages" 2) }}
+</article>
 {{- end }}

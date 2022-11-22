@@ -2,14 +2,40 @@
   This is a site-specific styling that have to be generated.
 */}}
 
-/* Internal links are not to be styled. */
-{{- $baseURL := urls.Parse $.Site.BaseURL }}
-a[href]:where(
-  a[href^="http://{{- $baseURL.Host -}}"],
-  a[href^="https://{{- $baseURL.Host -}}"],
-  a[href$="{{- $baseURL.Host -}}"],
-  a[href$="{{- $baseURL.Host -}}/"],
-  a[href^="{{- $.Site.BaseURL -}}"],
-)::after {
-  content: unset;
+article > main {
+  /*
+  Select all links that are external.
+
+  In this case, we'll just exclude all links that are...
+
+  - All internal anchors.
+  - All links that points to a relative path.
+  - All origin-relative URLs.
+
+  Also, all links that are explicitly marked as external are obviously
+  considered.
+   */
+  a[href]:not(:where(
+    a[href^="#"],
+    a[href^="./"],
+    a[href^="../"],
+    a[href^="/"]:not(a[href^="//"]),
+  ))::after, a[rel~="external"]::after {
+    color: var(--base05);
+    font-size: 0.50em;
+    content: " [🡕]";
+    vertical-align: super;
+  }
+
+  /* Internal links are not to be styled. */
+  {{- $baseURL := urls.Parse $.Site.BaseURL }}
+  a[href]:where(
+    a[href^="http://{{- $baseURL.Host -}}"],
+    a[href^="https://{{- $baseURL.Host -}}"],
+    a[href$="{{- $baseURL.Host -}}"],
+    a[href$="{{- $baseURL.Host -}}/"],
+    a[href^="{{- $.Site.BaseURL -}}"],
+  )::after {
+    content: unset;
+  }
 }
