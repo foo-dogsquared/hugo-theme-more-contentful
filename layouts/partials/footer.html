@@ -1,6 +1,6 @@
 <footer aria-label="Site footer">
 <!-- A convenient back to top link. -->
-<p><a href="#top">{{ i18n "back_to_top" | default "Back to top" }}</a></p>
+<a href="#top">{{ i18n "back_to_top" | default "Back to top" }}</a>
 
 <!-- Linking to other languages' homepage. -->
 {{ if $.Site.IsMultiLingual }}
@@ -35,8 +35,9 @@
 </ul>
 {{ end }}
 
+{{ $markdownOpt := dict "markup" "markdown" }}
 
 <!-- Copyright info. -->
-<p>{{ with $.Site.Copyright }}{{ . | markdownify }}{{ else }}© {{ now.Year }} {{ with $.Site.Author.name }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}{{ end }}</p>
+<p>{{ with $.Site.Copyright }}{{ . | $.Site.RenderPage $markdownOpt }}{{ else }}© {{ now.Year }} {{ with $.Site.Author.name }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}{{ end }}</p>
 </footer>
 
