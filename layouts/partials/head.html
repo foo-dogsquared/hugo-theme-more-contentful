@@ -10,7 +10,7 @@
 {{- $siteSpecificTheme := resources.Get "templates/site.scss" | resources.ExecuteAsTemplate "css/site.css" . | resources.ToCSS }}
 
 {{- /* Append the main stylesheet to be the last so the resulting stylesheet will make the custom colorschemes at the front. */ -}}
-{{ $stylesheets = $stylesheets | append $themes $main $siteSpecificTheme }}
+{{ $stylesheets = $stylesheets | append $themes $siteSpecificTheme $main }}
 
 {{ $style := $stylesheets | resources.Concat "css/main.css" }}
 
