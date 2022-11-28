@@ -22,6 +22,18 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 
 
+== [0.3.4] - 2022-11-28
+
+
+=== Fixed
+
+- Fix `<head>` layout.
+
+- Fix permalink for favicons.
+
+
+
+
 == [0.3.3] - 2022-11-22
 
 
