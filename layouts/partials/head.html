@@ -20,7 +20,7 @@
 {{- end }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
-<link rel="shortcut icon" href="{{ $.Site.BaseURL }}favicon.png" />
+<link rel="shortcut icon" href="{{ absURL "favicon.png" }}" />
 
 {{- /* Some sane <meta> tags default */ -}}
 {{ hugo.Generator }}
