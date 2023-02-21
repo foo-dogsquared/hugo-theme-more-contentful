@@ -228,14 +228,6 @@ footer {
   text-align: center;
 }
 
-
-/* Mobile styles */
-@media all and (max-width: $tablet-breakpoint) {
-  html:root {
-    --font-size: 17px;
-  }
-}
-
 @media print {
   html {
     overflow: auto;

@@ -20,6 +20,10 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+== Updated
+
+- Responsive font sizing.
+
 
 
 == [0.3.4] - 2022-11-28
