@@ -10,6 +10,5 @@
   [[module.imports]]
     path="github.com/refactoringui/heroicons"
     [[module.imports.mounts]]
-        source = "optimized"
-        target = "assets/svg/heroicons"
-
+      source = "optimized"
+      target = "assets/svg/heroicons"
