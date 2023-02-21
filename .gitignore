@@ -10,5 +10,4 @@ hugo.exe
 hugo.darwin
 hugo.linux
 
-# Content since it is unnecessary to include in a Hugo theme.
-/content/
+.direnv/
