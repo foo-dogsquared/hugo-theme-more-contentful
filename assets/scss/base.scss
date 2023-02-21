@@ -63,7 +63,6 @@ dd, li, p, td {
 
 p {
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 dd {
@@ -83,13 +82,11 @@ code, pre {
 }
 
 code {
-  background: var(--base01);
   font-family: var(--mono-family);
   font-size: 0.9em;
 }
 
 pre {
-  background: var(--base01);
   color: var(--base05);
   border: var(--border-style);
   font-family: var(--mono-family);
@@ -143,6 +140,10 @@ table {
 
   caption {
     margin: 1em;
+  }
+
+  tr td > p {
+    margin: 0;
   }
 }
 
