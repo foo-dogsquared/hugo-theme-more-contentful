@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Recipes on More Contentful</title>
   
-    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss"/><rights>© 2022 </rights>
+    <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss"/><rights>© 2023 </rights>
   <generator uri="https://gohugo.io/" version="0.96.0">Hugo</generator>
   <updated>2020-05-12T17:25:55+08:00</updated>
   <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
@@ -14,7 +14,7 @@
     <title type="text">Configurable list of contacts</title>
     <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
     <published>2020-10-20T20:38:24+08:00</published>
-    <updated>2022-11-28T11:03:44+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2023-02-21T14:48:28+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;Most themes offer quick social media links with site configuration.
 However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.&lt;/p&gt;
 &lt;/div&gt;
@@ -90,7 +90,7 @@ The &lt;code&gt;name&lt;/code&gt; would now be the image alternative text.&lt;/p
     <title type="text">Creating an archive page</title>
     <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/" hreflang="en" title="Creating an archive page"/>
     <published>2020-10-20T20:36:55+08:00</published>
-    <updated>2022-11-28T11:03:44+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
+    <updated>2023-02-21T14:48:28+08:00</updated><content type="html">&lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;This will add an archive page similar to archive pages &lt;a href=&#34;https://davidtranscend.com/archives/&#34;&gt;like&lt;/a&gt; &lt;a href=&#34;https://lukesmith.xyz/blogindex.html&#34;&gt;these&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
