@@ -1,13 +1,17 @@
-[aria-label="Site header"] {
-  @include header-link-hover-style;
+header[aria-label="Site header"] {
   position: relative;
 
   a {
     color: var(--base06);
+
+    &:hover {
+      color: var(--base0C);
+      text-decoration: unset;
+    }
   }
 }
 
-[aria-label="Site footer"] {
+footer[aria-label="Site footer"] {
   > * {
     margin-top: 1em;
     margin-bottom: 0;
@@ -70,7 +74,7 @@
   right: 0;
 
   &:hover {
-    color: unset;
+    color: unset !important;
     & .site__theme-dropdown {
       display: unset;
     }
