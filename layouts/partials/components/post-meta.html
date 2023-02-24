@@ -2,19 +2,24 @@
   The component where it will display the metadata of the post.
   This is used on list templates but feel free to change that.
 */ -}}
+{{- $RFC3339 := "2006-01-02T15:04:05Z07:00" }}
 <div class="list post__meta" aria-hidden="true">
   {{- if ne (.PublishDate.Format "2006") "0001" -}}
-  <time datetime="{{ .PublishDate }}" title="{{ i18n "published_on" }}">
+  <span>
     {{ partial "components/heroicon.html" "calendar" }}
-    <span style="margin-left: 0.5em;">{{ .PublishDate.Format "2006-01-02" }}</span>
-  </time>
+    <time datetime="{{ .PublishDate.Format $RFC3339 }}" title="{{ i18n "published_on" }}" style="margin-left: 0.5em;">
+      {{ .PublishDate.Format "2006-01-02" }}
+    </time>
+  </span>
   {{- end }}
 
   {{- if and .GitInfo (ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
-  <time datetime="{{ .Lastmod }}" title="{{ i18n "updated_on" }}">
+  <span>
     {{ partial "components/heroicon.html" "arrow-path" }}
-    <span style="margin-left: 0.5em;">{{ .Lastmod.Format "2006-01-02" }}</span>
-  </time>
+    <time datetime="{{ .Lastmod.Format $RFC3339 }}" title="{{ i18n "updated_on" }}" style="margin-left: 0.5em;">
+      {{ .Lastmod.Format "2006-01-02" }}
+    </time>
+  </span>
   {{- end }}
 
   {{- /* The authors are appended with 'et al' if there's more than one author in the map. */ -}}
