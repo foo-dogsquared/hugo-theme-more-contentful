@@ -20,12 +20,17 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
-== Added
+
+
+== [0.4.0] - 2023-02-24
+
+
+=== Added
 
 - Accessibility tags for certain elements in the website (i.e., `<hr>` in non-content).
 
 
-== Updated
+=== Updated
 
 - Reposition certain components.
 This is to (hopefully) fix certain layouts when the article is read in reader mode (in major web browsers such as Chrome and Firefox).
@@ -33,6 +38,7 @@ This is to (hopefully) fix certain layouts when the article is read in reader mo
 - Spacing between basic elements (i.e., `<p>`).
 
 - Responsive font sizing.
+
 
 
 
