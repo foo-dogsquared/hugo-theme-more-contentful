@@ -1,24 +1,26 @@
 {{ define "main" }}
 
-<article class="post--single">
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
-  {{ partial "partials/components/post-meta.html" . }}
-
-  {{ $is_toc := cond (ne .Params.toc nil) .Params.toc $.Site.Params.toc }}
-  {{ if (and $is_toc (gt (countrunes .TableOfContents) 0)) }}
-  <style>
-#TableOfContents:not(:empty)::before {
-  content: "{{ i18n "table_of_contents" | default "Table of contents" }}";
-  font-weight: bold;
-}
-  </style>
-  {{ .TableOfContents }}
-  {{ end }}
-
+<div class="post--single">
   <main>
-    {{ .Content }}
+    <article>
+      <header>
+        <h1>{{ .Title }}</h1>
+        {{ partial "partials/components/post-meta.html" . }}
+      </header>
+
+      {{ $is_toc := cond (ne .Params.toc nil) .Params.toc $.Site.Params.toc }}
+      {{ if (and $is_toc (gt (countrunes .TableOfContents) 0)) }}
+        <style>
+          #TableOfContents:not(:empty)::before {
+            content: "{{ i18n "table_of_contents" | default "Table of contents" }}";
+            font-weight: bold;
+          }
+        </style>
+        {{ .TableOfContents }}
+      {{ end }}
+
+      {{ .Content }}
+    </article>
   </main>
 
   <hr aria-hidden="true"/>
@@ -53,6 +55,6 @@
       <p data-content-translations="{{ jsonify $langs }}">{{ i18n "available_translations" }}: {{ delimit $lang_links "," (printf " %s " (i18n "and")) }}</p>
     {{- end }}
   </div>
-</article>
+</div>
 
 {{ end }}

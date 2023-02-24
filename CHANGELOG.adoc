@@ -27,6 +27,9 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 == Updated
 
+- Reposition certain components.
+This is to (hopefully) fix certain layouts when the article is read in reader mode (in major web browsers such as Chrome and Firefox).
+
 - Spacing between basic elements (i.e., `<p>`).
 
 - Responsive font sizing.
