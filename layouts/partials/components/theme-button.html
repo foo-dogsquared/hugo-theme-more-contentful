@@ -3,7 +3,7 @@
   Take note this component already has conditional rendering so a conditional is unnecessary.
 */ -}}
 {{- if gt (len (index $.Site.Data "more-contentful").themes) 1 }}
-<div class="site__theme-btn" aria-label="Theme toggle">
+<div class="site__theme-btn" aria-label="Theme toggle" aria-hidden="true">
   {{ partial "components/heroicon.html" "swatch" }}
   <div class="site__theme-dropdown">
     <div class="site__theme-dropdown-list">

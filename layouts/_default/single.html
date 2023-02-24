@@ -21,8 +21,8 @@
     {{ .Content }}
   </main>
 
-  <hr>
-  <div class="post__meta--single">
+  <hr aria-hidden="true"/>
+  <div class="post__meta--single" aria-hidden="true">
     <!-- List the author(s) of the article. -->
     {{- with .Params.author }}
     {{- $names := slice }}

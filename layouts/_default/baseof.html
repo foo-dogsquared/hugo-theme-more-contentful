@@ -6,9 +6,9 @@
   <body>
     {{- partial "components/theme-button.html" . }}
     {{- partial "header.html" . -}}
-    <hr>
+    <hr aria-hidden="true"/>
     {{- block "main" . }}{{- end }}
-    <hr>
+    <hr aria-hidden="true"/>
     {{- partial "footer.html" . -}}
   </body>
 </html>

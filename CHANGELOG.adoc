@@ -20,6 +20,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+== Added
+
+- Accessibility tags for certain elements in the website (i.e., `<hr>` in non-content).
+
+
 == Updated
 
 - Spacing between basic elements (i.e., `<p>`).

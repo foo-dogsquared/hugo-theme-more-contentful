@@ -2,7 +2,7 @@
   The component where it will display the metadata of the post.
   This is used on list templates but feel free to change that.
 */ -}}
-<div class="list post__meta">
+<div class="list post__meta" aria-hidden="true">
   {{- if ne (.PublishDate.Format "2006") "0001" -}}
   <time datetime="{{ .PublishDate }}" title="{{ i18n "published_on" }}">
     {{ partial "components/heroicon.html" "calendar" }}
