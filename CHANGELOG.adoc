@@ -20,6 +20,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+
+
+== [0.4.1] - 2023-02-24
+
+
 === Fixed
 
 - Revert the site layout.
