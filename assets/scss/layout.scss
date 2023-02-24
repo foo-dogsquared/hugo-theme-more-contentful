@@ -1,12 +1,13 @@
-nav[aria-label="Site header"] {
+[aria-label="Site header"] {
   @include header-link-hover-style;
+  position: relative;
 
   a {
     color: var(--base06);
   }
 }
 
-footer[aria-label="Site footer"] {
+[aria-label="Site footer"] {
   > * {
     margin-top: 1em;
     margin-bottom: 0;
@@ -63,12 +64,13 @@ footer[aria-label="Site footer"] {
 }
 
 .site__theme-btn {
-  background: var(--background);
   padding: 0.5em;
-  position: relative;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 
   &:hover {
+    color: unset;
     & .site__theme-dropdown {
       display: unset;
     }
