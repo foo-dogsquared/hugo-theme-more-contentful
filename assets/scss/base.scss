@@ -9,12 +9,6 @@
   100% { background: unset; }
 }
 
-
-::selection {
-  background: var(--foreground);
-  color: var(--background);
-}
-
 body {
   margin: 0 auto;
   max-width: var(--content-width);
@@ -49,10 +43,6 @@ a {
 
   &:hover {
     color: var(--base0B);
-    text-decoration: underline;
-  }
-
-  &::selection {
     text-decoration: underline;
   }
 }
@@ -99,22 +89,9 @@ pre {
   overflow: auto;
 }
 
-code[class*=language-]::selection,
-code[class*=language-] ::selection,
-pre[class*=language-]::selection,
-pre[class*=language-] ::selection {
-  background: var(--base02);
-  font-size: var(--mono-font-size);
-  color: unset;
-}
-
 mark {
   background: var(--foreground);
   color: var(--background);
-
-  &::selection {
-    color: var(--base05);
-  }
 }
 
 hr {
