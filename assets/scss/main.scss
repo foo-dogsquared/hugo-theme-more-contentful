@@ -7,8 +7,8 @@
   /* Spacing options. */
   --font-size: 20px;
   --mono-font-size: 0.9em;
-  --vertical-rhythm: 24px;
-  --content-width: 750px;
+  --vertical-rhythm: calc(1.25 * var(--font-size));
+  --content-width: max(750px, 75ch);
   --code-block-size: 50vh;
 
   --border-style: var(--base05) solid 1px;
