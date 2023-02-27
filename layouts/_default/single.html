@@ -23,38 +23,40 @@
     </article>
   </main>
 
-  <hr aria-hidden="true"/>
-  <div class="post__meta--single" aria-hidden="true">
-    <!-- List the author(s) of the article. -->
-    {{- with .Params.author }}
-    {{- $names := slice }}
-    {{- range . }}{{ $names = $names | append .name }}{{ end }}
-    <p data-content-author="{{ jsonify $names }}">{{ i18n "published_by" }}: {{ delimit $names ", " (printf " %s " (i18n "and")) }}</p>
-    {{- end }}
-
-    <!-- Only show the creation date if the `date` field is valid. -->
-    {{- if ne (.PublishDate.Format "2006") "0001" -}}
-    <!-- Publication date. -->
-    <p data-content-publication-date="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ i18n "published_on" }}: <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "2006-01-02" }}</time></p>
-    {{- end }}
-
-    <!-- Modification date (will only appear if the publication date is less than the modified date.) -->
-    {{- if ne .PublishDate .Lastmod }}
-    <p data-content-modification-date="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ i18n "updated_on" }}: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod.Format "2006-01-02" }}</time></p>
-    {{- end }}
-
-    <!-- Link the translated versions if the article has at least one translated page. -->
-    {{- if .IsTranslated }}
-      {{- $lang_links := slice }}
-      {{- $langs := slice }}
-      {{- range .Translations }}
-        {{- $lang := cond (ne .Language.LanguageName nil) .Language.LanguageName .Lang }}
-        {{ $lang_links = $lang_links | append (printf "<a href=%s>%s</a>" .Permalink $lang) }}
-        {{ $langs = $langs | append $lang }}
+  {{ if or (or .PublishDate .Lastmod) .IsTranslated }}
+    <hr aria-hidden="true"/>
+    <div class="post__meta--single" aria-hidden="true">
+      <!-- List the author(s) of the article. -->
+      {{- with .Params.author }}
+      {{- $names := slice }}
+      {{- range . }}{{ $names = $names | append .name }}{{ end }}
+      <p data-content-author="{{ jsonify $names }}">{{ i18n "published_by" }}: {{ delimit $names ", " (printf " %s " (i18n "and")) }}</p>
       {{- end }}
-      <p data-content-translations="{{ jsonify $langs }}">{{ i18n "available_translations" }}: {{ delimit $lang_links "," (printf " %s " (i18n "and")) }}</p>
-    {{- end }}
-  </div>
+
+      <!-- Only show the creation date if the `date` field is valid. -->
+      {{- if ne (.PublishDate.Format "2006") "0001" -}}
+      <!-- Publication date. -->
+      <p data-content-publication-date="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ i18n "published_on" }}: <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "2006-01-02" }}</time></p>
+      {{- end }}
+
+      <!-- Modification date (will only appear if the publication date is less than the modified date.) -->
+      {{- if ne .PublishDate .Lastmod }}
+      <p data-content-modification-date="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ i18n "updated_on" }}: <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod.Format "2006-01-02" }}</time></p>
+      {{- end }}
+
+      <!-- Link the translated versions if the article has at least one translated page. -->
+      {{- if .IsTranslated }}
+        {{- $lang_links := slice }}
+        {{- $langs := slice }}
+        {{- range .Translations }}
+          {{- $lang := cond (ne .Language.LanguageName nil) .Language.LanguageName .Lang }}
+          {{ $lang_links = $lang_links | append (printf "<a href=%s>%s</a>" .Permalink $lang) }}
+          {{ $langs = $langs | append $lang }}
+        {{- end }}
+        <p data-content-translations="{{ jsonify $langs }}">{{ i18n "available_translations" }}: {{ delimit $lang_links "," (printf " %s " (i18n "and")) }}</p>
+      {{- end }}
+    </div>
+  {{ end }}
 </div>
 
 {{ end }}

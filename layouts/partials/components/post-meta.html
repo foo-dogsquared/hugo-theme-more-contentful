@@ -1,37 +1,38 @@
 {{- /*
   The component where it will display the metadata of the post.
-  This is used on list templates but feel free to change that.
 */ -}}
-{{- $RFC3339 := "2006-01-02T15:04:05Z07:00" }}
-<div class="list post__meta" aria-hidden="true">
-  {{- if ne (.PublishDate.Format "2006") "0001" -}}
-  <span>
-    {{ partial "components/heroicon.html" "calendar" }}
-    <time datetime="{{ .PublishDate.Format $RFC3339 }}" title="{{ i18n "published_on" }}" style="margin-left: 0.5em;">
-      {{ .PublishDate.Format "2006-01-02" }}
-    </time>
-  </span>
-  {{- end }}
-
-  {{- if and .GitInfo (ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02")) }}
-  <span>
-    {{ partial "components/heroicon.html" "arrow-path" }}
-    <time datetime="{{ .Lastmod.Format $RFC3339 }}" title="{{ i18n "updated_on" }}" style="margin-left: 0.5em;">
-      {{ .Lastmod.Format "2006-01-02" }}
-    </time>
-  </span>
-  {{- end }}
-
-  {{- /* The authors are appended with 'et al' if there's more than one author in the map. */ -}}
-  {{ with .Params.author }}
-  {{- $names := slice }}
-  {{- range . }}{{ $names = $names | append .name }}{{ end }}
-  {{- $author := index (first 1 $names) 0 }}
-  <span data-authors="{{ jsonify $names }}" title="{{ i18n "published_by" }}">
-    {{ partial "components/heroicon.html" "pencil" }}
-    <span style="margin-left: 0.5em;">
-      {{ $author }}{{ if ge (len .) 2 }}, et al.{{ end }}
+{{- if or .PublishDate .Lastmod }}
+  {{- $RFC3339 := "2006-01-02T15:04:05Z07:00" }}
+  <div class="list post__meta" aria-hidden="true">
+    {{- if .PublishDate -}}
+    <span>
+      {{ partial "components/heroicon.html" "calendar" }}
+      <time datetime="{{ .PublishDate.Format $RFC3339 }}" title="{{ i18n "published_on" }}" style="margin-left: 0.5em;">
+        {{ .PublishDate.Format "2006-01-02" }}
+      </time>
     </span>
-  </span>
-  {{ end }}
-</div>
+    {{- end }}
+
+    {{- if ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02") }}
+    <span>
+      {{ partial "components/heroicon.html" "arrow-path" }}
+      <time datetime="{{ .Lastmod.Format $RFC3339 }}" title="{{ i18n "updated_on" }}" style="margin-left: 0.5em;">
+        {{ .Lastmod.Format "2006-01-02" }}
+      </time>
+    </span>
+    {{- end }}
+
+    {{- /* The authors are appended with 'et al' if there's more than one author in the map. */ -}}
+    {{- with .Params.author }}
+    {{- $names := slice }}
+    {{- range . }}{{ $names = $names | append .name }}{{ end }}
+    {{- $author := index (first 1 $names) 0 }}
+    <span data-authors="{{ jsonify $names }}" title="{{ i18n "published_by" }}">
+      {{ partial "components/heroicon.html" "pencil" }}
+      <span style="margin-left: 0.5em;">
+        {{ $author }}{{ if ge (len .) 2 }}, et al.{{ end }}
+      </span>
+    </span>
+    {{- end }}
+  </div>
+{{- end }}
