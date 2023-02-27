@@ -230,8 +230,7 @@ footer[aria-label="Site footer"] {
   font-size: 0.9em;
   padding: 1em;
 
-  // The styling is solely for consistency sake throughout the site.
-  > ul { padding-left: 1rem; }
+  > ul { margin-bottom: unset; }
 
   ul {
     list-style: disc;

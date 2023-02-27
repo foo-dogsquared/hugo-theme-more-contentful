@@ -18,9 +18,6 @@
   --selection-color: var(--base02);
 }
 
-$mobile-breakpoint: 600px;
-$tablet-breakpoint: 860px;
-
 :root {
   font-family: var(--body-family);
   font-size: clamp(var(--font-size), 1.4vw, calc(var(--font-size) * 3));
