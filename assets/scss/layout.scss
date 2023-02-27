@@ -105,14 +105,15 @@ footer[aria-label="Site footer"] {
   &[data-theme-system] { order: -2; }
 
   .site__theme-dropdown &:hover {
-    background: var(--accent-color);
-    color: var(--background);
+    background: var(--selection-color);
     cursor: pointer;
   }
 
   &--selected {
     background: var(--base05);
     color: var(--background);
+
+    &:hover { color: var(--base05); }
   };
 }
 

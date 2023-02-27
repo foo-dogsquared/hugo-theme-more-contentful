@@ -129,6 +129,8 @@ table {
 
   tbody {
     tr + tr, tr:first-child { border-top: var(--border-style); }
+
+    tr:hover { background: var(--selection-color); }
   }
 
   th, td { padding: 0.5em; }
