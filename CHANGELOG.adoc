@@ -20,6 +20,21 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+=== Updated
+
+- Update the table styling.
+
+- Make component selection style consistent.
+
+
+=== Fixed
+
+- Remove the overridden selection (i.e., `::selection`) style.
+It is harder to configure it right for accessibility plus it isn't recommended to add one anyways.
+
+- Fix the style for `<code>` elements.
+
+
 
 
 == [0.4.1] - 2023-02-24
