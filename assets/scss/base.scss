@@ -114,10 +114,21 @@ table {
   margin: auto;
   overflow: auto;
   width: 100%;
+  border: var(--border-style);
+  margin: var(--vertical-rhythm) auto;
 
-  caption {
-    margin: 1em;
+  caption { margin: unset; }
+
+  thead tr {
+    background: var(--base05);
+    color: var(--base00);
   }
+
+  tbody {
+    tr + tr, tr:first-child { border-top: var(--border-style); }
+  }
+
+  th, td { padding: 0.5em; }
 
   tr td > p {
     margin: 0;
