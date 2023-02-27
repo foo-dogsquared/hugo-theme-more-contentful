@@ -1,6 +1,6 @@
 baseURL = "https://foo-dogsquared.github.io/hugo-theme-more-contentful"
 title = "More Contentful"
-enableGitInfo = true
+enableGitInfo = false
 paginate = 20
 rssLimit = 2
 
