@@ -20,6 +20,30 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+=== Removed
+
+- External links styling.
+Now that it stayed in the theme for some time, I realized it isn't worth to implement it.
+It just adds clutter and setting it up to work properly is a bit too much compared to what you would get.
+Most users would probably use some font froms Google Fonts which most of them are missing the required glyph from my non-scientific testing.
+So yeah, not worth it.
+
+
+=== Updated
+
+- Reduce unnecessary rules in the site stylesheet.
+Pretty standard stuff.
+
+- Update styling for content spacing.
+It should be more consistent when changed with the font size.
+
+
+=== Fixed
+
+- Conditional rendering for the site post metadata.
+This enables non-content pages (i.e., "About" pages, "Contact" pages).
+
+
 
 
 == [0.4.2] - 2023-02-27
