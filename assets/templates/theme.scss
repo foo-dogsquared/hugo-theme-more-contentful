@@ -91,19 +91,19 @@
 
   {{- if eq $name "_light" }}
     @media (prefers-color-scheme: light) {
-      :root {
+      :root, ::backdrop {
         @include createColorScheme
       }
     }
   {{- else if eq $name "_dark" }}
     @media (prefers-color-scheme: dark) {
-      :root {
+      :root, ::backdrop {
         @include createColorScheme
       }
     }
   {{- end }}
 
-  [data-theme="{{ .scheme }}"]:root {
+  [data-theme="{{ .scheme }}"]:root, [data-theme="{{ .scheme }}"]::backdrop {
     @include createColorScheme;
   }
 {{- end }}
