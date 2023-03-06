@@ -18,6 +18,14 @@
   {{- $style = $style | resources.Minify | resources.Fingerprint -}}
 {{- end }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{- /* Persistent theme.
+It's a very small script so there's little effect on perceived performance. */ -}}
+<script>
+  let theme = window.localStorage.getItem('theme'); 
+  if (theme) {
+    document.documentElement.dataset.theme = theme;
+  }
+</script>
 
 <link rel="shortcut icon" href="{{ absURL "favicon.png" }}" />
 
@@ -49,14 +57,4 @@
   {{ template "_internal/google_analytics_async.html" . }}
   {{ template "_internal/disqus.html" . }}
 {{- end }}
-
-
-{{- /* Persistent theme.
-It's a very small script so there's little effect on perceived performance. */ -}}
-<script>
-  let theme = window.localStorage.getItem('theme'); 
-  if (theme) {
-    document.documentElement.dataset.theme = theme;
-  }
-</script>
 
