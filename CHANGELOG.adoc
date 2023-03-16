@@ -20,6 +20,26 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+=== Added
+
+- Proper site layout for right-to-left (RTL) direction.
+
+- Color palette for `::backdrop` pseudo-element.
+It apparently doesn't inherit from the root so we'll have to create it ourselves.
+
+
+=== Updated
+
+- Update Hugo module for Simple Icons to v8.7.0.
+
+
+=== Fixed
+
+- Use gaps for certain components.
+This also happens to properly style for RTL at the cost of good-looking separators.
+I'll just find an alternative for that.
+
+
 
 
 == [0.5.0] - 2023-02-27
