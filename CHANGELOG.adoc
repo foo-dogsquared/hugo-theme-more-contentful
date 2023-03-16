@@ -20,6 +20,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+
+
+== [0.6.0] - 2023-03-16
+
+
 === Added
 
 - Proper site layout for right-to-left (RTL) direction.
