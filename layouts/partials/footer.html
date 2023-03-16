@@ -16,13 +16,12 @@
 
 <!-- List all of the social media links -->
 {{ with (index $.Site.Data "more-contentful").contacts }}
-<ul class="list site__socials">
+<nav class="list site__socials">
   {{ $useImage := index . "useImage" | default false }}
 
   {{ $links := sort .links "id" "asc" }}
   {{ $links = sort $links "weight" "asc" }}
   {{- range $links -}}
-  <li>
     <a {{ if $useImage }}class="site__social-icon"{{ end }} rel="me" href="{{ .url | absLangURL }}" aria-label="{{ with .name }}{{ . }}{{ else }}{{ .id }}{{ end }}">
     {{- if $useImage }}
       {{- partial "components/icon.html" (dict "id" .id "output" "icons/brand/%s.svg" "template" "templates/simple-icon.svg") }}
@@ -30,9 +29,8 @@
       {{- .name }}
     {{- end }}
     </a>
-  </li>
   {{- end -}}
-</ul>
+</nav>
 {{ end }}
 
 {{ $markdownOpt := dict "markup" "markdown" }}

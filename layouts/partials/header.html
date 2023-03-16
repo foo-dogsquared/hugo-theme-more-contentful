@@ -1,13 +1,15 @@
 <header aria-label="Site header">
-  <nav>
+  <nav class="site__nav-header">
     <a class="site__title" href="{{ "" | absLangURL }}">{{ $.Site.Title }}</a>
-    <div class="list site__links">
+    <ul class="list">
       {{ with $.Site.Menus.main }}
         {{ range . -}}
-          <a href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
+          <li>
+            <a href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
+          </li>
         {{ end }}
       {{ end }}
-    </div>
+    </ul>
   </nav>
   {{- partial "components/theme-button.html" . }}
 </header>

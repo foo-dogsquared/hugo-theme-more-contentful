@@ -28,13 +28,6 @@
   padding: 0;
 }
 
-@mixin header-link-hover-style {
-  > *:hover {
-    color: var(--accent-color);
-    text-decoration: none;
-  }
-}
-
 @import "base";
 @import "layout";
 @import "extend";

@@ -26,28 +26,24 @@ footer[aria-label="Site footer"] {
 
 .list {
   display: inline-flex;
+  align-items: baseline;
   flex-flow: row wrap;
+  gap: 0.75em;
+  justify-content: space-around;
   list-style: none;
   margin: 0;
   padding: 0;
-
-  & > *:not(:last-child) {
-    border-right: 1px solid var(--base02);
-    margin-right: 0.5em;
-    padding-right: 0.5em;
-  }
 }
 
 .site__title {
-  --size: 2rem;
-  display: inline-block;
-  font-size: var(--size);
-  margin-bottom: unset;
-  margin-right: 0.5rem;
+  font-size: 2rem;
 }
 
-.site__links {
-  @include header-link-hover-style;
+.site__nav-header {
+  display: flex;
+  align-items: baseline;
+  flex-flow: row wrap;
+  gap: 0.5em;
 }
 
 .site__languages {
@@ -55,8 +51,9 @@ footer[aria-label="Site footer"] {
 }
 
 .site__socials {
-  @include header-link-hover-style;
+  display: flex;
   font-style: unset;
+  gap: 1em;
 }
 
 .site__social-icon {
@@ -171,9 +168,10 @@ footer[aria-label="Site footer"] {
   font-size: 0.9em;
   margin-top: 0.5em;
 
-  & > * {
+  &-icon-label {
+    gap: 0.25em;
     display: inline-flex;
-    align-items: center;
+    align-items: normal;
   }
 
   .post--single & {
