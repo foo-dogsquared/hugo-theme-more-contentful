@@ -86,6 +86,7 @@ pre {
   max-height: var(--code-block-size);
   padding: 0.5rem;
   overflow: auto;
+  direction: ltr;
 
   code { background: unset; }
 }

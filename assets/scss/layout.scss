@@ -70,6 +70,11 @@ footer[aria-label="Site footer"] {
   top: 0;
   right: 0;
 
+  [dir="rtl"] & {
+    right: unset;
+    left: 0;
+  }
+
   &:hover {
     color: unset !important;
     & .site__theme-dropdown {
@@ -87,6 +92,11 @@ footer[aria-label="Site footer"] {
   right: 0;
   top: 1.5em;
   width: max-content;
+
+  [dir="rtl"] & {
+    right: unset;
+    left: 0;
+  }
 }
 
 .site__theme-dropdown-list {
