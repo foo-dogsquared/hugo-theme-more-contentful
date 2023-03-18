@@ -20,6 +20,15 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+=== Updated
+
+* Update class names of several components.
+
+** `.icon` has been updated to `.site__icon`.
+** `.list` has been updated to `.site__list`.
+
+
+
 
 
 == [0.6.0] - 2023-03-16

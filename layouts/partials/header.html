@@ -1,7 +1,7 @@
 <header aria-label="Site header">
   <nav class="site__nav-header">
     <a class="site__title" href="{{ "" | absLangURL }}">{{ $.Site.Title }}</a>
-    <ul class="list">
+    <ul class="site__list">
       {{ with $.Site.Menus.main }}
         {{ range . -}}
           <li>

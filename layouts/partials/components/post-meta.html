@@ -3,7 +3,7 @@
 */ -}}
 {{- if or .PublishDate .Lastmod }}
   {{- $RFC3339 := "2006-01-02T15:04:05Z07:00" }}
-  <div class="list post__meta" aria-hidden="true">
+  <div class="site__list post__meta" aria-hidden="true">
     {{- if .PublishDate -}}
     <span class="post__meta-icon-label">
       {{ partial "components/heroicon.html" "calendar" }}

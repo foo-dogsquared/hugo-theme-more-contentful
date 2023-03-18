@@ -19,7 +19,7 @@
 {{- define "partials/components/icon.html" }}
   {{- $icon := . }}
   {{- $res := resources.ExecuteAsTemplate (printf $icon.output $icon.id) $icon.id (resources.Get $icon.template) }}
-  <svg class="icon">
+  <svg class="site__icon">
     <use href="{{ $res.Permalink }}#{{ $icon.id }}"></use>
   </svg>
 {{- end }}

@@ -5,7 +5,7 @@
 <!-- Linking to other languages' homepage. -->
 {{ if $.Site.IsMultiLingual }}
   <p>{{ i18n "multilingual" }}:
-  <span class="list site__languages">
+  <span class="site__list site__languages">
   {{ range $.Site.Languages }}
     <a href="{{ . | relURL }}" hreflang="{{ .Lang }}">{{ with .LanguageName }}{{ . }}{{ else }}{{ .Lang }}{{ end }}</a>
   {{ end }}
@@ -16,7 +16,7 @@
 
 <!-- List all of the social media links -->
 {{ with (index $.Site.Data "more-contentful").contacts }}
-<nav class="list site__socials">
+<nav class="site__list site__socials">
   {{ $useImage := index . "useImage" | default false }}
 
   {{ $links := sort .links "id" "asc" }}

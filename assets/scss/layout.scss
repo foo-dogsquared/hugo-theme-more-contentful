@@ -18,13 +18,13 @@ footer[aria-label="Site footer"] {
   }
 }
 
-.icon {
+.site__icon {
   height: 1rem;
   width: 1rem;
   fill: currentColor;
 }
 
-.list {
+.site__list {
   display: inline-flex;
   align-items: baseline;
   flex-flow: row wrap;
