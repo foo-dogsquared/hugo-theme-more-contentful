@@ -167,10 +167,6 @@ footer[aria-label="Site footer"] {
   h1 {
     margin: 0 auto;
   }
-
-  &--single .post__meta {
-    margin: 0;
-  }
 }
 
 .post__meta {
@@ -189,6 +185,7 @@ footer[aria-label="Site footer"] {
     color: var(--foreground);
     font-size: 0.9em;
     padding: 0 0.5em;
+    margin: 0;
   }
 }
 
