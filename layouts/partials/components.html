@@ -4,31 +4,29 @@
 */ -}}
 
 {{- /*
-  This is a partial that creates an icon from the icon templates and links them from the created file.
-  Why not embed the text into the resulting document, you ask?
-  I just want to save a few kilobytes of the total site weight. :)
-
-  It accepts a dictionary with the specified keys:
-
-  - id - The name of the resource in a specific set.
-  - output - The output location of the resource relative to the base URL.
-    It can accept a formatted string (e.g., "icons/brand/%s.svg") where 'id' will be used.
-  - template - The template file to be used.
-    It should be relative to the asset directory.
-*/ -}}
-{{- define "partials/components/icon.html" }}
-  {{- $icon := . }}
-  {{- $res := resources.ExecuteAsTemplate (printf $icon.output $icon.id) $icon.id (resources.Get $icon.template) }}
-  <svg class="site__icon">
-    <use href="{{ $res.Permalink }}#{{ $icon.id }}"></use>
-  </svg>
-{{- end }}
-
-
-{{- /*
   A partial that aliases the Heroicon template from the icon partial.
-  It only needs a string of the ID from one of the icons.
 */ -}}
 {{- define "partials/components/heroicon.html" }}
-  {{- partial "components/icon.html" (dict "id" . "output" "icons/generic/%s.svg" "template" "templates/heroicon.svg") }}
+  {{ $name := default .id .name }}
+  {{- $res := resources.ExecuteAsTemplate (printf "icons/generic/%s.svg" .id)
+                                          (dict "id" .id
+                                                "name" $name)
+                                          (resources.Get "templates/heroicon.svg") }}
+  <svg class="site__icon">
+    <use href="{{ $res.Permalink }}#{{ $name }}"></use>
+  </svg>
 {{ end }}
+
+{{- /*
+  A partial for easily using icons from Simple Icons set.
+*/ -}}
+{{- define "partials/components/simple-icon.html" }}
+  {{ $name := default .id .name }}
+  {{- $res := resources.ExecuteAsTemplate (printf "icons/brand/%s.svg" .id)
+                                          (dict "id" .id
+                                                "name" $name)
+                                          (resources.Get "templates/simple-icon.svg") }}
+  <svg class="site__icon">
+    <use href="{{ $res.Permalink }}#{{ $name }}"></use>
+  </svg>
+{{- end }}

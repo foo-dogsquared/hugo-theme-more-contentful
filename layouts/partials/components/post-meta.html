@@ -6,7 +6,7 @@
   <div class="site__list post__meta" aria-hidden="true">
     {{- if .PublishDate -}}
     <span class="post__meta-icon-label">
-      {{ partial "components/heroicon.html" "calendar" }}
+      {{ partial "components/heroicon.html" (dict "id" "calendar") }}
       <time datetime="{{ .PublishDate.Format $RFC3339 }}" title="{{ i18n "published_on" }}">
         {{ .PublishDate.Format "2006-01-02" }}
       </time>
@@ -28,7 +28,7 @@
     {{- range . }}{{ $names = $names | append .name }}{{ end }}
     {{- $author := index (first 1 $names) 0 }}
     <span class="post__meta-icon-label" data-authors="{{ jsonify $names }}" title="{{ i18n "published_by" }}">
-      {{ partial "components/heroicon.html" "pencil" }}
+      {{ partial "components/heroicon.html" (dict "id" "pencil") }}
       <span>
         {{ $author }}{{ if ge (len .) 2 }}, et al.{{ end }}
       </span>

@@ -24,7 +24,7 @@
   {{- range $links -}}
     <a {{ if $useImage }}class="site__social-icon"{{ end }} rel="me" href="{{ .url | absLangURL }}" aria-label="{{ with .name }}{{ . }}{{ else }}{{ .id }}{{ end }}">
     {{- if $useImage }}
-      {{- partial "components/icon.html" (dict "id" .id "output" "icons/brand/%s.svg" "template" "templates/simple-icon.svg") }}
+      {{- partial "components/simple-icon.html" (dict "id" .id) }}
     {{- else }}
       {{- .name }}
     {{- end }}

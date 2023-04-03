@@ -27,6 +27,9 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 ** `.icon` has been updated to `.site__icon`.
 ** `.list` has been updated to `.site__list`.
 
+* Update the icon template.
+This is also useful for those who are extensively modifying the theme.
+
 
 
 
