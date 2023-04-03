@@ -15,7 +15,7 @@
 
     {{- if ne (.PublishDate.Format "2006-01-02") (.Lastmod.Format "2006-01-02") }}
     <span class="post__meta-icon-label">
-      {{ partial "components/heroicon.html" "arrow-path" }}
+      {{ partial "components/heroicon.html" (dict "id" "arrow-path") }}
       <time datetime="{{ .Lastmod.Format $RFC3339 }}" title="{{ i18n "updated_on" }}">
         {{ .Lastmod.Format "2006-01-02" }}
       </time>
