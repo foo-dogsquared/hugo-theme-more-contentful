@@ -7,7 +7,7 @@
   A partial that aliases the Heroicon template from the icon partial.
 */ -}}
 {{- define "partials/components/heroicon.html" }}
-  {{ $name := default .id .name }}
+  {{- $name := default .id .name }}
   {{- $res := resources.ExecuteAsTemplate (printf "icons/generic/%s.svg" .id)
                                           (dict "id" .id
                                                 "name" $name)
@@ -21,7 +21,7 @@
   A partial for easily using icons from Simple Icons set.
 */ -}}
 {{- define "partials/components/simple-icon.html" }}
-  {{ $name := default .id .name }}
+  {{- $name := default .id .name }}
   {{- $res := resources.ExecuteAsTemplate (printf "icons/brand/%s.svg" .id)
                                           (dict "id" .id
                                                 "name" $name)
