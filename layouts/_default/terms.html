@@ -15,7 +15,7 @@
     {{- range $pages }}
         <li class="post--list">
           <date class="post--list__date" datetime="{{ .PublishDate }}">{{ .PublishDate.Format "2006-01-02" }}</date>
-          <a class="post--list__title" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+          <a class="post--list__title" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         </li>
     {{- end }}
     </ul>

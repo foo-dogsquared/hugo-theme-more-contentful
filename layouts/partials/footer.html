@@ -22,7 +22,7 @@
   {{ $links := sort .links "id" "asc" }}
   {{ $links = sort $links "weight" "asc" }}
   {{- range $links -}}
-    <a {{ if $useImage }}class="site__social-icon"{{ end }} rel="me" href="{{ .url | absLangURL }}" aria-label="{{ with .name }}{{ . }}{{ else }}{{ .id }}{{ end }}">
+    <a {{ if $useImage }}class="site__social-icon"{{ end }} rel="me" href="{{ .url | relLangURL }}" aria-label="{{ with .name }}{{ . }}{{ else }}{{ .id }}{{ end }}">
     {{- if $useImage }}
       {{- partial "components/simple-icon.html" (dict "id" .id) }}
     {{- else }}

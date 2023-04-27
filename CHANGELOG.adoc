@@ -22,6 +22,9 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 === Updated
 
+* Switch from absolute links to relative links.
+This is to make testing between different versions easier such as Netlify builds.
+
 * Update class names of several components.
 
 ** `.icon` has been updated to `.site__icon`.

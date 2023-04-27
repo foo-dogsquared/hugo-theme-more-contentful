@@ -11,7 +11,7 @@ Otherwise, we take the pages of a section. */ -}}
 
 {{- range (.Paginate $pages).Pages }}
 <article class="post">
-  <h1><a href="{{ .Permalink }}" aria-label="{{ .Title }}">{{ .Title }}</a></h1>
+  <h1><a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">{{ .Title }}</a></h1>
   {{ partial "partials/components/post-meta.html" . }}
 </article>
 {{- end }}

@@ -50,7 +50,7 @@
         {{- $langs := slice }}
         {{- range .Translations }}
           {{- $lang := cond (ne .Language.LanguageName nil) .Language.LanguageName .Lang }}
-          {{ $lang_links = $lang_links | append (printf "<a href=%s>%s</a>" .Permalink $lang) }}
+          {{ $lang_links = $lang_links | append (printf "<a href=%s>%s</a>" .RelPermalink $lang) }}
           {{ $langs = $langs | append $lang }}
         {{- end }}
         <p data-content-translations="{{ jsonify $langs }}">{{ i18n "available_translations" }}: {{ delimit $lang_links "," (printf " %s " (i18n "and")) }}</p>

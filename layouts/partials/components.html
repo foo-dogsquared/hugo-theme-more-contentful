@@ -13,7 +13,7 @@
                                                 "name" $name)
                                           (resources.Get "templates/heroicon.svg") }}
   <svg class="site__icon">
-    <use href="{{ $res.Permalink }}#{{ $name }}"></use>
+    <use href="{{ $res.RelPermalink }}#{{ $name }}"></use>
   </svg>
 {{ end }}
 
@@ -27,6 +27,6 @@
                                                 "name" $name)
                                           (resources.Get "templates/simple-icon.svg") }}
   <svg class="site__icon">
-    <use href="{{ $res.Permalink }}#{{ $name }}"></use>
+    <use href="{{ $res.RelPermalink }}#{{ $name }}"></use>
   </svg>
 {{- end }}
