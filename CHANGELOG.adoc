@@ -20,6 +20,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 == Unreleased
 
 
+
+
+== [0.7.0] - 2023-04-28
+
+
 === Updated
 
 * Switch from absolute links to relative links.
