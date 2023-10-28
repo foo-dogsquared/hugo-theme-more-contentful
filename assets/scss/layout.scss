@@ -44,6 +44,15 @@ footer[aria-label="Site footer"] {
   align-items: baseline;
   flex-flow: row wrap;
   gap: 0.5em;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      background: unset;
+      color: initial;
+    }
+  }
 }
 
 .site__languages {
@@ -57,6 +66,11 @@ footer[aria-label="Site footer"] {
 }
 
 .site__social-icon {
+  &:hover {
+    background: unset;
+    color: var(--base0C);
+  }
+
   svg {
     --size: 1.25em;
     height: var(--size);
