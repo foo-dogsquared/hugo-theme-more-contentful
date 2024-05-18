@@ -1,7 +1,7 @@
 {
     "version": "https://jsonfeed.org/version/1.1",
     "title": "More Contentful",
-    "home_page_url": "https://foo-dogsquared.github.io/hugo-theme-more-contentful",
+    "home_page_url": "https://foo-dogsquared.github.io/hugo-theme-more-contentful/",
     "feed_url": "https://foo-dogsquared.github.io/hugo-theme-more-contentful/feed.json",
     "description": "Recent content on More Contentful", 
     "authors":[{"name":"John Doe"}],

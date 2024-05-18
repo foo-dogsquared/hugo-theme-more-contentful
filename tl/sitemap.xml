@@ -6,7 +6,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/"
                 />
     <xhtml:link
@@ -19,7 +19,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/"
                 />
     <xhtml:link
@@ -32,7 +32,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/category1/"
                 />
     <xhtml:link
@@ -45,7 +45,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/hidden-post-test/"
                 />
     <xhtml:link
@@ -58,7 +58,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/"
                 />
     <xhtml:link
@@ -71,7 +71,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/tag1/"
                 />
     <xhtml:link
@@ -84,7 +84,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/tag2/"
                 />
     <xhtml:link
@@ -97,7 +97,7 @@
     <lastmod>2020-05-12T21:28:27+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/"
                 />
     <xhtml:link
@@ -110,7 +110,7 @@
     <lastmod>2019-09-04T17:22:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/guide/"
                 />
     <xhtml:link
@@ -123,7 +123,7 @@
     <lastmod>2019-09-04T17:22:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/"
                 />
     <xhtml:link
@@ -136,7 +136,7 @@
     <lastmod>2019-09-04T17:22:44+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/this-is-a-test-tag/"
                 />
     <xhtml:link
@@ -148,7 +148,7 @@
     <loc>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/about/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/about/"
                 />
     <xhtml:link
@@ -160,7 +160,7 @@
     <loc>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tl/archives/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/archives/"
                 />
     <xhtml:link

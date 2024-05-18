@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>category1 on More Contentful</title>
+    <title>Category1 on More Contentful</title>
     <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/category1/</link>
-    <description>Recent content in category1 on More Contentful</description>
-    <generator>Hugo v0.111.3 -- gohugo.io</generator><language>en-us</language><copyright>© 2023 to the author(s) behind More Contentful</copyright>
+    <description>Recent content in Category1 on More Contentful</description>
+    <generator>Hugo v0.126.1 -- gohugo.io</generator><language>en-us</language><copyright>© 2024 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 12 May 2020 21:29:52 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
         <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/category1/feed.rss" rel="self" type="application/rss+xml" />
         <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/category1/" rel="canonical" type="text/html" />
-    <item>
-      <title>Hidden post test</title>
-      <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/hidden-post-test/</link>
-      <category>tag1</category>
-      <category>tag2</category>
-
-      <pubDate>Tue, 12 May 2020 21:29:52 +0800</pubDate>
-      <guid>https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/hidden-post-test/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

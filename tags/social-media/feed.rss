@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>social media on More Contentful</title>
+    <title>Social Media on More Contentful</title>
     <link>https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/social-media/</link>
-    <description>Recent content in social media on More Contentful</description>
-    <generator>Hugo v0.111.3 -- gohugo.io</generator><language>en-us</language><copyright>© 2023 to the author(s) behind More Contentful</copyright>
+    <description>Recent content in Social Media on More Contentful</description>
+    <generator>Hugo v0.126.1 -- gohugo.io</generator><language>en-us</language><copyright>© 2024 to the author(s) behind More Contentful</copyright>
         <lastBuildDate>Tue, 20 Oct 2020 20:35:39 +0800</lastBuildDate>
     <docs>https://www.rssboard.org/rss-2-0-1</docs>
         <atom:link href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/social-media/feed.rss" rel="self" type="application/rss+xml" />

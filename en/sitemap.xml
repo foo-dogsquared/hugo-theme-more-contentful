@@ -11,7 +11,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/"
                 />
   </url><url>
@@ -27,7 +27,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/"
                 />
   </url><url>
@@ -55,7 +55,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/"
                 />
   </url><url>
@@ -77,7 +77,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/"
                 />
   </url><url>
@@ -90,7 +90,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/category1/"
                 />
   </url><url>
@@ -103,7 +103,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/tag1/"
                 />
   </url><url>
@@ -116,7 +116,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/tag2/"
                 />
   </url><url>
@@ -132,7 +132,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/categories/guide/"
                 />
   </url><url>
@@ -151,7 +151,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/articles/rss-atom-and-json-feed-support/"
                 />
   </url><url>
@@ -164,7 +164,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/tags/this-is-a-test-tag/"
                 />
   </url><url>
@@ -218,7 +218,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/about/"
                 />
   </url><url>
@@ -230,7 +230,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
+                hreflang="en-us"
                 href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/archives/"
                 />
   </url>
