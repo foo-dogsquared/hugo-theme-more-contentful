@@ -1,16 +1,5 @@
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20230315231533-b5bff1dac7d9 h1:ZDcHzPnU7f+7F+xUdek0CjTyWEQzpxUQmjC1uW6vKgg=
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20230315231533-b5bff1dac7d9/go.mod h1:MQXLTwYOjEDpdVYf83IywWAzsQbR+CILSBJeofYo63g=
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20230426231746-ef27600d22f3 h1:NNFC36N3PnrS0B7zcyROhsQt6M7+kc2eWWBK92y9ZS0=
-github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20230426231746-ef27600d22f3/go.mod h1:11iN6ArO6sro187xxOeDYAFMENfUNd+Vopn+qqVkCbw=
 github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20231025231637-36998f86bbf2 h1:gm6pPfT7tU0fovIdP2L3POiDvdRC0dtBmhy1lHHtS8o=
 github.com/foo-dogsquared/hugo-mod-simple-icons v0.0.0-20231025231637-36998f86bbf2/go.mod h1:8HnVc0SlzI7LCEU4sITYS5MQTq0Bct/nFr/7LdsHYVQ=
-github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20220513103455-d83c3f8c6954 h1:ODhabu0XqJYNlXL6OEGRVMuz0dKR6Cp/TTkwoMD1m1A=
-github.com/foo-dogsquared/hugo-theme-contentful v1.2.1-0.20220513103455-d83c3f8c6954/go.mod h1:BL7L5CENEhUx+miRRaOZ9SVC92j9MAMztirBWtTpiPc=
-github.com/refactoringui/heroicons v2.0.12+incompatible h1:b7pW0LNw2TjxcmtYCmY8pLApm6UGeXSgKTj9t9oXZFQ=
-github.com/refactoringui/heroicons v2.0.12+incompatible/go.mod h1:82HsLWQga7MkEl5aK8TctxPPIBlXrsyWcVTB57uipuk=
-github.com/refactoringui/heroicons v2.0.17+incompatible h1:440qZrhnMDt898I0m8s1BHhZJGAOy72W/Hl+cytMZL8=
-github.com/refactoringui/heroicons v2.0.17+incompatible/go.mod h1:82HsLWQga7MkEl5aK8TctxPPIBlXrsyWcVTB57uipuk=
 github.com/refactoringui/heroicons v2.0.18+incompatible h1:0FCFt04NkT3svNxWlvGaLEgPlctjsuRGLwEldYD9v0U=
 github.com/refactoringui/heroicons v2.0.18+incompatible/go.mod h1:82HsLWQga7MkEl5aK8TctxPPIBlXrsyWcVTB57uipuk=
-github.com/simple-icons/simple-icons v0.0.0-20230315131209-aa70b1e830e9/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=
-github.com/simple-icons/simple-icons v0.0.0-20230423030844-cd4f7d2bf53c/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=
+github.com/simple-icons/simple-icons v0.0.0-20231022005333-fdbaaa2d5f99/go.mod h1:oOgUUt8yVYOso/wEBi2ojfZP2MU/xxiNccIpaE+jCvE=
