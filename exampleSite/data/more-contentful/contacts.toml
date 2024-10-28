@@ -1,9 +1,9 @@
 useImage = true
 
 [[links]]
-id = "twitter"
+id = "x"
 url = "https://example.org/twitter"
-name = "Twitter"
+name = "X (formerly Twitter)"
 
 [[links]]
 id = "github"
