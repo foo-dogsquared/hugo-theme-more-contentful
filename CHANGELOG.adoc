@@ -19,15 +19,21 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 == Unreleased
 
+
+
+
+== [0.7.1] - 2024-10-28
+
+
 === Updated
 
 * Add underlines to link text.
 
 * Updated Hugo modules.
 
-** Updated Simple Icons to v9.19.0.
+** Updated Simple Icons to v13.15.0.
 
-** Updated Heroicons to v2.0.18.
+** Updated Heroicons to v2.1.5.
 
 
 
