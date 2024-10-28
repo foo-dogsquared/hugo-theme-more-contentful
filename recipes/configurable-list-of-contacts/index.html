@@ -14,29 +14,55 @@
 
 <link rel="shortcut icon" href="/hugo-theme-more-contentful/%20favicon.png" />
 
-<meta name="generator" content="Hugo 0.126.1">
+<meta name="generator" content="Hugo 0.135.0">
 <meta charset="utf-8">
 <meta name="author" content="John Doe" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="referrer" content="no-referrer" />
-<meta name="description" content="Most themes offer quick social media links with site configuration. However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
-To get around this, we’ll make use of data templates. Let’s create a quick game plan how does it work.
+<meta name="description" content="
+Most themes offer quick social media links with site configuration.
+However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
+
+
+To get around this, we’ll make use of data templates.
+Let’s create a quick game plan how does it work.
+
+
 The data is a top-level dictionary/object with each key contains an object with the following fields.
-url is the…​ contact link itself and it is required to have it." />
+
+
+
+
+url is the…​ contact link itself and it is required to have it.
+
+
+name is the text to appear in the output.
+Also required to have.
+
+
+weight is an integer similar to how Hugo sorts the pages with the lower weight having high precedence;
+if this key is absent, it will be interpreted as 0.
+
+
+" />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Configurable list of contacts">
-  <meta name="twitter:description" content="Most themes offer quick social media links with site configuration. However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
+  <meta name="twitter:description" content=" Most themes offer quick social media links with site configuration. However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
 To get around this, we’ll make use of data templates. Let’s create a quick game plan how does it work.
 The data is a top-level dictionary/object with each key contains an object with the following fields.
-url is the…​ contact link itself and it is required to have it.">
+url is the…​ contact link itself and it is required to have it.
+name is the text to appear in the output. Also required to have.
+weight is an integer similar to how Hugo sorts the pages with the lower weight having high precedence; if this key is absent, it will be interpreted as 0.">
 <meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/">
   <meta property="og:site_name" content="More Contentful">
   <meta property="og:title" content="Configurable list of contacts">
-  <meta property="og:description" content="Most themes offer quick social media links with site configuration. However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
+  <meta property="og:description" content=" Most themes offer quick social media links with site configuration. However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
 To get around this, we’ll make use of data templates. Let’s create a quick game plan how does it work.
 The data is a top-level dictionary/object with each key contains an object with the following fields.
-url is the…​ contact link itself and it is required to have it.">
+url is the…​ contact link itself and it is required to have it.
+name is the text to appear in the output. Also required to have.
+weight is an integer similar to how Hugo sorts the pages with the lower weight having high precedence; if this key is absent, it will be interpreted as 0.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="recipes">
@@ -44,10 +70,12 @@ url is the…​ contact link itself and it is required to have it.">
     <meta property="article:modified_time" content="2020-10-20T20:38:24+08:00">
 
   <meta itemprop="name" content="Configurable list of contacts">
-  <meta itemprop="description" content="Most themes offer quick social media links with site configuration. However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
+  <meta itemprop="description" content=" Most themes offer quick social media links with site configuration. However, it is only limited to popular media sites such as Facebook, Twitter, Instagram, GitHub, etc.
 To get around this, we’ll make use of data templates. Let’s create a quick game plan how does it work.
 The data is a top-level dictionary/object with each key contains an object with the following fields.
-url is the…​ contact link itself and it is required to have it.">
+url is the…​ contact link itself and it is required to have it.
+name is the text to appear in the output. Also required to have.
+weight is an integer similar to how Hugo sorts the pages with the lower weight having high precedence; if this key is absent, it will be interpreted as 0.">
   <meta itemprop="datePublished" content="2020-10-20T20:38:24+08:00">
   <meta itemprop="dateModified" content="2020-10-20T20:38:24+08:00">
   <meta itemprop="wordCount" content="259">
@@ -370,9 +398,9 @@ The <code>name</code> would now be the image alternative text.</p>
   <svg class="site__icon">
     <use href="/hugo-theme-more-contentful/icons/brand/twitch.svg#twitch"></use>
   </svg>
-    </a><a class="site__social-icon" rel="me" href="https://example.org/twitter" aria-label="Twitter">
+    </a><a class="site__social-icon" rel="me" href="https://example.org/twitter" aria-label="X (formerly Twitter)">
   <svg class="site__icon">
-    <use href="/hugo-theme-more-contentful/icons/brand/twitter.svg#twitter"></use>
+    <use href="/hugo-theme-more-contentful/icons/brand/x.svg#x"></use>
   </svg>
     </a><a class="site__social-icon" rel="me" href="https://example.org/youtube" aria-label="YouTube">
   <svg class="site__icon">

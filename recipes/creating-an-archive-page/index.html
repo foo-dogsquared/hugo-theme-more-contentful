@@ -14,23 +14,56 @@
 
 <link rel="shortcut icon" href="/hugo-theme-more-contentful/%20favicon.png" />
 
-<meta name="generator" content="Hugo 0.126.1">
+<meta name="generator" content="Hugo 0.135.0">
 <meta charset="utf-8">
 <meta name="author" content="John Doe" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="referrer" content="no-referrer" />
-<meta name="description" content="This will add an archive page similar to archive pages like these.
-{{- define &#34;main&#34; -}} &lt;h1&gt;{{ .Title }}&lt;/h1&gt; {{ .Content }} &lt;hr&gt; {{- /* Creating a section that lists out regular pages by year */ -}} {{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }} {{- /* Skip regular pages with an invalid creation date string. */ -}} {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter." />
+<meta name="description" content="
+This will add an archive page similar to archive pages like these.
+
+
+
+{{- define &#34;main&#34; -}}
+
+&lt;h1&gt;{{ .Title }}&lt;/h1&gt;
+
+{{ .Content }}
+
+&lt;hr&gt;
+
+{{- /* Creating a section that lists out regular pages by year */ -}}
+{{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }}
+    {{- /* Skip regular pages with an invalid creation date string. */ -}}
+    {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter. */ -}}
+    {{- /* We will also exclude hidden pages. */ -}}
+    {{ if ne .Key &#34;0001&#34; }}
+        &lt;section data-year=&#34;{{ .Key }}&#34;&gt;
+            &lt;h2 id=&#34;{{ .Key }}&#34;&gt;{{ .Key }}&lt;/h2&gt;
+            &lt;ul&gt;
+            {{- range where .Pages &#34;Params.hidden&#34; &#34;!=&#34; true -}}
+                &lt;li&gt;
+                    &lt;date&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/date&gt; -
+                    &lt;a aria-label=&#34;{{ .Title }}&#34; href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt;
+                &lt;/li&gt;
+            {{- end -}}
+            &lt;/ul&gt;
+        &lt;/section&gt;
+    {{- end }}
+{{ end }}
+
+{{- end -}}
+" />
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Creating an archive page">
-  <meta name="twitter:description" content="This will add an archive page similar to archive pages like these.
-{{- define &#34;main&#34; -}} &lt;h1&gt;{{ .Title }}&lt;/h1&gt; {{ .Content }} &lt;hr&gt; {{- /* Creating a section that lists out regular pages by year */ -}} {{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }} {{- /* Skip regular pages with an invalid creation date string. */ -}} {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter.">
+  <meta name="twitter:description" content=" This will add an archive page similar to archive pages like these.
+{{- define &#34;main&#34; -}} &lt;h1&gt;{{ .Title }}&lt;/h1&gt; {{ .Content }} &lt;hr&gt; {{- /* Creating a section that lists out regular pages by year */ -}} {{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }} {{- /* Skip regular pages with an invalid creation date string. */ -}} {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter. */ -}} {{- /* We will also exclude hidden pages. */ -}} {{ if ne .Key &#34;0001&#34; }} &lt;section data-year=&#34;{{ .Key }}&#34;&gt; &lt;h2 id=&#34;{{ .Key }}&#34;&gt;{{ .Key }}&lt;/h2&gt; &lt;ul&gt; {{- range where .Pages &#34;Params.hidden&#34; &#34;!=&#34; true -}} &lt;li&gt; &lt;date&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/date&gt; - &lt;a aria-label=&#34;{{ .Title }}&#34; href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt; &lt;/li&gt; {{- end -}} &lt;/ul&gt; &lt;/section&gt; {{- end }} {{ end }} {{- end -}} ">
 <meta property="og:url" content="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/creating-an-archive-page/">
   <meta property="og:site_name" content="More Contentful">
   <meta property="og:title" content="Creating an archive page">
-  <meta property="og:description" content="This will add an archive page similar to archive pages like these.
-{{- define &#34;main&#34; -}} &lt;h1&gt;{{ .Title }}&lt;/h1&gt; {{ .Content }} &lt;hr&gt; {{- /* Creating a section that lists out regular pages by year */ -}} {{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }} {{- /* Skip regular pages with an invalid creation date string. */ -}} {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter.">
+  <meta property="og:description" content=" This will add an archive page similar to archive pages like these.
+{{- define &#34;main&#34; -}} &lt;h1&gt;{{ .Title }}&lt;/h1&gt; {{ .Content }} &lt;hr&gt; {{- /* Creating a section that lists out regular pages by year */ -}} {{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }} {{- /* Skip regular pages with an invalid creation date string. */ -}} {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter. */ -}} {{- /* We will also exclude hidden pages. */ -}} {{ if ne .Key &#34;0001&#34; }} &lt;section data-year=&#34;{{ .Key }}&#34;&gt; &lt;h2 id=&#34;{{ .Key }}&#34;&gt;{{ .Key }}&lt;/h2&gt; &lt;ul&gt; {{- range where .Pages &#34;Params.hidden&#34; &#34;!=&#34; true -}} &lt;li&gt; &lt;date&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/date&gt; - &lt;a aria-label=&#34;{{ .Title }}&#34; href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt; &lt;/li&gt; {{- end -}} &lt;/ul&gt; &lt;/section&gt; {{- end }} {{ end }} {{- end -}} ">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="recipes">
@@ -38,8 +71,8 @@
     <meta property="article:modified_time" content="2020-10-20T20:36:55+08:00">
 
   <meta itemprop="name" content="Creating an archive page">
-  <meta itemprop="description" content="This will add an archive page similar to archive pages like these.
-{{- define &#34;main&#34; -}} &lt;h1&gt;{{ .Title }}&lt;/h1&gt; {{ .Content }} &lt;hr&gt; {{- /* Creating a section that lists out regular pages by year */ -}} {{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }} {{- /* Skip regular pages with an invalid creation date string. */ -}} {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter.">
+  <meta itemprop="description" content=" This will add an archive page similar to archive pages like these.
+{{- define &#34;main&#34; -}} &lt;h1&gt;{{ .Title }}&lt;/h1&gt; {{ .Content }} &lt;hr&gt; {{- /* Creating a section that lists out regular pages by year */ -}} {{ range $.Site.RegularPages.GroupByPublishDate &#34;2006&#34; }} {{- /* Skip regular pages with an invalid creation date string. */ -}} {{- /* This is convenient if we want to exclude certain posts to be listed by giving no value to `date` in the frontmatter. */ -}} {{- /* We will also exclude hidden pages. */ -}} {{ if ne .Key &#34;0001&#34; }} &lt;section data-year=&#34;{{ .Key }}&#34;&gt; &lt;h2 id=&#34;{{ .Key }}&#34;&gt;{{ .Key }}&lt;/h2&gt; &lt;ul&gt; {{- range where .Pages &#34;Params.hidden&#34; &#34;!=&#34; true -}} &lt;li&gt; &lt;date&gt;{{ .Date.Format &#34;2006-01-02&#34; }}&lt;/date&gt; - &lt;a aria-label=&#34;{{ .Title }}&#34; href=&#34;{{ .Permalink }}&#34;&gt;{{ .Title }}&lt;/a&gt; &lt;/li&gt; {{- end -}} &lt;/ul&gt; &lt;/section&gt; {{- end }} {{ end }} {{- end -}} ">
   <meta itemprop="datePublished" content="2020-10-20T20:36:55+08:00">
   <meta itemprop="dateModified" content="2020-10-20T20:36:55+08:00">
   <meta itemprop="wordCount" content="233">
@@ -347,9 +380,9 @@ This is the archives of the century.</code></pre>
   <svg class="site__icon">
     <use href="/hugo-theme-more-contentful/icons/brand/twitch.svg#twitch"></use>
   </svg>
-    </a><a class="site__social-icon" rel="me" href="https://example.org/twitter" aria-label="Twitter">
+    </a><a class="site__social-icon" rel="me" href="https://example.org/twitter" aria-label="X (formerly Twitter)">
   <svg class="site__icon">
-    <use href="/hugo-theme-more-contentful/icons/brand/twitter.svg#twitter"></use>
+    <use href="/hugo-theme-more-contentful/icons/brand/x.svg#x"></use>
   </svg>
     </a><a class="site__social-icon" rel="me" href="https://example.org/youtube" aria-label="YouTube">
   <svg class="site__icon">
