@@ -3,10 +3,10 @@
 {{- $stylesheets := slice }}
 
 <!-- The main stylesheet being compiled. -->
-{{- $main := resources.Get "scss/main.scss" | resources.ToCSS }}
+{{- $main := resources.Get "scss/main.scss" | toCSS }}
 
 {{- /* Combine all of the custom schems in under one stylesheet */ -}}
-{{- $themes := resources.Get "templates/theme.scss" | resources.ExecuteAsTemplate "css/themes.css" . | resources.ToCSS
+{{- $themes := resources.Get "templates/theme.scss" | resources.ExecuteAsTemplate "css/themes.css" . | toCSS
 }}
 
 {{- /* Append the main stylesheet to be the last so the resulting stylesheet will make the custom colorschemes at the
