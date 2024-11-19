@@ -168,11 +168,11 @@ paginate = 20
     path = "github.com/foo-dogsquared/hugo-web-feeds"
 
 
-[author.john_doe]
+[params.author.john_doe]
      name = "John Doe"
      email = "johndoe@example.com"
 
-[author.jane_doe]
+[params.author.jane_doe]
     name = "Jane Doe"
     email = "jane_doe_1995@example.com"
 
@@ -250,19 +250,19 @@ Here are some of the assumptions made with certain keys from the site configurat
 === Authors
 
 Despite this theme is aimed for personal blogs, it has support for multiple authors.
-As hinted from the example configuration, the author site parameter (i.e., `$.Site.Author`) is a map of objects.
+As hinted from the example configuration, the author site parameter (i.e., `$.Site.Params.author`) is a map of objects.
 The author object only requires a value for `name` key.
 You can also add more keys for more metadata.
 
 .An example of indicating authors in the site configuration
 [source, toml]
 ----
-[author.john_doe]
+[params.author.john_doe]
     name = "John Doe"
     email = "john_doe@example.com"
     birthdate = "1996-01-12"
 
-[author.jane_doe]
+[params.author.jane_doe]
     name = "Jane Doe"
 ----
 

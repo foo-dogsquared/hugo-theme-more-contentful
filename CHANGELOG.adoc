@@ -19,6 +19,12 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 
 == Unreleased
 
+=== Updated
+
+* Change all of the deprecated functions and parameters to their recommended replacements.
+
+** `$.Site.Author` has been deprecated and instead uses the `$.Site.Params.author` instead.
+
 
 
 

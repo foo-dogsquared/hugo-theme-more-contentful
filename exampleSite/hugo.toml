@@ -29,13 +29,6 @@ rssLimit = 2
           experimental = true
 
 
-
-[author]
-    [author.john_doe]
-        name = "John Doe"
-        email = "johndoe@example.com"
-
-
 [languages]
     [languages.en]
         # This key is used for more readable links.
@@ -133,3 +126,9 @@ rssLimit = 2
 
 [params]
   toc = true
+
+[params.author]
+    [params.author.john_doe]
+        name = "John Doe"
+        email = "johndoe@example.com"
+

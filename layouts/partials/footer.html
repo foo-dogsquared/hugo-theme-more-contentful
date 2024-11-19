@@ -3,7 +3,7 @@
 <a href="#top">{{ i18n "back_to_top" | default "Back to top" }}</a>
 
 <!-- Linking to other languages' homepage. -->
-{{ if hugo.IsMultiLingual }}
+{{ if hugo.IsMultilingual }}
   <p>{{ i18n "multilingual" }}:
   <span class="site__list site__languages">
   {{ range $.Site.Languages }}
@@ -36,6 +36,6 @@
 {{ $markdownOpt := dict "markup" "markdown" }}
 
 <!-- Copyright info. -->
-<p>{{ with $.Site.Copyright }}{{ . | $.Site.RenderPage $markdownOpt }}{{ else }}© {{ now.Year }} {{ with $.Site.Author.name }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}{{ end }}</p>
+<p>{{ with $.Site.Copyright }}{{ . | $.Site.RenderPage $markdownOpt }}{{ else }}© {{ now.Year }} {{ with $.Site.Params.author.name }}{{ . }}{{ else }}{{ $.Site.Title }}{{ end }}{{ end }}</p>
 </footer>
 
