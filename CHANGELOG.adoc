@@ -26,6 +26,11 @@ and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Version
 ** `$.Site.Author` has been deprecated and instead uses the `$.Site.Params.author` instead.
 
 
+=== Fixed
+
+* Update translation links template.
+
+
 
 
 == [0.7.1] - 2024-10-28
