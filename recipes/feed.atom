@@ -3,13 +3,9 @@
   <title>Recipes on More Contentful</title>
   
     <link rel="self" type="application/atom+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.atom"/><link rel="canonical" type="text/html" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/"/><link rel="alternate" type="application/feed+json" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.json"/><link rel="alternate" type="application/rss+xml" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/feed.rss"/><rights>© 2024 </rights>
-  <generator uri="https://gohugo.io/" version="0.135.0">Hugo</generator>
+  <generator uri="https://gohugo.io/" version="0.138.0">Hugo</generator>
   <updated>2020-05-12T17:25:55+08:00</updated>
-  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon>
-  <author>
-    <name>John Doe</name>
-    <email>johndoe@example.com</email>
-    </author><entry>
+  <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/</id><icon>https://foo-dogsquared.github.io/hugo-theme-more-contentful/icon.png</icon><entry>
     <id>https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/</id>
     <title type="text">Configurable list of contacts</title>
     <link rel="alternate" href="https://foo-dogsquared.github.io/hugo-theme-more-contentful/recipes/configurable-list-of-contacts/" hreflang="en" title="Configurable list of contacts"/>
