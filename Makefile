@@ -9,3 +9,7 @@ update:
 .PHONY : build-demo
 build-demo:
 	hugo -s ./exampleSite
+
+.PHONY : dev-update
+dev-update:
+	nix flake update
