@@ -5,7 +5,7 @@
     <article>
       <header>
         <h1>{{ .Title }}</h1>
-        {{ partial "partials/components/post-meta.html" . }}
+        {{ partial "components/post-meta.html" . }}
       </header>
 
       {{ $is_toc := cond (ne .Params.toc nil) .Params.toc $.Site.Params.toc }}

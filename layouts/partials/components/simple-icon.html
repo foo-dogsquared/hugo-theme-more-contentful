@@ -1,0 +1,11 @@
+{{- /*
+  A partial for easily using icons from Simple Icons set.
+*/ -}}
+{{- $name := default .id .name }}
+{{- $res := resources.ExecuteAsTemplate (printf "icons/brand/%s.svg" .id)
+                                        (dict "id" .id
+                                              "name" $name)
+                                        (resources.Get "templates/simple-icon.svg") }}
+<svg class="site__icon">
+  <use href="{{ $res.RelPermalink }}#{{ $name }}"></use>
+</svg>

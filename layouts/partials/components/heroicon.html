@@ -1,0 +1,11 @@
+{{- /*
+  A partial that aliases the Heroicon template from the icon partial.
+*/ -}}
+{{- $name := default .id .name }}
+{{- $res := resources.ExecuteAsTemplate (printf "icons/generic/%s.svg" .id)
+                                        (dict "id" .id
+                                              "name" $name)
+                                        (resources.Get "templates/heroicon.svg") }}
+<svg class="site__icon">
+  <use href="{{ $res.RelPermalink }}#{{ $name }}"></use>
+</svg>
