@@ -1,8 +1,10 @@
 baseURL = "https://foo-dogsquared.github.io/hugo-theme-more-contentful"
 title = "More Contentful"
 enableGitInfo = false
-paginate = 20
 rssLimit = 2
+
+[pagination]
+pagerSize = 20
 
 [security]
   enableInlineShortcodes = true
